@@ -1,5 +1,6 @@
 Job,Config,pTM,ipTM,Rank,FAD_iptm,pLDDT@222,pLDDT@429,Clash
 job01_wt_mono_fad,WT mono+FAD,0.8000,0.9700,0.9700,0.9700,98.5,97.5,0.0
+job02_wt_dimer_fad,WT dimer+FAD,0.7900,0.7600,0.8000,0.5700,97.4,96.2,0.0
 job03_c677t_mono_fad,C677T mono+FAD,0.8100,0.9700,0.9700,0.9700,98.1,97.8,0.0
 job04_c677t_dimer_fad,C677T dimer+FAD,0.7700,0.7500,0.7800,0.5700,97.0,96.0,0.0
 job05_a1298c_mono_fad,A1298C mono+FAD,0.8100,0.9700,0.9700,0.9700,98.5,97.5,0.0
@@ -7,4 +8,6 @@ job06_compound_dimer_fad,Compound dimer+FAD,0.7300,0.7000,0.7300,0.5300,96.6,95.
 job07_wt_mono_rep,WT mono rep,0.8100,0.9800,0.9700,0.9800,98.5,97.5,0.0
 job08_wt_dimer_rep,WT dimer rep,0.7600,0.7200,0.7600,0.5400,97.2,95.8,0.0
 job09_c677t_mono_rep,C677T mono rep,0.8200,0.9700,0.9700,0.9700,98.0,97.6,0.0
+job10_c677t_dimer_rep,C677T dimer rep,0.8000,0.7800,0.8200,0.5800,97.1,95.9,0.0
 job11_a1298c_mono_rep,A1298C mono rep,0.8100,0.9700,0.9700,0.9700,98.4,97.5,0.0
+job12_compound_rep,Compound rep,0.7600,0.7300,0.7700,0.5500,96.4,95.3,0.0
