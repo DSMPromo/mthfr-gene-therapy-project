@@ -421,6 +421,21 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
+### What This Means for You
+
+| You Want To... | Allowed? | Details |
+|----------------|----------|---------|
+| Read, download, and share this research | ✅ Yes | No permission needed |
+| Replicate the AlphaFold analysis in your lab | ✅ Yes | That's why we built it |
+| Cite this work in your own papers | ✅ Yes | Credit Igor Mihaljko as original author |
+| Build on this research for academic/educational purposes | ✅ Yes | Your work must also be shared openly (ShareAlike) |
+| Use this to develop a commercial therapy or product | ❌ Not without permission | Contact igor@dsm.promo for commercial licensing |
+| Take this work and make it closed/proprietary | ❌ No | ShareAlike requires derivative work to remain open |
+
+**For researchers:** This license is designed to maximize scientific collaboration while protecting the original work. Use it freely for research. Cite it. Build on it. Share your results.
+
+**For biotech/pharma:** If you want to develop MTHFR base editing therapeutics based on this work, contact us for a commercial license agreement. We want this therapy to exist -- let's talk about how to make it happen.
+
 ---
 
 ## Contact
