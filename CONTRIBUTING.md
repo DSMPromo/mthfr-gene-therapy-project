@@ -28,7 +28,7 @@ If you have access to wet-lab facilities:
 - Compare AlphaFold predictions against the experimental PDB 6FCX structure
 
 ### 4. Expand the Literature Review
-- Add new publications connecting MTHFR to any of the five disease targets
+- Add new publications connecting MTHFR to any of the seven disease targets
 - Identify additional MTHFR variants worth modeling
 - Find clinical trial data on methylfolate/folinic acid interventions
 

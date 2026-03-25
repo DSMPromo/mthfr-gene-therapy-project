@@ -357,7 +357,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 - **Validation:** Are the AlphaFold predictions biologically sensible?
 - **Experimental structures:** Cryo-EM of C677T/A1298C variants with FAD
 - **Wet-lab work:** Base editor guide RNA design and testing for C677T
-- **Clinical correlation:** Prospective studies of compound heterozygous individuals across all five pathways
+- **Clinical correlation:** Prospective studies of compound heterozygous individuals across all seven pathways
 - **Replication:** Independent researchers reproducing and extending the computational analysis
 
 **If you're not a scientist:** Share this project. Get tested for MTHFR. Tell your doctor about it. The more people who know, the more pressure there is to take this seriously.

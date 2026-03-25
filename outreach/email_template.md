@@ -12,10 +12,10 @@ I am writing to propose a research collaboration targeting MTHFR polymorphisms (
 
 Building on your published work on [CITE THEIR SPECIFIC PAPER], I have conducted AlphaFold 3 structural modeling comparing wild-type and variant MTHFR enzyme complexes with FAD cofactor. The structural analysis reveals [BRIEF FINDING FROM YOUR ALPHAFOLD RESULTS — e.g., "reduced interface confidence at the FAD binding site in the C677T variant, consistent with known thermolability"].
 
-My research thesis connects five disease pathways — retinal neurodegeneration, autism/cerebral folate deficiency, anxiety/depression, B-vitamin metabolism failure, and cardiovascular disease — to a single correctable genetic root cause. As a compound heterozygous carrier of both MTHFR C677T and A1298C, along with CFH rs1061170 (AMD risk), I bring both a personal genomic proof-of-concept and a comprehensive research foundation.
+My research thesis connects seven disease pathways — retinal neurodegeneration, autism/cerebral folate deficiency, anxiety/depression, B-vitamin metabolism failure, cardiovascular disease, genome-wide DNA methylation disruption, and pregnancy complications — to a single correctable genetic root cause. As a compound heterozygous carrier of both MTHFR C677T and A1298C, I bring both a personal genomic proof-of-concept and a comprehensive research foundation.
 
 I have prepared:
-- A detailed research white paper with published evidence across all five disease targets
+- A detailed research white paper with published evidence across all seven disease targets
 - AlphaFold 3 structural comparison data with confidence metrics
 - A complete replication protocol that any lab can follow
 - A GitHub repository with all sequences, protocols, and analysis tools
