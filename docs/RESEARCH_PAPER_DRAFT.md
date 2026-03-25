@@ -489,7 +489,47 @@ We invite collaboration from structural biologists, gene therapy researchers, cl
 
 ---
 
-## 6. Collaboration Opportunities
+## 6. Development Roadmap
+
+Taking this from computational predictions to a real therapy requires a phased approach. Each phase builds on the previous one, with increasing complexity and cost but also increasing confidence and impact.
+
+| Phase | Description | Timeline | Estimated Cost | Key Milestone |
+|-------|-------------|----------|----------------|---------------|
+| **1** | **Computational Foundation** | **Complete** | **$0** | AlphaFold predictions, analysis pipeline, 7-pathway thesis, safety architecture, open-source repo |
+| **2** | Extended Computation + Outreach | 1-3 months | ~$500 | MD simulations, guide RNA design, preprint on bioRxiv, researcher outreach |
+| **3** | Experimental Validation | 6-18 months | $50K-200K | Express WT/variant MTHFR, measure FAD binding, test ABE guide RNAs in cell lines, confirm predictions |
+| **4** | Preclinical Animal Studies | 12-24 months | $500K-2M | Mthfr+/- mouse model, LNP-ABE injection, homocysteine/retinal/methylation endpoints, toxicology |
+| **5** | IND Filing + Trial Design | 24-36 months | $5M-20M | FDA Pre-IND meeting, GMP manufacturing, Phase 1 trial design |
+| **6** | Clinical Trials | 3-7 years | $50M-500M | Phase 1 (safety) → Phase 2 (efficacy) → Phase 3 (pivotal) |
+| **7** | Market + Global Access | Post-approval | -- | Commercial launch, expanded indications, global screening integration |
+
+### What Phase 1 Accomplished (This Project)
+
+This project represents a complete Phase 1 deliverable:
+- Structural evidence that compound heterozygous MTHFR has the lowest FAD binding confidence of any variant tested
+- Seven disease pathways connected to a single correctable genetic root cause
+- A safety architecture with anti-CRISPR kill switch and CRISPRoff reversible pathway
+- A fully replicable, open-source pipeline that any researcher can verify
+- All of this done for $0 using freely available tools (AlphaFold Server, Python, GitHub)
+
+### What Comes Next (Phase 2)
+
+Phase 2 is achievable by an independent researcher:
+1. Submit AlphaFold Jobs 13-16 (substrate and inhibitor binding)
+2. Run molecular dynamics simulations on compound heterozygous dimer
+3. Design ABE guide RNAs targeting the C677T locus computationally
+4. Post preprint to bioRxiv to establish priority and make the work citable
+5. Contact target researchers with the complete package
+
+### The Critical Transition: Phase 2 → Phase 3
+
+Everything from Phase 3 onward requires a laboratory partner. The entire purpose of Phases 1 and 2 is to produce a package compelling enough that a researcher says: "This is worth validating in my lab."
+
+The computational foundation, the structural data, the safety analysis, the open-source pipeline -- this is the door opener. The wet lab is the door.
+
+---
+
+## 7. Collaboration Opportunities
 
 This is an open research project seeking collaboration with:
 
@@ -506,19 +546,19 @@ Contact: igor@dsm.promo | GitHub: https://github.com/DSMPromo/mthfr-gene-therapy
 
 ---
 
-## 7. Acknowledgments
+## 8. Acknowledgments
 
 AlphaFold 3 predictions were performed using Google DeepMind's AlphaFold Server (Abramson et al., 2024). Protein sequences were obtained from UniProt (P42898). Reference structures were obtained from the Protein Data Bank (6FCX, 8QA5, 8QA6). AI tools (Claude, Anthropic) were used for literature organization, analysis pipeline development, and manuscript preparation. All AI-assisted work is explicitly disclosed per emerging best practices in scientific publishing.
 
 ---
 
-## 8. Conflict of Interest Statement
+## 9. Conflict of Interest Statement
 
 The author declares no financial conflicts of interest. The author is a compound heterozygous MTHFR carrier (C677T + A1298C) whose personal genetic data motivated this research. No funding was received for this work. No pharmaceutical, biotechnology, or diagnostic company has any involvement in this project.
 
 ---
 
-## 9. Ethics Statement
+## 10. Ethics Statement
 
 The genetic data presented in this study represents voluntary self-disclosure by the author. No other human subjects data was collected. The author's genetic variants were identified through consumer genetic testing (Genetic Genie / GenVue Discovery) and are shared voluntarily to demonstrate transparency and reproducibility. No institutional review board (IRB) approval was required for self-experimentation disclosure.
 
@@ -526,7 +566,7 @@ The author affirms that no individual should feel pressured to share their genet
 
 ---
 
-## 10. References
+## 11. References
 
 ### Vision and Retinal Neurodegeneration
 1. Markand S, Tawfik A, Ha Y, et al. (2015). Retinal Ganglion Cell Loss and Mild Vasculopathy in Methylene Tetrahydrofolate Reductase (Mthfr)-Deficient Mice: A Model of Mild Hyperhomocysteinemia. *Invest Ophthalmol Vis Sci*, 56(4):2684-2695. PMID: 25766590

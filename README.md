@@ -20,6 +20,7 @@
 - [Research Findings](#what-the-research-shows)
 - [Safety Architecture](#safety-architecture-what-if-something-goes-wrong)
 - [Quick Start: Replicate This](#quick-start-replicate-this-research)
+- [Development Roadmap](#development-roadmap)
 - [Project Structure](#project-structure)
 - [References](#verified-references)
 - [How to Help](#how-you-can-help)
@@ -289,6 +290,26 @@ python analyze.py
 # Open the report
 open analysis/outputs/report.html
 ```
+
+---
+
+## Development Roadmap
+
+From computational predictions to real therapy -- here's the path forward:
+
+| Phase | What | Timeline | Cost | Status |
+|-------|------|----------|------|--------|
+| **1** | Computational foundation -- AlphaFold predictions, 7-pathway thesis, safety architecture, open-source repo | **Done** | **$0** | ✅ **Complete** |
+| **2** | MD simulations, guide RNA design, bioRxiv preprint, researcher outreach | 1-3 months | ~$500 | Next |
+| **3** | Experimental validation -- express proteins, measure FAD binding, test ABE in cell lines | 6-18 months | $50K-200K | Needs lab partner |
+| **4** | Preclinical animal studies -- Mthfr+/- mice, LNP-ABE injection, multi-organ endpoints | 12-24 months | $500K-2M | Needs institution |
+| **5** | IND filing + Phase 1 clinical trial design | 24-36 months | $5M-20M | Needs biotech |
+| **6** | Clinical trials (Phase 1→2→3) | 3-7 years | $50M-500M | Needs pharma |
+| **7** | Market launch + global access | Post-approval | -- | 1.5-2B people affected |
+
+**Where we are now:** Phase 1 complete. The computational foundation exists. Every sequence, every prediction, every analysis, every reference -- documented and replicable. Built for $0.
+
+**The critical next step:** Get a researcher with a wet lab to say "yes." Everything in this repo is designed to make that conversation happen.
 
 ---
 
