@@ -225,6 +225,24 @@ The C677T variant (T>C at DNA level) is a candidate for **adenine base editing (
 
 ---
 
+## Safety Architecture: What If Something Goes Wrong?
+
+Any gene therapy must answer this question. We propose a multi-layered safety approach:
+
+| Layer | Mechanism | Status |
+|-------|-----------|--------|
+| **1. Inherent safety** | Base editing has no DNA breaks; LNP mRNA degrades in 48 hours; restores wild-type (not novel) protein | Built into platform |
+| **2. Guide RNA screening** | Comprehensive off-target analysis before treatment (Cas-OFFinder, GUIDE-seq, whole-genome sequencing) | Standard practice |
+| **3. Anti-CRISPR off-switch** | Emergency LNP dose carrying anti-CRISPR proteins (AcrIIA4) to neutralize any residual editor | Demonstrated in mice |
+| **4. CRISPRoff reversible option** | Epigenetic silencing as a reversible "test run" before permanent editing; reversed with TET1 demethylase | Moving to clinical (2025) |
+| **5. Post-treatment monitoring** | Homocysteine, methylation panels, retinal OCT, off-target sequencing at defined timepoints | Clinical protocol |
+
+**Key point:** The C677T correction restores the exact protein that billions of healthy people naturally carry. We are not creating anything new -- we are fixing what is broken.
+
+See the [full research paper](docs/RESEARCH_PAPER_DRAFT.md#47-safety-architecture-built-in-safeguards-and-emergency-off-switches) for complete safety analysis.
+
+---
+
 ## Quick Start: Replicate This Research
 
 **Anyone with a Google account can do this. It's free.**
