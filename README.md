@@ -31,7 +31,7 @@
 
 **I'm not a biohacker. I'm not trying to be something I'm not.**
 
-My name is Igor Mihaljko. I'm a cybersecurity specialist, cloud solution architect, and infrastructure architect with 20+ years in IT and 14 Microsoft certifications. I run an AI marketing agency called DSM.Promo in Chicago.
+My name is Igor Mihaljko. I'm a cybersecurity specialist, cloud solution architect, and infrastructure architect with 20+ years in IT. I run an AI marketing agency called DSM.Promo in Chicago.
 
 I'm just a guy who thinks outside the box. I looked at my genetic test results, started asking questions that crossed the boundaries between medical specialties, and used AI tools to organize what I found. This project exists because I believe the next generation deserves better -- and sometimes it takes someone from outside a field to see what the people inside it can't.
 

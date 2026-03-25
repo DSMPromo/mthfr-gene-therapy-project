@@ -623,7 +623,7 @@ The author affirms that no individual should feel pressured to share their genet
 
 ## Appendix A: Author Disclosure
 
-The author is not a medical professional, biomedical scientist, or geneticist. The author is a cybersecurity specialist and cloud solution architect with 20+ years in IT and 14 Microsoft certifications who identified compound heterozygous MTHFR status (C677T + A1298C) plus MTRR I22M through consumer genetic testing and used computational tools to organize and analyze published research.
+The author is not a medical professional, biomedical scientist, or geneticist. The author is a cybersecurity specialist and cloud solution architect with 20+ years in IT who identified compound heterozygous MTHFR status (C677T + A1298C) plus MTRR I22M through consumer genetic testing and used computational tools to organize and analyze published research.
 
 This project exists to provide a computational framework that qualified researchers can validate, extend, or refute. The author explicitly invites correction of any errors in interpretation or analysis.
 
