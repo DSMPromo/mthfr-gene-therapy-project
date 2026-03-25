@@ -1,0 +1,10 @@
+# MTHFR AlphaFold Analyzer - Python Dependencies
+# Install: pip install -r requirements.txt
+
+# Required (analysis won't produce charts without these)
+numpy>=1.20
+matplotlib>=3.5
+
+# Optional (for advanced analysis)
+# biopython>=1.80        # For sequence analysis
+# pandas>=1.4            # For data manipulation

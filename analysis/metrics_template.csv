@@ -1,0 +1,17 @@
+job_number,job_name,configuration,seed,ptm,iptm,ranking_score,chain_iptm_FAD,pLDDT_pos222,pLDDT_pos429,has_clash,notes
+1,Job01_WT_mono,WT monomer + FAD,auto,,,,,,,,Baseline single chain
+2,Job02_WT_dimer,WT homodimer + FAD x2,auto,,,,,,,,Native functional dimer
+3,Job03_C677T_mono,C677T monomer + FAD,auto,,,,,,,,A222V catalytic domain
+4,Job04_C677T_dimer,C677T homodimer + FAD x2,auto,,,,,,,,TT genotype model
+5,Job05_A1298C_mono,A1298C monomer + FAD,auto,,,,,,,,E429A regulatory domain
+6,Job06_compound_dimer,Compound + WT dimer + FAD x2,auto,,,,,,,,YOUR GENOTYPE
+7,Job07_WT_mono_rep,WT monomer + FAD (replicate),auto,,,,,,,,Day 2 replication
+8,Job08_WT_dimer_rep,WT homodimer + FAD x2 (replicate),auto,,,,,,,,Day 2 replication
+9,Job09_C677T_mono_rep,C677T monomer + FAD (replicate),auto,,,,,,,,Day 2 replication
+10,Job10_C677T_dimer_rep,C677T homodimer + FAD x2 (replicate),auto,,,,,,,,Day 2 replication
+11,Job11_A1298C_mono_rep,A1298C monomer + FAD (replicate),auto,,,,,,,,Day 2 replication
+12,Job12_compound_dimer_rep,Compound + WT dimer (replicate),auto,,,,,,,,Day 2 replication
+13,Job13_WT_dimer_THF,WT dimer + FAD + THF,auto,,,,,,,,Substrate binding
+14,Job14_C677T_dimer_THF,C677T dimer + FAD + THF,auto,,,,,,,,Variant + substrate
+15,Job15_compound_THF,Compound dimer + FAD + THF,auto,,,,,,,,Your genotype + substrate
+16,Job16_WT_dimer_SAM,WT dimer + FAD + SAM,auto,,,,,,,,Allosteric inhibition
