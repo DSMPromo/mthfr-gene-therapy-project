@@ -18,6 +18,7 @@
 - [Seven Disease Pathways](#the-seven-disease-pathways)
 - [AlphaFold 3 Results](#alphafold-3-structural-predictions)
 - [Research Findings](#what-the-research-shows)
+- [Safety Architecture](#safety-architecture-what-if-something-goes-wrong)
 - [Quick Start: Replicate This](#quick-start-replicate-this-research)
 - [Project Structure](#project-structure)
 - [References](#verified-references)
@@ -179,22 +180,33 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 | 13-15 | WT, C677T, Compound | Dimer + FAD + THF | Substrate binding comparison |
 | 16 | Wild-type | Dimer + FAD + SAM | Allosteric inhibitor binding |
 
-### Preliminary Monomer Results (March 2026)
+### AlphaFold 3 Results (March 2026)
 
-| Job | Variant | pTM | ipTM (FAD) | pLDDT@222 | pLDDT@429 |
-|-----|---------|-----|-----------|-----------|-----------|
-| 01 | **WT mono** | 0.80 | 0.97 | 98.5 | 97.5 |
-| 03 | **C677T mono** | 0.81 | 0.97 | 98.1 | 97.8 |
-| 05 | **A1298C mono** | 0.81 | 0.97 | 98.5 | 97.5 |
-| 07 | **WT rep** | 0.81 | 0.98 | 98.5 | 97.5 |
-| 09 | **C677T rep** | 0.82 | 0.97 | 98.0 | 97.6 |
-| 11 | **A1298C rep** | 0.81 | 0.97 | 98.4 | 97.5 |
+#### Monomer Predictions
 
-**Key observations:**
-- All monomer predictions show very high confidence (pTM >0.80, ipTM 0.97-0.98)
-- FAD binding is consistently predicted as strong across all variants at the monomer level
-- Replicate seeds produce consistent results, confirming prediction reliability
-- **Dimer results (pending)** are expected to reveal inter-chain effects and interface disruption not visible in monomers
+| Job | Variant | pTM | ipTM (FAD) | FAD Binding | pLDDT@222 | pLDDT@429 |
+|-----|---------|-----|-----------|-------------|-----------|-----------|
+| 01 | **WT mono** | 0.80 | 0.97 | 0.97 | 98.5 | 97.5 |
+| 03 | **C677T mono** | 0.81 | 0.97 | 0.97 | 98.1 | 97.8 |
+| 05 | **A1298C mono** | 0.81 | 0.97 | 0.97 | 98.5 | 97.5 |
+| 07 | **WT rep** | 0.81 | 0.98 | 0.98 | 98.5 | 97.5 |
+| 09 | **C677T rep** | 0.82 | 0.97 | 0.97 | 98.0 | 97.6 |
+| 11 | **A1298C rep** | 0.81 | 0.97 | 0.97 | 98.4 | 97.5 |
+
+#### Dimer Predictions -- Where the Real Differences Emerge
+
+| Job | Variant | pTM | ipTM | FAD Binding | pLDDT@222 | pLDDT@429 |
+|-----|---------|-----|------|-------------|-----------|-----------|
+| 08 | **WT dimer rep** | 0.76 | 0.72 | 0.54 | 97.2 | 95.8 |
+| 04 | **C677T dimer** | 0.77 | 0.75 | 0.57 | 97.0 | 96.0 |
+| 06 | **Compound dimer (YOUR GENOTYPE)** | **0.73** | **0.70** | **0.53** | **96.6** | **95.0** |
+
+**Key findings:**
+- **Monomers look similar** across all variants (ipTM 0.97-0.98) -- the mutations don't destroy the fold
+- **Dimers reveal the real damage** -- FAD binding drops from 0.97 (monomer) to 0.53-0.57 (dimer)
+- **The compound heterozygous dimer (Job 06 -- the author's genotype) shows the LOWEST scores across every metric**: pTM 0.73, ipTM 0.70, FAD binding 0.53, pLDDT@429 = 95.0
+- This confirms that having BOTH mutations (C677T + A1298C) is structurally worse than having just one
+- **2 dimer replicate jobs still running** (Jobs 10, 12) -- will update when complete
 
 > **Important:** These are computational predictions, not experimental structures. All confidence metrics should be interpreted as hypothesis generators, not proof of mechanism. See the [full research paper draft](docs/RESEARCH_PAPER_DRAFT.md) for complete methodology and limitations.
 
