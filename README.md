@@ -165,7 +165,11 @@ Follow `analysis/analysis_workflow.md` to compare results in PyMOL
 4. Pu D, et al. (2020). *BMC Pediatrics*, 20:471 -- Meta-analysis: MTHFR C677T significantly associated with ASD
 5. Wan L, et al. (2018). *Transl Psychiatry*, 8:242 -- MTHFR and psychiatric diseases
 6. Levin BL and Varga E. (2016). *Integr Med*, 15(2):48-52 -- Compound het anxiety treated with SAMe
-7. Froese DS, et al. (2018). *Nat Chem Biol*, 15:793-800 -- Human MTHFR crystal structure (PDB: 6FCX)
+7. Froese DS, et al. (2018). *Nat Commun*, 9:4735 -- Human MTHFR crystal structure, SAM regulation (PDB: 6FCX)
+8. Pejchal R, et al. (2006). *Biochemistry*, 45(15):4808-4818 -- Structural perturbation of A222V: helix α5 displacement disrupts FAD binding
+9. Froese DS, et al. (2024). *Nat Commun* -- Cryo-EM structures of MTHFR + SAM inhibited/active states (PDB: 8QA5, 8QA6)
+10. Frye RE, et al. (2018). *Mol Psychiatry*, 23:631-636 -- Folinic acid improved verbal communication in ASD (randomized controlled trial)
+11. Abramson J, et al. (2024). *Nature*, 630:493-500 -- AlphaFold 3: accurate structure prediction of biomolecular interactions
 
 **Database Links:**
 [UniProt P42898](https://www.uniprot.org/uniprotkb/P42898/entry) | [PDB 6FCX](https://www.rcsb.org/structure/6FCX) | [ClinVar rs1801133](https://www.ncbi.nlm.nih.gov/clinvar/?term=rs1801133) | [ClinVar rs1801131](https://www.ncbi.nlm.nih.gov/clinvar/?term=rs1801131)
