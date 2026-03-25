@@ -55,6 +55,20 @@ Modern medicine is organized by organ system. Ophthalmologists treat eyes. Psych
 
 Thousands of papers have been published on individual aspects of MTHFR. But no single document connects all seven disease pathways to one genetic root cause and proposes a unified correction strategy using modern structural biology tools. That's what this project does.
 
+### Why Has Nobody Tried to Fix This Genetically?
+
+As of March 2026, among ~250 active CRISPR clinical trials worldwide, **zero target MTHFR.** Why?
+
+| Reason It Was Ignored | Why That's Wrong |
+|----------------------|------------------|
+| "It's just a polymorphism" | 40% prevalence ≠ benign. 1.5-2 billion people affected across 7 pathways |
+| "Supplements work fine" | Lifelong, imperfect, addresses symptoms not root cause. The enzyme is still broken in every cell |
+| Specialists stay in lanes | 7 diseases = 7 specialties. No one sees the full picture |
+| Structural data didn't exist | First crystal structure 2018, cryo-EM 2024, AlphaFold 3 2024 |
+| Gene therapy targets rare diseases | PCSK9 editing (VERVE-102, YOLT-101) proves common-variant correction is viable |
+
+**What changed:** AlphaFold 3 + adenine base editing (proven in humans) + LNP delivery (proven at scale) + 2024 cryo-EM structures = a window that didn't exist two years ago. This project exists to open it.
+
 ---
 
 ## The MTHFR Enzyme

@@ -123,7 +123,27 @@ While thousands of individual studies address MTHFR variants in specific disease
 
 AlphaFold 3 (Abramson et al., 2024) can model protein + cofactor (FAD) + substrate (THF) + inhibitor (SAM) interactions in a single prediction, enabling direct comparison of wild-type and variant enzyme structures with their functional ligands.
 
-### 1.6 Study Objectives
+### 1.6 Why Nobody Has Pursued MTHFR Gene Correction -- And Why That Should Change
+
+As of March 2026, among approximately 250 active CRISPR/gene editing clinical trials worldwide, zero target MTHFR. No biotech company, no academic lab, no clinical program is pursuing genetic correction of C677T or A1298C. This gap exists for several identifiable reasons, each of which we argue is now addressable:
+
+**1. "It's just a polymorphism, not a disease."** The CDC states that MTHFR variants are "generally not a reason to change treatment." Because the variants are so common (up to 40% of the population), the medical establishment has normalized them as benign polymorphisms rather than recognizing them as clinically actionable targets. However, commonality does not equal benignity -- 40% prevalence means 1.5-2 billion people are affected. The disease burden is massive but distributed across seven specialties, making it invisible to any single field.
+
+**2. Supplementation "works well enough."** The current standard of care -- methylfolate, riboflavin, B12, SAMe supplementation -- partially compensates for impaired enzyme function. This creates the perception that the problem is solved. However, supplementation is lifelong, imperfect (it cannot fully restore enzyme activity), and addresses downstream symptoms rather than the root genetic cause. The C677T enzyme is still thermolabile. The A1298C regulatory domain is still impaired. Every cell in the body still carries the variant. Supplementation is a workaround, not a fix.
+
+**3. Specialization blindness.** The seven disease pathways connected to MTHFR are managed by seven different medical specialties: ophthalmology (vision), psychiatry (anxiety/depression), neurology (autism/CFD), cardiology (CVD), nutrition (B-vitamins), reproductive medicine (pregnancy), and genetics (epigenetics). No single specialist sees the full picture. Each sees their piece -- "unexplained retinal thinning," "treatment-resistant anxiety," "elevated homocysteine" -- without recognizing the common root cause.
+
+**4. The structural data is new.** The first human MTHFR crystal structure was only published in 2018 (Froese et al., PDB 6FCX). The cryo-EM structures revealing SAM allosteric regulation were published in 2024 (PDB 8QA5, 8QA6). AlphaFold 3, capable of predicting protein-ligand complexes, became available in 2024. The tools to structurally characterize these variants simply did not exist until very recently.
+
+**5. No one connected the dots.** Thousands of papers exist on individual aspects of MTHFR -- C677T and cardiovascular risk, MTHFR and autism, MTHFR and pregnancy complications. But no published work has unified all seven pathways with structural predictions and proposed a correction strategy. The information existed in fragments across disciplines. This project is the integration.
+
+**6. Gene therapy economics favor rare diseases.** The gene therapy industry has focused on rare diseases (sickle cell, hemophilia, SMA) where small patient populations justify high per-patient pricing ($1-3M per treatment). MTHFR, with 1.5-2 billion carriers, is the opposite -- an extremely common variant. The business model for correcting a common variant has not been established. However, the precedent is shifting: PCSK9 base editing (VERVE-102, YOLT-101) targets a common cardiovascular risk factor, demonstrating that gene editing for common variants is commercially viable.
+
+**What has changed:** The convergence of AlphaFold 3 (structural predictions), adenine base editing (proven safe in humans via VERVE-102, YOLT-101), LNP delivery (proven at scale via COVID vaccines and now gene editing), and the 2024 MTHFR cryo-EM structures creates a window that did not exist even two years ago. The question is no longer whether MTHFR correction is technically feasible -- it is whether anyone will pursue it.
+
+This project exists to make that case.
+
+### 1.7 Study Objectives
 
 We hypothesize that AlphaFold 3 structural predictions will reveal:
 1. Reduced FAD binding confidence (ipTM) in C677T variants compared to wild-type, particularly at the dimer level
