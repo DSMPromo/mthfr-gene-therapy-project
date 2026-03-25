@@ -47,6 +47,20 @@ def load_json(d,pattern):
     c=sorted(Path(d).rglob(pattern))
     return json.load(open(c[0])) if c else None
 
+def get_residue_plddt(d, resnum, chain="A"):
+    """Extract per-residue pLDDT from CIF file (B-factor column index 14 for CA atom)."""
+    cifs = sorted(Path(d).rglob("*model_0.cif"))
+    if not cifs: return None
+    target = f" {resnum} "
+    with open(cifs[0]) as cf:
+        for line in cf:
+            if line.startswith("ATOM") and " CA " in line and target in line and f" {chain} " in line:
+                parts = line.split()
+                if len(parts) > 14:
+                    try: return float(parts[14])
+                    except ValueError: pass
+    return None
+
 def analyze(dirs):
     results=[]
     for d in dirs:
@@ -55,12 +69,13 @@ def analyze(dirs):
         f=load_json(d,"*full_data_0.json")
         if not s: print(f"    SKIP: no summary JSON"); continue
         ci=s.get("chain_iptm",[])
+        p222=get_residue_plddt(d, 222)
+        p429=get_residue_plddt(d, 429)
         e={"name":n,"config":JOBS.get(n,n),"ptm":s.get("ptm"),"iptm":s.get("iptm"),
            "rank":s.get("ranking_score"),"disordered":s.get("fraction_disordered"),
            "clash":s.get("has_clash",False),"chains":len(s.get("chain_ptm",[])),
            "fad_iptm":ci[-1] if len(ci)>1 else None,
-           "p222":f["atom_plddts"][221] if f and len(f.get("atom_plddts",[]))>221 else None,
-           "p429":f["atom_plddts"][428] if f and len(f.get("atom_plddts",[]))>428 else None,
+           "p222":p222,"p429":p429,
            "pae":np.array(f["pae"]) if f and "pae" in f else None}
         results.append(e)
     return results
