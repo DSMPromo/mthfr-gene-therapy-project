@@ -440,7 +440,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
 ## Contact
 
-**Igor Mihaljko** | CEO and Founder, DSM.Promo | Chicago, IL | igor@dsm.promo
+**Igor Mihaljko** | CEO and Founder, DSM.Promo | Chicago, IL | igor@dsm.promo | [ORCID: 0009-0000-1408-1065](https://orcid.org/0009-0000-1408-1065)
 
 ---
 

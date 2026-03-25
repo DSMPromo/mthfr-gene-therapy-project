@@ -29,6 +29,7 @@ Igor Mihaljko
 CEO & Founder, DSM.Promo
 Chicago, IL
 igor@dsm.promo
+ORCID: https://orcid.org/0009-0000-1408-1065
 
 ---
 

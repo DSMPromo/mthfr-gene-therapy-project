@@ -6,6 +6,8 @@
 
 **Author:** Igor Mihaljko, Independent Researcher, DSM.Promo, Chicago, IL
 
+**ORCID:** [0009-0000-1408-1065](https://orcid.org/0009-0000-1408-1065)
+
 **Correspondence:** igor@dsm.promo
 
 **Keywords:** MTHFR, AlphaFold 3, C677T, A1298C, FAD cofactor, protein structure prediction, gene therapy, folate metabolism, DNA methylation, epigenetics, compound heterozygous
