@@ -11,11 +11,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 1
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job02_WT_dimer_FAD",
@@ -29,11 +31,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 2
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job03_C677T_mono_FAD",
@@ -47,11 +51,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 1
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job04_C677T_dimer_FAD",
@@ -65,11 +71,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 2
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job05_A1298C_mono_FAD",
@@ -83,11 +91,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 1
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job06_compound_dimer_FAD",
@@ -107,11 +117,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 2
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job07_WT_mono_rep",
@@ -125,11 +137,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 1
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job08_WT_dimer_rep",
@@ -143,11 +157,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 2
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job09_C677T_mono_rep",
@@ -161,11 +177,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 1
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job10_C677T_dimer_rep",
@@ -179,11 +197,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 2
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job11_A1298C_mono_rep",
@@ -197,11 +217,13 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 1
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   },
   {
     "name": "Job12_compound_rep",
@@ -221,112 +243,12 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 2
         }
       }
-    ]
-  },
-  {
-    "name": "Job13_WT_dimer_FAD_THF",
-    "modelSeeds": [],
-    "sequences": [
-      {
-        "proteinChain": {
-          "sequence": "MVNEARGNSSLNPCLEGSASSGSESSKDSSRCSTPGLDPERHERLREKMRRRLESGDKWFSLEFFPPRTAEGAVNLISRFDRMAAGGPLYIDVTWHPAGDPGSDKETSSMMIASTAVNYCGLETILHMTCCRQRLEEITGHLHKAKQLGLKNIMALRGDPIGDQWEEEEGGFNYAVDLVKHIRSEFGDYFDICVAGYPKGHPEAGSFEADLKHLKEKVSAGADFIITQLFFEADTFFRFVKACTDMGITCPIVPGIFPIQGYHSLRQLVKLSKLEVPQEIKDVIEPIKDNDAAIRNYGIELAVSLCQELLASGLVPGLHFYTLNREMATTEVLKRLGMWTEDPRRPLPWALSAHPKRREEDVRPIFWASRPKSYIYRTQEWDEFPNGRWGNSSSPAFGELKDYYLFYLKSKSPKEELLKMWGEELTSEESVFEVFVLYLSGEPNRNGHKVTCLPWNDEPLAAETSLLKEELLRVNRQGILTINSQPNINGKPSSDPIVGWGPSGGYVFQKAYLEFFTSRETAEALLQVLKKYELRVNYHLVNVKGENITNAPELQPNAVTWGIFPGREIIQPTVVDPVSFMFWKDEAFALWIERWGKLYEEESPSRTIIQYIHDNYFLVNLVDNDFPLDNCLWQVVEDTLELLNRPTQNARETEAP",
-          "count": 2
-        }
-      },
-      {
-        "ligand": {
-          "ligand": "FAD",
-          "count": 2
-        }
-      },
-      {
-        "ligand": {
-          "ligand": "THF",
-          "count": 2
-        }
-      }
-    ]
-  },
-  {
-    "name": "Job14_C677T_dimer_FAD_THF",
-    "modelSeeds": [],
-    "sequences": [
-      {
-        "proteinChain": {
-          "sequence": "MVNEARGNSSLNPCLEGSASSGSESSKDSSRCSTPGLDPERHERLREKMRRRLESGDKWFSLEFFPPRTAEGAVNLISRFDRMAAGGPLYIDVTWHPAGDPGSDKETSSMMIASTAVNYCGLETILHMTCCRQRLEEITGHLHKAKQLGLKNIMALRGDPIGDQWEEEEGGFNYAVDLVKHIRSEFGDYFDICVAGYPKGHPEAGSFEADLKHLKEKVSAGVDFIITQLFFEADTFFRFVKACTDMGITCPIVPGIFPIQGYHSLRQLVKLSKLEVPQEIKDVIEPIKDNDAAIRNYGIELAVSLCQELLASGLVPGLHFYTLNREMATTEVLKRLGMWTEDPRRPLPWALSAHPKRREEDVRPIFWASRPKSYIYRTQEWDEFPNGRWGNSSSPAFGELKDYYLFYLKSKSPKEELLKMWGEELTSEESVFEVFVLYLSGEPNRNGHKVTCLPWNDEPLAAETSLLKEELLRVNRQGILTINSQPNINGKPSSDPIVGWGPSGGYVFQKAYLEFFTSRETAEALLQVLKKYELRVNYHLVNVKGENITNAPELQPNAVTWGIFPGREIIQPTVVDPVSFMFWKDEAFALWIERWGKLYEEESPSRTIIQYIHDNYFLVNLVDNDFPLDNCLWQVVEDTLELLNRPTQNARETEAP",
-          "count": 2
-        }
-      },
-      {
-        "ligand": {
-          "ligand": "FAD",
-          "count": 2
-        }
-      },
-      {
-        "ligand": {
-          "ligand": "THF",
-          "count": 2
-        }
-      }
-    ]
-  },
-  {
-    "name": "Job15_compound_dimer_FAD_THF",
-    "modelSeeds": [],
-    "sequences": [
-      {
-        "proteinChain": {
-          "sequence": "MVNEARGNSSLNPCLEGSASSGSESSKDSSRCSTPGLDPERHERLREKMRRRLESGDKWFSLEFFPPRTAEGAVNLISRFDRMAAGGPLYIDVTWHPAGDPGSDKETSSMMIASTAVNYCGLETILHMTCCRQRLEEITGHLHKAKQLGLKNIMALRGDPIGDQWEEEEGGFNYAVDLVKHIRSEFGDYFDICVAGYPKGHPEAGSFEADLKHLKEKVSAGVDFIITQLFFEADTFFRFVKACTDMGITCPIVPGIFPIQGYHSLRQLVKLSKLEVPQEIKDVIEPIKDNDAAIRNYGIELAVSLCQELLASGLVPGLHFYTLNREMATTEVLKRLGMWTEDPRRPLPWALSAHPKRREEDVRPIFWASRPKSYIYRTQEWDEFPNGRWGNSSSPAFGELKDYYLFYLKSKSPKEELLKMWGEELTSEASVFEVFVLYLSGEPNRNGHKVTCLPWNDEPLAAETSLLKEELLRVNRQGILTINSQPNINGKPSSDPIVGWGPSGGYVFQKAYLEFFTSRETAEALLQVLKKYELRVNYHLVNVKGENITNAPELQPNAVTWGIFPGREIIQPTVVDPVSFMFWKDEAFALWIERWGKLYEEESPSRTIIQYIHDNYFLVNLVDNDFPLDNCLWQVVEDTLELLNRPTQNARETEAP",
-          "count": 1
-        }
-      },
-      {
-        "proteinChain": {
-          "sequence": "MVNEARGNSSLNPCLEGSASSGSESSKDSSRCSTPGLDPERHERLREKMRRRLESGDKWFSLEFFPPRTAEGAVNLISRFDRMAAGGPLYIDVTWHPAGDPGSDKETSSMMIASTAVNYCGLETILHMTCCRQRLEEITGHLHKAKQLGLKNIMALRGDPIGDQWEEEEGGFNYAVDLVKHIRSEFGDYFDICVAGYPKGHPEAGSFEADLKHLKEKVSAGADFIITQLFFEADTFFRFVKACTDMGITCPIVPGIFPIQGYHSLRQLVKLSKLEVPQEIKDVIEPIKDNDAAIRNYGIELAVSLCQELLASGLVPGLHFYTLNREMATTEVLKRLGMWTEDPRRPLPWALSAHPKRREEDVRPIFWASRPKSYIYRTQEWDEFPNGRWGNSSSPAFGELKDYYLFYLKSKSPKEELLKMWGEELTSEESVFEVFVLYLSGEPNRNGHKVTCLPWNDEPLAAETSLLKEELLRVNRQGILTINSQPNINGKPSSDPIVGWGPSGGYVFQKAYLEFFTSRETAEALLQVLKKYELRVNYHLVNVKGENITNAPELQPNAVTWGIFPGREIIQPTVVDPVSFMFWKDEAFALWIERWGKLYEEESPSRTIIQYIHDNYFLVNLVDNDFPLDNCLWQVVEDTLELLNRPTQNARETEAP",
-          "count": 1
-        }
-      },
-      {
-        "ligand": {
-          "ligand": "FAD",
-          "count": 2
-        }
-      },
-      {
-        "ligand": {
-          "ligand": "THF",
-          "count": 2
-        }
-      }
-    ]
-  },
-  {
-    "name": "Job16_WT_dimer_FAD_SAM",
-    "modelSeeds": [],
-    "sequences": [
-      {
-        "proteinChain": {
-          "sequence": "MVNEARGNSSLNPCLEGSASSGSESSKDSSRCSTPGLDPERHERLREKMRRRLESGDKWFSLEFFPPRTAEGAVNLISRFDRMAAGGPLYIDVTWHPAGDPGSDKETSSMMIASTAVNYCGLETILHMTCCRQRLEEITGHLHKAKQLGLKNIMALRGDPIGDQWEEEEGGFNYAVDLVKHIRSEFGDYFDICVAGYPKGHPEAGSFEADLKHLKEKVSAGADFIITQLFFEADTFFRFVKACTDMGITCPIVPGIFPIQGYHSLRQLVKLSKLEVPQEIKDVIEPIKDNDAAIRNYGIELAVSLCQELLASGLVPGLHFYTLNREMATTEVLKRLGMWTEDPRRPLPWALSAHPKRREEDVRPIFWASRPKSYIYRTQEWDEFPNGRWGNSSSPAFGELKDYYLFYLKSKSPKEELLKMWGEELTSEESVFEVFVLYLSGEPNRNGHKVTCLPWNDEPLAAETSLLKEELLRVNRQGILTINSQPNINGKPSSDPIVGWGPSGGYVFQKAYLEFFTSRETAEALLQVLKKYELRVNYHLVNVKGENITNAPELQPNAVTWGIFPGREIIQPTVVDPVSFMFWKDEAFALWIERWGKLYEEESPSRTIIQYIHDNYFLVNLVDNDFPLDNCLWQVVEDTLELLNRPTQNARETEAP",
-          "count": 2
-        }
-      },
-      {
-        "ligand": {
-          "ligand": "FAD",
-          "count": 2
-        }
-      },
-      {
-        "ligand": {
-          "ligand": "SAM",
-          "count": 2
-        }
-      }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   }
 ]

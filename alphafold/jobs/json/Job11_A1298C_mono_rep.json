@@ -11,10 +11,12 @@
       },
       {
         "ligand": {
-          "ligand": "FAD",
+          "ligand": "CCD_FAD",
           "count": 1
         }
       }
-    ]
+    ],
+    "dialect": "alphafoldserver",
+    "version": 1
   }
 ]
