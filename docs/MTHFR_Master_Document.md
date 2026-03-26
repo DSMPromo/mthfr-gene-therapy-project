@@ -157,14 +157,14 @@ These predictions are used for hypothesis prioritization only. They do not estab
 
 **Key observations:**
 
-1. Monomer predictions show preserved overall folding across the tested variant states (ipTM 0.97-0.98); the tested monomer predictions do not suggest large-scale loss of overall folding confidence
+1. Monomer predictions showed preserved overall folding across the tested variant states (ipTM 0.97-0.98); the tested monomer predictions do not suggest large-scale loss of overall folding confidence
 2. Dimer predictions show inter-chain differences: FAD binding confidence drops from 0.97 (monomer) to 0.53-0.58 (dimer), consistent with known cooperativity in the homodimer
 3. The compound heterozygous dimer yielded the lowest comparative confidence values across the assessed metrics in both independent runs
 4. Compound heterozygous dimers averaged lower than the tested comparators (ipTM 0.715 vs WT 0.740 and C677T 0.765), consistent with a possible combined dimer-level perturbation in this modeling setup
 5. Independent random seeds produced consistent directional trends across the tested configurations, supporting limited internal reproducibility within this modeling setup
 6. THF substrate binding: compound het ligand ipTM 0.878 vs 0.974 WT, consistent with reduced substrate access at the dimer level
 
-**Core observation:** Monomer predictions show preserved overall folding across the tested variant states, whereas dimer predictions show inter-chain differences. This is the central comparative finding of the current computational dataset and the main basis for downstream experimental prioritization.
+**Core observation:** Monomer predictions showed preserved overall folding across the tested variant states, whereas dimer predictions show inter-chain differences. This is the central comparative finding of the current computational dataset and the main basis for downstream experimental prioritization.
 
 ---
 

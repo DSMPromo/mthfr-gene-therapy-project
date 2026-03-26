@@ -64,7 +64,7 @@ As of March 2026, we did not identify a registered interventional clinical trial
 | Supplementation available | Methylfolate, riboflavin, B12 partially compensate, reducing perceived urgency for genetic correction |
 | Cross-specialty fragmentation | Relevant disease associations span 7+ specialties; no single field owns the integrated picture |
 | Structural data only recently available | First human MTHFR crystal structure 2018 (PDB 6FCX), cryo-EM 2024 (PDB 8QA5, 8QA6) |
-| Gene editing precedent emerging | Human base-editing programs have entered clinical testing or early clinical use for selected targets, though target biology, delivery, benefit-risk, and regulatory path remain highly target-specific |
+| Gene-editing precedent emerging | Human base-editing programs have entered clinical testing or early clinical use for selected targets, though target biology, delivery, benefit-risk, and regulatory path remain highly target-specific |
 
 **Why this question is now technically more testable:** Recent advances in structure prediction, human base-editing programs for other targets, scalable nucleic acid delivery systems, and new human MTHFR structural data make experimental assessment of MTHFR correction more technically discussable than before. They do not establish MTHFR as a validated therapeutic target. This project asks whether these conditions support a bounded experimental investigation.
 
@@ -201,7 +201,7 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 | **Compound dimer** | **0.745** | **0.715** | **0.540** | **96.5** | **95.15** |
 
 **Key observations (replicated across independent seeds):**
-- **Monomer predictions show preserved overall folding confidence** (ipTM 0.97-0.98) -- the tested monomer predictions do not suggest large-scale loss of overall fold confidence
+- **Monomer predictions showed preserved overall folding confidence** (ipTM 0.97-0.98) -- the tested monomer predictions do not suggest large-scale loss of overall fold confidence
 - **Dimer predictions reveal comparative inter-chain differences** -- reported FAD-associated confidence values are lower in the tested dimer models than in the tested monomer models, consistent with the distinct interaction context of the homodimer
 - **The compound heterozygous dimer yielded the lowest reported interaction-confidence values** across the reported comparative metrics in both runs: pTM (0.73/0.76), ipTM (0.70/0.73), FAD binding (0.53/0.55), pLDDT@429 (95.0/95.3)
 - **Compound heterozygous dimers averaged lower than the tested comparators** -- ipTM 0.715 vs WT 0.740 and C677T 0.765, consistent with a possible combined dimer-level perturbation in this modeling setup
