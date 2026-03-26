@@ -1,4 +1,4 @@
-# MTHFR Variant Target Validation Program
+# MTHFR Variant Hypothesis Prioritization Program
 
 ### Computational Prioritization of Selected MTHFR Variant States for Experimental Validation
 
@@ -110,7 +110,7 @@ As of March 2026, we did not identify a registered interventional clinical trial
 
 ---
 
-## Primary Experimental Indication Hypotheses
+## Primary Experimental Follow-Up Contexts
 
 The computational findings in this project generate specific, testable hypotheses rather than therapeutic claims. Two downstream systems are prioritized for experimental validation based on existing literature:
 
@@ -140,7 +140,7 @@ Because one-carbon pathway disruption may influence BH4-dependent neurotransmitt
 
 ---
 
-## Additional Disease Pathways
+## Additional Literature Context
 
 MTHFR dysfunction has been associated with additional disease-relevant pathways in the literature. If future biochemical and in vivo studies support a causal contribution of selected MTHFR states, sequence correction strategies could be evaluated as one possible upstream intervention concept. These pathways are documented here for completeness.
 
@@ -357,7 +357,7 @@ See the [full research paper](docs/RESEARCH_PAPER_DRAFT.md#47-safety-architectur
 
 ## Quick Start: Replicate This Research
 
-**Anyone with a Google account can do this. It's free.**
+**The workflow is designed to be reproducible with publicly accessible tools.**
 
 ### Option A: Upload JSON (Fastest)
 1. Go to [alphafoldserver.com](https://alphafoldserver.com) and sign in
@@ -408,7 +408,7 @@ From computational prioritization to staged experimental follow-up:
 
 > Advancement between phases is conditional and depends on supportive data at each prior stage. This roadmap is a planning framework, not a claim of therapeutic readiness.
 
-**Where we are now:** Phase 1 complete. The computational hypothesis prioritization is documented and replicable. Built for $0.
+**Where we are now:** Phase 1 complete. The computational hypothesis prioritization is documented and replicable. 
 
 **The next step:** Identify a researcher with biochemical or structural biology capabilities to evaluate whether these computational observations translate to measurable differences in experimental systems.
 
