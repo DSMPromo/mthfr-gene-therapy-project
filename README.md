@@ -114,7 +114,7 @@ The computational findings in this project generate specific, testable hypothese
 Because MTHFR dysfunction has been linked in prior literature to homocysteine-related retinal injury, the retina is a candidate downstream system for validation. The current computational results do not establish efficacy in retinal disease, but they support testing whether high-risk MTHFR states are associated with measurable retinal biomarkers.
 
 **Supporting literature:**
-- **Mthfr+/- mice** show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage -- without elevated IOP (Markand et al., 2015, *IOVS*)
+- **Mthfr+/- mice** show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage, without elevated IOP (Markand et al., 2015, *IOVS*)
 - **Case report:** metabolic correction with betaine was associated with visual recovery in a patient with severe MTHFR deficiency (Hergert et al., 2022, *J Neurology*)
 - **Retinal perfusion improved** by MTHFR genotype-guided supplementation; compound C677T/A1298C carriers showed significant improvement (Jiang et al., 2023, *Clin Ophthalmol*)
 - MTHFR modifies CRB1-related retinopathies, worsening rd8 retinal phenotype (Markand et al., 2015, *Exp Eye Res*)
@@ -181,7 +181,7 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 | 09 | **C677T rep** | 0.82 | 0.97 | 0.97 | 98.0 | 97.6 |
 | 11 | **A1298C rep** | 0.81 | 0.97 | 0.97 | 98.4 | 97.5 |
 
-#### Dimer Predictions -- Where the Real Differences Emerge (All 12 Jobs Complete, Replicated)
+#### Dimer Predictions (All 12 Jobs Complete, Replicated)
 
 | Job | Variant | pTM | ipTM | FAD Binding | pLDDT@222 | pLDDT@429 |
 |-----|---------|-----|------|-------------|-----------|-----------|
@@ -233,7 +233,7 @@ The author also carries MTRR I22M (rs1801394), which is involved in B12 regenera
 | VERVE-102 | Verve Therapeutics | PCSK9 (single base edit) | IV LNP | Phase 1b |
 | Beam-101 | Beam Therapeutics | Sickle cell (base edit) | Ex vivo | Phase I/II |
 | Casgevy | Vertex/CRISPR | Sickle cell / beta-thal | Ex vivo | **FDA Approved (2023)** |
-| YOLT-101 | YolTech | PCSK9 (next-gen ABE) | IV LNP | Phase 1 -- good safety (2025) |
+| YOLT-101 | YolTech | PCSK9 (next-gen ABE) | IV LNP | Phase 1 (2025) |
 
 At the sequence level, C677T appears conceptually compatible with **adenine base editing (ABE)** logic, which converts A-T base pairs to G-C base pairs. However, edit window, guide design, bystander edits, tissue targeting, and functional rescue would all need empirical validation.
 
@@ -305,7 +305,7 @@ From computational observations to experimental validation -- here's the path fo
 | **3** | Biochemical validation -- express WT/variant proteins, dimer stability assays, FAD/THF cofactor binding assays | 6-12 months | $50K-150K | Needs lab partner |
 | **4** | Subgroup biomarker correlation -- homocysteine, methylation panels, retinal OCT, BH4 levels in defined compound het cohorts | 12-18 months | $100K-300K | Needs clinical collaborator |
 | **5** | If biochemical and biomarker data support continued development: guide design assessment, edit-window analysis, bystander-risk evaluation, and cell-based feasibility studies | 18-24 months | $200K-500K | Needs gene editing lab |
-| **6** | If editing feasibility confirmed: preclinical animal studies (Mthfr+/- mice, multi-organ endpoints) | 24-36 months | $500K-2M | Needs institution |
+| **6** | If cell-based feasibility and safety data support further development: preclinical animal studies (Mthfr+/- mice, multi-organ endpoints) | 24-36 months | $500K-2M | Needs institution |
 | **7** | If preclinical success: IND filing, clinical trial design, regulatory pathway | 3-7+ years | $5M+ | Needs biotech/pharma |
 
 **Where we are now:** Phase 1 complete. The computational foundation exists. Every sequence, every prediction, every analysis, every reference -- documented and replicable. Built for $0.
@@ -443,7 +443,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
 **For researchers:** This license is designed to maximize scientific collaboration while protecting the original work. Use it freely for research. Cite it. Build on it. Share your results.
 
-**For biotech/pharma:** If you are interested in commercial development based on this work, contact us for a licensing discussion.
+**For biotech/pharma:** If you are interested in commercial development based on this work, contact us to discuss licensing.
 
 ---
 
