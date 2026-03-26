@@ -265,7 +265,7 @@ a{{color:#2E75B6}}
 </style></head><body>
 
 <h1>MTHFR Variant Target Validation Program</h1>
-<p style="font-size:18px;color:#666">Structural Analysis of Dimer Stability, Cofactor Binding, and Substrate Interaction in High-Risk MTHFR States</p>
+<p style="font-size:18px;color:#666">Computational Structural Comparison of Dimer Interface Confidence, Cofactor Binding, and Substrate Interaction in Selected MTHFR Variant States</p>
 
 <p><b>Generated:</b> {datetime.now().strftime('%Y-%m-%d %H:%M')} |
 <b>Author:</b> Igor Mihaljko / <a href="https://dsm.promo">DSM.Promo</a> |
@@ -273,18 +273,18 @@ a{{color:#2E75B6}}
 <b>Jobs analyzed:</b> {len(R)} |
 <b>Platforms:</b> <span class="badge badge-af">AlphaFold 3</span> <span class="badge badge-b2">Boltz-2</span></p>
 
-<div class="warn"><b>DISCLAIMER:</b> For research and educational purposes only. These are computational predictions, not experimental structures. All findings require validation through experimental methods (cryo-EM, X-ray crystallography, functional assays). The author is not a medical professional.</div>
+<div class="warn"><b>DISCLAIMER:</b> For research and educational purposes only. The models and scores presented here are computational predictions, not experimentally resolved structures or clinical findings. All observations require orthogonal validation through experimental methods such as cryo-EM, X-ray crystallography, molecular dynamics, and biochemical or functional assays. The author is not a medical professional.</div>
 
 <h2>Executive Summary</h2>
 <div class="finding">
-<b>Key Observation:</b> Relative to wild-type, the compound heterozygous MTHFR dimer shows the weakest predicted interaction profile across every metric:
+<b>Key observation:</b> Relative to the tested wild-type comparator, the compound heterozygous MTHFR dimer showed the lowest predicted interaction-confidence values across the assessed dimer-interface and ligand-associated metrics:
 <ul>
-<li><b>FAD cofactor binding:</b> ipTM 0.53 (vs 0.57 WT) — AlphaFold Server</li>
-<li><b>THF substrate binding:</b> ligand ipTM 0.878 (vs 0.974 WT) — Boltz-2</li>
-<li><b>Dimer interface:</b> ipTM 0.70 (vs 0.76 WT) — reduced inter-chain confidence</li>
-<li><b>Position 429 (A1298C site):</b> pLDDT 95.0 (vs 96.2 WT) — regulatory domain perturbation</li>
+<li><b>FAD cofactor context:</b> ipTM 0.53 versus 0.57 in the tested wild-type dimer (AlphaFold Server)</li>
+<li><b>THF substrate context:</b> ligand ipTM 0.878 versus 0.974 in the tested wild-type dimer (Boltz-2)</li>
+<li><b>Dimer interface context:</b> ipTM 0.70 versus 0.76 in the tested wild-type dimer</li>
+<li><b>Position 429 context:</b> pLDDT 95.0 versus 96.2 in the tested wild-type comparator</li>
 </ul>
-<b>Working hypothesis:</b> These results support experimental testing of whether selected high-risk MTHFR states contribute to measurable dysfunction in retinal and neuropsychiatric-relevant pathways. The present work generates falsifiable hypotheses for orthogonal validation.
+<b>Working hypothesis:</b> These comparative computational results support experimental testing of whether selected MTHFR variant states are associated with measurable differences in dimer-level behavior, retinal biomarkers, and neuropsychiatric-relevant biochemical readouts. The present work is intended to generate falsifiable hypotheses for orthogonal validation, not to establish mechanism, disease causation, or therapeutic relevance.
 </div>"""
 
     # Summary dashboard
@@ -371,17 +371,17 @@ a{{color:#2E75B6}}
 <li><b>PAE:</b> How confidently AlphaFold predicts relative positions of residue pairs. Low values (blue) = confident.</li>
 </ul>
 <h3>Why Monomers vs Dimers Matter</h3>
-<p>MTHFR functions as a <b>homodimer</b> in the body. Monomer predictions (Jobs 1,3,5) show all variants fold correctly — the mutations don't destroy the protein. But dimer predictions (Jobs 2,4,6) reveal inter-chain effects: FAD binding drops from 0.97 to 0.53-0.57, and the compound heterozygous dimer is consistently worst. This is the biologically relevant finding.</p>
+<p>MTHFR functions as a <b>homodimer</b> in vivo. The tested monomer predictions (Jobs 1,3,5) do not suggest large-scale loss of overall folding confidence across variant states. However, dimer predictions (Jobs 2,4,6) show inter-chain differences: FAD binding confidence drops from 0.97 to 0.53-0.57, and the compound heterozygous dimer yielded the lowest comparative values. This is the central comparative finding in the current computational dataset and the main basis for downstream experimental prioritization.</p>
 <h3>Why Two Platforms</h3>
-<p><b>AlphaFold 3 Server</b> (Jobs 1-12) provided the core FAD binding analysis. <b>Boltz-2</b> (Jobs 13-16) enabled THF substrate and SAM inhibitor modeling not possible through AlphaFold Server's interface. Both confirm the same trend: compound het = worst structural scores.</p>
+<p><b>AlphaFold 3 Server</b> (Jobs 1-12) provided the core FAD binding analysis. <b>Boltz-2</b> (Jobs 13-16) enabled THF substrate and SAM inhibitor modeling not possible through AlphaFold Server's interface. Across the tested model configurations, both showed the same directional pattern, with the compound heterozygous dimer yielding the lowest comparative confidence values among the assessed dimer conditions.</p>
 </div>
 
 <h2>Primary Experimental Indication Hypotheses</h2>
 <div class="info">
 <h3>Retinal Pathway Hypothesis</h3>
-<p>Because MTHFR dysfunction has been linked in prior literature to homocysteine-related retinal injury, the retina is a candidate downstream system for validation. The current computational results do not establish efficacy in retinal disease, but they support testing whether high-risk MTHFR states are associated with measurable retinal biomarkers. Prior evidence: Mthfr+/- mice show ganglion cell loss (Markand 2015); case report of visual recovery with betaine (Hergert 2022).</p>
+<p>Because prior literature has linked MTHFR-related one-carbon pathway disruption and hyperhomocysteinemia to retinal injury, the retina is a candidate downstream system for experimental follow-up. The current computational results do not establish efficacy in retinal disease, but they support testing whether selected MTHFR variant states are associated with measurable retinal biomarker differences. Prior evidence: Mthfr+/- mice show ganglion cell loss (Markand 2015); case report of visual recovery with betaine (Hergert 2022).</p>
 <h3>Neuropsychiatric Pathway Hypothesis</h3>
-<p>Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pathways, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected high-risk MTHFR states correlate with measurable biochemical and clinical features. This may be relevant in defined subgroups with specific biochemical patterns involving upstream one-carbon and BH4-relevant biology.</p>
+<p>Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pathways, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected MTHFR variant states correlate with measurable biochemical differences. This may warrant exploratory study in defined subgroups where one-carbon metabolism and BH4-relevant biology are hypothesized to be relevant.</p>
 <p><i>Additional downstream systems (autism/CFD, B-vitamin metabolism, cardiovascular, epigenetics, pregnancy) are documented in the full research paper as candidate areas for future investigation.</i></p>
 </div>
 
@@ -390,14 +390,14 @@ a{{color:#2E75B6}}
 <li>Structural validation: compare predictions against experimental PDB 6FCX crystal structure</li>
 <li>Molecular dynamics simulations on WT vs compound dimer</li>
 <li>Biochemical validation: express proteins, dimer stability assays, cofactor binding assays</li>
-<li>Subgroup biomarker correlation in defined compound het cohorts</li>
+<li>Exploratory biomarker correlation studies in well-defined compound heterozygous cohorts</li>
 <li>Submit to bioRxiv as preprint</li>
 <li>Contact target researchers (structural biology, metabolic disease, retinal, neuropsychiatric)</li>
 </ol>
 
 <div class="footer">
 <p><b>MTHFR Target Validation Program</b> | Igor Mihaljko | <a href="https://github.com/DSMPromo/mthfr-target-validation">GitHub</a> | <a href="https://orcid.org/0009-0000-1408-1065">ORCID</a> | CC BY-NC-SA 4.0</p>
-<p>Computational predictions — not experimental structures. For research and educational purposes only.</p>
+<p>Computational predictions, not experimentally resolved structures. This document is intended for research planning and educational use only.</p>
 </div>
 </body></html>"""
 

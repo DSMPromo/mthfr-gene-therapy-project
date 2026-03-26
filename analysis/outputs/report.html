@@ -25,26 +25,26 @@ a{color:#2E75B6}
 </style></head><body>
 
 <h1>MTHFR Variant Target Validation Program</h1>
-<p style="font-size:18px;color:#666">Structural Analysis of Dimer Stability, Cofactor Binding, and Substrate Interaction in High-Risk MTHFR States</p>
+<p style="font-size:18px;color:#666">Computational Structural Comparison of Dimer Interface Confidence, Cofactor Binding, and Substrate Interaction in Selected MTHFR Variant States</p>
 
-<p><b>Generated:</b> 2026-03-25 22:18 |
+<p><b>Generated:</b> 2026-03-25 22:24 |
 <b>Author:</b> Igor Mihaljko / <a href="https://dsm.promo">DSM.Promo</a> |
 <b>ORCID:</b> <a href="https://orcid.org/0009-0000-1408-1065">0009-0000-1408-1065</a> |
 <b>Jobs analyzed:</b> 16 |
 <b>Platforms:</b> <span class="badge badge-af">AlphaFold 3</span> <span class="badge badge-b2">Boltz-2</span></p>
 
-<div class="warn"><b>DISCLAIMER:</b> For research and educational purposes only. These are computational predictions, not experimental structures. All findings require validation through experimental methods (cryo-EM, X-ray crystallography, functional assays). The author is not a medical professional.</div>
+<div class="warn"><b>DISCLAIMER:</b> For research and educational purposes only. The models and scores presented here are computational predictions, not experimentally resolved structures or clinical findings. All observations require orthogonal validation through experimental methods such as cryo-EM, X-ray crystallography, molecular dynamics, and biochemical or functional assays. The author is not a medical professional.</div>
 
 <h2>Executive Summary</h2>
 <div class="finding">
-<b>Key Observation:</b> Relative to wild-type, the compound heterozygous MTHFR dimer shows the weakest predicted interaction profile across every metric:
+<b>Key observation:</b> Relative to the tested wild-type comparator, the compound heterozygous MTHFR dimer showed the lowest predicted interaction-confidence values across the assessed dimer-interface and ligand-associated metrics:
 <ul>
-<li><b>FAD cofactor binding:</b> ipTM 0.53 (vs 0.57 WT) — AlphaFold Server</li>
-<li><b>THF substrate binding:</b> ligand ipTM 0.878 (vs 0.974 WT) — Boltz-2</li>
-<li><b>Dimer interface:</b> ipTM 0.70 (vs 0.76 WT) — reduced inter-chain confidence</li>
-<li><b>Position 429 (A1298C site):</b> pLDDT 95.0 (vs 96.2 WT) — regulatory domain perturbation</li>
+<li><b>FAD cofactor context:</b> ipTM 0.53 versus 0.57 in the tested wild-type dimer (AlphaFold Server)</li>
+<li><b>THF substrate context:</b> ligand ipTM 0.878 versus 0.974 in the tested wild-type dimer (Boltz-2)</li>
+<li><b>Dimer interface context:</b> ipTM 0.70 versus 0.76 in the tested wild-type dimer</li>
+<li><b>Position 429 context:</b> pLDDT 95.0 versus 96.2 in the tested wild-type comparator</li>
 </ul>
-<b>Working hypothesis:</b> These results support experimental testing of whether selected high-risk MTHFR states contribute to measurable dysfunction in retinal and neuropsychiatric-relevant pathways. The present work generates falsifiable hypotheses for orthogonal validation.
+<b>Working hypothesis:</b> These comparative computational results support experimental testing of whether selected MTHFR variant states are associated with measurable differences in dimer-level behavior, retinal biomarkers, and neuropsychiatric-relevant biochemical readouts. The present work is intended to generate falsifiable hypotheses for orthogonal validation, not to establish mechanism, disease causation, or therapeutic relevance.
 </div><h2>Summary Dashboard</h2><img src="figures/summary_dashboard.png" alt="Summary Dashboard"><h2>Candidate Disease Pathways</h2><img src="figures/clinical_targets.png" alt="Candidate Pathways"><h2>3D Structure Visualizations</h2><p>Backbone traces colored by pLDDT confidence (blue=high, red=low). Mutation sites marked with stars.</p><div class="grid"><img src="figures/structure_job01_wt_mono_fad.png" alt="structure_job01_wt_mono_fad"><img src="figures/structure_job02_wt_dimer_fad.png" alt="structure_job02_wt_dimer_fad"><img src="figures/structure_job06_compound_dimer_fad.png" alt="structure_job06_compound_dimer_fad"><img src="figures/structure_job13_wt_dimer_fad_thf.png" alt="structure_job13_wt_dimer_fad_thf"><img src="figures/structure_job15_compound_dimer_fad_thf.png" alt="structure_job15_compound_dimer_fad_thf"></div><h2>Per-Residue Confidence Comparison</h2><img src="figures/plddt_comparison.png" alt="pLDDT Comparison"><h2>AlphaFold 3 Server Results (Jobs 1-12)</h2><p><span class="badge badge-af">AlphaFold 3</span> FAD cofactor binding — monomers and homodimers with independent replication seeds</p><table><tr><th>Job</th><th>Config</th><th>pTM</th><th>ipTM</th><th>Rank</th><th>FAD ipTM</th><th>pLDDT@222</th><th>pLDDT@429</th></tr><tr><td>job01_wt_mono_fad</td><td>WT mono+FAD</td><td>0.800</td><td>0.970</td><td>0.970</td><td>0.970</td><td>99</td><td>97</td></tr><tr><td>job02_wt_dimer_fad</td><td>WT dimer+FAD</td><td>0.790</td><td>0.760</td><td>0.800</td><td>0.570</td><td>97</td><td>96</td></tr><tr><td>job03_c677t_mono_fad</td><td>C677T mono+FAD</td><td>0.810</td><td>0.970</td><td>0.970</td><td>0.970</td><td>98</td><td>98</td></tr><tr><td>job04_c677t_dimer_fad</td><td>C677T dimer+FAD</td><td>0.770</td><td>0.750</td><td>0.780</td><td>0.570</td><td>97</td><td>96</td></tr><tr><td>job05_a1298c_mono_fad</td><td>A1298C mono+FAD</td><td>0.810</td><td>0.970</td><td>0.970</td><td>0.970</td><td>99</td><td>97</td></tr><tr class="highlight"><td>job06_compound_dimer_fad</td><td>Compound dimer+FAD</td><td>0.730</td><td>0.700</td><td>0.730</td><td>0.530</td><td>97</td><td>95</td></tr><tr><td>job07_wt_mono_rep</td><td>WT mono rep</td><td>0.810</td><td>0.980</td><td>0.970</td><td>0.980</td><td>99</td><td>98</td></tr><tr><td>job08_wt_dimer_rep</td><td>WT dimer rep</td><td>0.760</td><td>0.720</td><td>0.760</td><td>0.540</td><td>97</td><td>96</td></tr><tr><td>job09_c677t_mono_rep</td><td>C677T mono rep</td><td>0.820</td><td>0.970</td><td>0.970</td><td>0.970</td><td>98</td><td>98</td></tr><tr><td>job10_c677t_dimer_rep</td><td>C677T dimer rep</td><td>0.800</td><td>0.780</td><td>0.820</td><td>0.580</td><td>97</td><td>96</td></tr><tr><td>job11_a1298c_mono_rep</td><td>A1298C mono rep</td><td>0.810</td><td>0.970</td><td>0.970</td><td>0.970</td><td>98</td><td>98</td></tr><tr class="highlight"><td>job12_compound_rep</td><td>Compound dimer rep</td><td>0.760</td><td>0.730</td><td>0.770</td><td>0.550</td><td>96</td><td>95</td></tr></table><h2>Boltz-2 Substrate Binding Results (Jobs 13-16)</h2><p><span class="badge badge-b2">Boltz-2</span> THF folate substrate and SAM allosteric inhibitor binding via Tamarind Bio</p><table><tr><th>Job</th><th>Config</th><th>pTM</th><th>ipTM</th><th>Confidence</th><th>Ligand ipTM</th><th>pLDDT@222</th><th>pLDDT@429</th></tr><tr><td>job13_wt_dimer_fad_thf</td><td>WT dimer+FAD+THF</td><td>0.906</td><td>0.892</td><td>0.869</td><td>0.974</td><td>98</td><td>92</td></tr><tr><td>job14_c677t_dimer_fad_thf</td><td>C677T dimer+FAD+THF</td><td>0.891</td><td>0.875</td><td>0.869</td><td>0.969</td><td>98</td><td>95</td></tr><tr class="highlight"><td>job15_compound_dimer_fad_thf</td><td>Compound dimer+FAD+THF</td><td>0.848</td><td>0.819</td><td>0.854</td><td>0.878</td><td>97</td><td>95</td></tr><tr><td>job16_wt_dimer_fad_sam</td><td>WT dimer+FAD+SAM</td><td>0.911</td><td>0.897</td><td>0.877</td><td>0.925</td><td>97</td><td>95</td></tr></table><h2>Comparison Charts</h2><div class="grid"><img src="charts/iptm_comparison.png" alt="iptm_comparison"><img src="charts/ptm_comparison.png" alt="ptm_comparison"></div><h2>Predicted Aligned Error (PAE) Plots</h2><p>Blue = confident relative positioning. Red/white = uncertain. Dashed lines mark mutation positions (222, 429).</p><div class="grid"><img src="pae_plots/pae_job01_wt_mono_fad.png" alt="pae_job01_wt_mono_fad"><img src="pae_plots/pae_job02_wt_dimer_fad.png" alt="pae_job02_wt_dimer_fad"><img src="pae_plots/pae_job03_c677t_mono_fad.png" alt="pae_job03_c677t_mono_fad"><img src="pae_plots/pae_job04_c677t_dimer_fad.png" alt="pae_job04_c677t_dimer_fad"><img src="pae_plots/pae_job05_a1298c_mono_fad.png" alt="pae_job05_a1298c_mono_fad"><img src="pae_plots/pae_job06_compound_dimer_fad.png" alt="pae_job06_compound_dimer_fad"><img src="pae_plots/pae_job07_wt_mono_rep.png" alt="pae_job07_wt_mono_rep"><img src="pae_plots/pae_job08_wt_dimer_rep.png" alt="pae_job08_wt_dimer_rep"><img src="pae_plots/pae_job09_c677t_mono_rep.png" alt="pae_job09_c677t_mono_rep"><img src="pae_plots/pae_job10_c677t_dimer_rep.png" alt="pae_job10_c677t_dimer_rep"><img src="pae_plots/pae_job11_a1298c_mono_rep.png" alt="pae_job11_a1298c_mono_rep"><img src="pae_plots/pae_job12_compound_rep.png" alt="pae_job12_compound_rep"><img src="pae_plots/pae_job13_wt_dimer_fad_thf.png" alt="pae_job13_wt_dimer_fad_thf"><img src="pae_plots/pae_job14_c677t_dimer_fad_thf.png" alt="pae_job14_c677t_dimer_fad_thf"><img src="pae_plots/pae_job15_compound_dimer_fad_thf.png" alt="pae_job15_compound_dimer_fad_thf"><img src="pae_plots/pae_job16_wt_dimer_fad_sam.png" alt="pae_job16_wt_dimer_fad_sam"></div><h2>Interpretation Guide</h2>
 <div class="info">
 <h3>What These Metrics Mean</h3>
@@ -56,17 +56,17 @@ a{color:#2E75B6}
 <li><b>PAE:</b> How confidently AlphaFold predicts relative positions of residue pairs. Low values (blue) = confident.</li>
 </ul>
 <h3>Why Monomers vs Dimers Matter</h3>
-<p>MTHFR functions as a <b>homodimer</b> in the body. Monomer predictions (Jobs 1,3,5) show all variants fold correctly — the mutations don't destroy the protein. But dimer predictions (Jobs 2,4,6) reveal inter-chain effects: FAD binding drops from 0.97 to 0.53-0.57, and the compound heterozygous dimer is consistently worst. This is the biologically relevant finding.</p>
+<p>MTHFR functions as a <b>homodimer</b> in vivo. The tested monomer predictions (Jobs 1,3,5) do not suggest large-scale loss of overall folding confidence across variant states. However, dimer predictions (Jobs 2,4,6) show inter-chain differences: FAD binding confidence drops from 0.97 to 0.53-0.57, and the compound heterozygous dimer yielded the lowest comparative values. This is the central comparative finding in the current computational dataset and the main basis for downstream experimental prioritization.</p>
 <h3>Why Two Platforms</h3>
-<p><b>AlphaFold 3 Server</b> (Jobs 1-12) provided the core FAD binding analysis. <b>Boltz-2</b> (Jobs 13-16) enabled THF substrate and SAM inhibitor modeling not possible through AlphaFold Server's interface. Both confirm the same trend: compound het = worst structural scores.</p>
+<p><b>AlphaFold 3 Server</b> (Jobs 1-12) provided the core FAD binding analysis. <b>Boltz-2</b> (Jobs 13-16) enabled THF substrate and SAM inhibitor modeling not possible through AlphaFold Server's interface. Across the tested model configurations, both showed the same directional pattern, with the compound heterozygous dimer yielding the lowest comparative confidence values among the assessed dimer conditions.</p>
 </div>
 
 <h2>Primary Experimental Indication Hypotheses</h2>
 <div class="info">
 <h3>Retinal Pathway Hypothesis</h3>
-<p>Because MTHFR dysfunction has been linked in prior literature to homocysteine-related retinal injury, the retina is a candidate downstream system for validation. The current computational results do not establish efficacy in retinal disease, but they support testing whether high-risk MTHFR states are associated with measurable retinal biomarkers. Prior evidence: Mthfr+/- mice show ganglion cell loss (Markand 2015); case report of visual recovery with betaine (Hergert 2022).</p>
+<p>Because prior literature has linked MTHFR-related one-carbon pathway disruption and hyperhomocysteinemia to retinal injury, the retina is a candidate downstream system for experimental follow-up. The current computational results do not establish efficacy in retinal disease, but they support testing whether selected MTHFR variant states are associated with measurable retinal biomarker differences. Prior evidence: Mthfr+/- mice show ganglion cell loss (Markand 2015); case report of visual recovery with betaine (Hergert 2022).</p>
 <h3>Neuropsychiatric Pathway Hypothesis</h3>
-<p>Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pathways, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected high-risk MTHFR states correlate with measurable biochemical and clinical features. This may be relevant in defined subgroups with specific biochemical patterns involving upstream one-carbon and BH4-relevant biology.</p>
+<p>Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pathways, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected MTHFR variant states correlate with measurable biochemical differences. This may warrant exploratory study in defined subgroups where one-carbon metabolism and BH4-relevant biology are hypothesized to be relevant.</p>
 <p><i>Additional downstream systems (autism/CFD, B-vitamin metabolism, cardiovascular, epigenetics, pregnancy) are documented in the full research paper as candidate areas for future investigation.</i></p>
 </div>
 
@@ -75,13 +75,13 @@ a{color:#2E75B6}
 <li>Structural validation: compare predictions against experimental PDB 6FCX crystal structure</li>
 <li>Molecular dynamics simulations on WT vs compound dimer</li>
 <li>Biochemical validation: express proteins, dimer stability assays, cofactor binding assays</li>
-<li>Subgroup biomarker correlation in defined compound het cohorts</li>
+<li>Exploratory biomarker correlation studies in well-defined compound heterozygous cohorts</li>
 <li>Submit to bioRxiv as preprint</li>
 <li>Contact target researchers (structural biology, metabolic disease, retinal, neuropsychiatric)</li>
 </ol>
 
 <div class="footer">
 <p><b>MTHFR Target Validation Program</b> | Igor Mihaljko | <a href="https://github.com/DSMPromo/mthfr-target-validation">GitHub</a> | <a href="https://orcid.org/0009-0000-1408-1065">ORCID</a> | CC BY-NC-SA 4.0</p>
-<p>Computational predictions — not experimental structures. For research and educational purposes only.</p>
+<p>Computational predictions, not experimentally resolved structures. This document is intended for research planning and educational use only.</p>
 </div>
 </body></html>
