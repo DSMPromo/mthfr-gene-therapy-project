@@ -13,7 +13,7 @@ AlphaFold structural predictions are computational models and may not accurately
 The MTHFR-disease associations described in this project represent published correlations from peer-reviewed literature. Correlation does not equal causation. The significance and clinical relevance of common MTHFR variants remains an area of active scientific debate. The CDC states that MTHFR variants are generally not a reason to change medical treatment.
 
 ## Therapeutic Concepts
-All gene therapy concepts described are speculative and would require extensive preclinical testing, safety validation, and clinical trials before any human application. The regulatory, ethical, and safety considerations for gene editing therapies are substantial.
+All gene therapy concepts described are speculative and would require extensive preclinical testing, safety validation, and clinical trials before any human application. The regulatory, ethical, and safety considerations for gene-editing therapies are substantial.
 
 ## AlphaFold Server Terms
 AlphaFold Server outputs are for non-commercial use only, subject to [AlphaFold Server Terms of Service](https://alphafoldserver.com/terms). Outputs cannot be used for commercial drug discovery, docking/screening tools, or training ML models.

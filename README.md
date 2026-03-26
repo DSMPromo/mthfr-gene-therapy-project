@@ -56,7 +56,7 @@ This project attempts to bring the structural biology perspective into that conv
 
 ### Possible Reasons MTHFR Has Not Yet Advanced as a Gene-Editing Research Program
 
-As of March 2026, we did not identify a registered interventional clinical trial focused on MTHFR gene editing in ClinicalTrials.gov searches. This absence should not be interpreted as evidence of scientific disinterest or target invalidity. Several factors may contribute:
+As of March 2026, we did not identify a registered interventional clinical trial focused on MTHFR gene-editing in ClinicalTrials.gov searches. This absence should not be interpreted as evidence of scientific disinterest or target invalidity. Several factors may contribute:
 
 | Observation | Context |
 |-------------|---------|

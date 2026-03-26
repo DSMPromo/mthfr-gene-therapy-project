@@ -17,7 +17,7 @@ MTHFR biology sits at the intersection of folate metabolism, homocysteine regula
 
 Common MTHFR variants are widely distributed in human populations, and current clinical guidance does not treat most common variant states as stand-alone indications for major treatment changes. For example, the CDC states that common MTHFR variants such as C677T are not a reason to avoid folic acid, and notes limited evidence that A1298C alone significantly affects folate processing.
 
-Recent advances in structure prediction and gene editing make it reasonable to explore whether selected MTHFR variant states warrant deeper experimental study. In this document, computational modeling is used for hypothesis prioritization only. The goal is not to claim therapeutic readiness, but to identify structural and biochemical questions suitable for orthogonal validation.
+Recent advances in structure prediction and gene-editing make it reasonable to explore whether selected MTHFR variant states warrant deeper experimental study. In this document, computational modeling is used for hypothesis prioritization only. The goal is not to claim therapeutic readiness, but to identify structural and biochemical questions suitable for orthogonal validation.
 
 ---
 
@@ -170,7 +170,7 @@ These predictions are used for hypothesis prioritization only. They do not estab
 
 ## PART 4: Safety Concepts for Future Experimental Programs
 
-Any future gene editing program would need to address safety. The following are examples of safety layers used or discussed in broader editing research that could be relevant to MTHFR correction if it advances to experimental testing. Each would require target-specific validation.
+Any future gene-editing program would need to address safety. The following are examples of safety layers used or discussed in broader editing research that could be relevant to MTHFR correction if it advances to experimental testing. Each would require target-specific validation.
 
 | Layer | Concept | Precedent |
 |-------|---------|-----------|
@@ -196,7 +196,7 @@ From computational observations to experimental validation:
 | 2 | Structural benchmarking against experimental reference structures such as PDB 6FCX, molecular dynamics simulations, preprint preparation, researcher outreach | 1-3 months | ~$500 | Next |
 | 3 | Biochemical validation: expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6-12 months | $50K-150K | Requires lab partner |
 | 4 | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-related readouts in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
-| 5 | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene editing partner |
+| 5 | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene-editing partner |
 | 6 | If cell-based feasibility and safety data support further progression: preclinical animal studies using appropriate Mthfr-relevant models and multi-organ outcome measures | 24-36 months | $500K-2M | Requires institutional partner |
 | 7 | If preclinical data support advancement: IND-enabling planning, regulatory strategy development, and early clinical trial concept design | 3-7+ years | $5M+ | Requires biotech or pharma partner |
 

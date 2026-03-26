@@ -125,7 +125,7 @@ AlphaFold 3 (Abramson et al., 2024) can model protein + cofactor (FAD) + substra
 
 ### 1.6 Why Nobody Has Pursued MTHFR Gene Correction -- And Why That Should Change
 
-As of March 2026, among approximately 250 active CRISPR/gene editing clinical trials worldwide, zero target MTHFR. No biotech company, no academic lab, no clinical program is pursuing genetic correction of C677T or A1298C. This gap exists for several identifiable reasons, each of which we argue is now addressable:
+As of March 2026, among approximately 250 active CRISPR/gene-editing clinical trials worldwide, zero target MTHFR. No biotech company, no academic lab, no clinical program is pursuing genetic correction of C677T or A1298C. This gap exists for several identifiable reasons, each of which we argue is now addressable:
 
 **1. "It's just a polymorphism, not a disease."** The CDC states that MTHFR variants are "generally not a reason to change treatment." Because the variants are so common (up to 40% of the population), the medical establishment has normalized them as benign polymorphisms rather than recognizing them as clinically actionable targets. However, commonality does not equal benignity -- 40% prevalence means 1.5-2 billion people carry these variants. The potential disease burden is distributed across seven specialties, making it invisible to any single field.
 
@@ -137,9 +137,9 @@ As of March 2026, among approximately 250 active CRISPR/gene editing clinical tr
 
 **5. No one connected the dots.** Thousands of papers exist on individual aspects of MTHFR -- C677T and cardiovascular risk, MTHFR and autism, MTHFR and pregnancy complications. But no published work has unified all seven pathways with structural predictions and proposed a correction strategy. The information existed in fragments across disciplines. This project is the integration.
 
-**6. Gene therapy economics favor rare diseases.** The gene therapy industry has focused on rare diseases (sickle cell, hemophilia, SMA) where small patient populations justify high per-patient pricing ($1-3M per treatment). MTHFR, with 1.5-2 billion carriers, is the opposite -- an extremely common variant. The business model for correcting a common variant has not been established. However, the precedent is shifting: PCSK9 base editing (VERVE-102, YOLT-101) targets a common cardiovascular risk factor, demonstrating that gene editing for common variants is commercially viable.
+**6. Gene therapy economics favor rare diseases.** The gene therapy industry has focused on rare diseases (sickle cell, hemophilia, SMA) where small patient populations justify high per-patient pricing ($1-3M per treatment). MTHFR, with 1.5-2 billion carriers, is the opposite -- an extremely common variant. The business model for correcting a common variant has not been established. However, the precedent is shifting: PCSK9 base editing (VERVE-102, YOLT-101) targets a common cardiovascular risk factor, demonstrating that gene-editing for common variants is commercially viable.
 
-**What has changed:** The convergence of AlphaFold 3 (structural predictions), adenine base editing (proven safe in humans via VERVE-102, YOLT-101), LNP delivery (proven at scale via COVID vaccines and now gene editing), and the 2024 MTHFR cryo-EM structures creates a window that did not exist even two years ago. The question is no longer whether MTHFR correction is technically feasible -- it is whether anyone will pursue it.
+**What has changed:** The convergence of AlphaFold 3 (structural predictions), adenine base editing (proven safe in humans via VERVE-102, YOLT-101), LNP delivery (proven at scale via COVID vaccines and now gene-editing), and the 2024 MTHFR cryo-EM structures creates a window that did not exist even two years ago. The question is no longer whether MTHFR correction is technically feasible -- it is whether anyone will pursue it.
 
 This project exists to make that case.
 
@@ -450,7 +450,7 @@ The A1298C variant (C>A at the DNA level, resulting in E429A) would require a cy
 
 ### 4.7 Safety Architecture: Built-In Safeguards and Emergency Off-Switches
 
-Any gene editing program must address the question: *what happens if something goes wrong?* Should MTHFR base editing advance to experimental testing, we outline a multi-layered safety architecture combining inherent delivery safety with emergency intervention capabilities.
+Any gene-editing program must address the question: *what happens if something goes wrong?* Should MTHFR base editing advance to experimental testing, we outline a multi-layered safety architecture combining inherent delivery safety with emergency intervention capabilities.
 
 **Layer 1: Inherent Safety of LNP-Delivered Base Editing**
 
@@ -509,7 +509,7 @@ A comprehensive monitoring framework would include:
 
 This safety architecture is not theoretical -- every component is either already in clinical use or in active preclinical development. The combination of inherent design safety (no DNA breaks, transient editor, restoring reference allele) with emergency intervention capability (anti-CRISPR proteins) and a reversible alternative pathway (CRISPRoff) provides multiple layers of protection for patients and their families.
 
-For compound heterozygous MTHFR carriers and their families, the question is whether the convergence of structural prediction tools, validated gene editing programs, and delivery technologies justifies experimental testing of genetic correction hypotheses.
+For compound heterozygous MTHFR carriers and their families, the question is whether the convergence of structural prediction tools, validated gene-editing programs, and delivery technologies justifies experimental testing of genetic correction hypotheses.
 
 ### 4.8 Limitations
 
@@ -569,7 +569,7 @@ From computational prioritization to staged experimental follow-up:
 | **2** | Structural benchmarking against experimental reference structures such as PDB 6FCX, molecular dynamics simulations, preprint preparation, researcher outreach | 1-3 months | ~$500 | Next |
 | **3** | Biochemical validation: expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6-12 months | $50K-150K | Requires lab partner |
 | **4** | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-related readouts in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
-| **5** | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene editing partner |
+| **5** | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene-editing partner |
 | **6** | If cell-based feasibility and safety data support further progression: preclinical animal studies using appropriate Mthfr-relevant models and multi-organ outcome measures | 24-36 months | $500K-2M | Requires institutional partner |
 | **7** | If preclinical data support advancement: IND-enabling planning, regulatory strategy development, and early clinical trial concept design | 3-7+ years | $5M+ | Requires biotech or pharma partner |
 
