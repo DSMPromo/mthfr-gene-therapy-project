@@ -1,10 +1,10 @@
 # MTHFR Variant Target Validation Program
 
-### Computational Prioritization of High-Risk MTHFR Variant States for Experimental Validation
+### Computational Prioritization of Selected MTHFR Variant States for Experimental Validation
 
-> This project is a computational hypothesis-prioritization study designed to identify experimentally testable differences among wild-type, single-variant, and compound heterozygous MTHFR states. In the tested AlphaFold 3 and Boltz-2 model configurations, the compound heterozygous dimer produced the lowest reported interaction-confidence values across the assessed dimer-interface and ligand-associated metrics relative to the tested wild-type and single-variant comparators. These observations do not establish mechanism, disease causation, or therapeutic benefit. They support a bounded experimental agenda centered on dimer-level biology, retinal biomarkers, and neuropsychiatric biochemical readouts.
+> This project is a computational hypothesis-prioritization study designed to identify experimentally testable differences among wild-type, single-variant, and compound heterozygous MTHFR states. In the tested AlphaFold 3 and Boltz-2 model configurations, the compound heterozygous dimer produced the lowest reported interaction-confidence values across the assessed dimer-interface and ligand-associated metrics relative to the tested wild-type and single-variant comparators. These observations do not establish mechanism, disease causation, clinical relevance, or therapeutic benefit. They support a bounded experimental agenda focused on dimer-level biology, retinal biomarkers, and neuropsychiatric-relevant biochemical readouts.
 >
-> **Core observation:** Monomer predictions show preserved overall folding across the tested variant states, whereas dimer predictions show inter-chain differences. This is the central finding of the current study.
+> **Core observation:** Across the tested model configurations, monomer predictions showed preserved overall folding confidence, whereas dimer predictions showed comparative inter-chain differences. This is the central computational finding of the current study.
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Status: Active Research](https://img.shields.io/badge/Status-Active%20Research-green.svg)]()
@@ -93,7 +93,7 @@ As of March 2026, we did not identify a registered interventional clinical trial
 
 ---
 
-## My Genetic Variants
+## Author Genotype Context
 
 | Gene | Variant | rsID | Zygosity | Classification | Relevance |
 |------|---------|------|----------|----------------|-----------|
@@ -111,7 +111,7 @@ The computational findings in this project generate specific, testable hypothese
 
 ### Hypothesis 1: Retinal Pathway
 
-Because MTHFR dysfunction has been linked in prior literature to homocysteine-related retinal injury, the retina is a candidate downstream system for validation. The current computational results do not establish efficacy in retinal disease, but they support testing whether high-risk MTHFR states are associated with measurable retinal biomarkers.
+Because MTHFR dysfunction has been linked in prior literature to homocysteine-related retinal injury, the retina is a candidate downstream system for validation. The current computational results do not establish efficacy in retinal disease, but they support testing whether selected MTHFR states are associated with measurable retinal biomarkers.
 
 **Supporting literature:**
 - **Mthfr+/- mice** show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage, without elevated IOP (Markand et al., 2015, *IOVS*)
@@ -123,7 +123,7 @@ Because MTHFR dysfunction has been linked in prior literature to homocysteine-re
 
 ### Hypothesis 2: Neuropsychiatric Pathway
 
-Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pathways, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected high-risk MTHFR states correlate with measurable biochemical and clinical features.
+Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pathways, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected MTHFR states correlate with measurable biochemical and clinical features.
 
 **Supporting literature:**
 - **MTHFR polymorphism** associated with schizophrenia, major depression, autism, bipolar disorder, and ADHD (Wan et al., 2018, *Transl Psychiatry*)
@@ -137,11 +137,11 @@ Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pa
 
 ## Additional Disease Pathways
 
-MTHFR dysfunction has been associated with additional disease-relevant pathways in the literature. If future biochemical and in vivo studies support a causal contribution of selected high-risk MTHFR states, genetic correction could be evaluated as one possible upstream intervention strategy. These pathways are documented here for completeness.
+MTHFR dysfunction has been associated with additional disease-relevant pathways in the literature. If future biochemical and in vivo studies support a causal contribution of selected MTHFR states, genetic correction could be evaluated as one possible upstream intervention strategy. These pathways are documented here for completeness.
 
 Published literature has also reported MTHFR associations with autism/cerebral folate deficiency (Pu et al., 2020; Frye et al., 2018), B-vitamin processing failure (McNulty et al., 2006), cardiovascular disease via homocysteine elevation, transgenerational epigenetic effects in mouse models (Karahan et al., 2021), and adverse pregnancy outcomes including preeclampsia (Xia et al., 2013) and recurrent pregnancy loss (Kumar et al., 2024). These are documented in the [full research paper](docs/RESEARCH_PAPER_DRAFT.md) but are not the primary focus of this computational study.
 
-**Working hypothesis:** The compound heterozygous MTHFR dimer shows lower predicted confidence for cofactor-associated and substrate-associated interactions relative to wild-type. These results support experimental testing of whether selected high-risk MTHFR states contribute to measurable dysfunction in retinal and neuropsychiatric-relevant pathways, and whether genetic correction could theoretically modulate enzyme activity relative to wild-type, contingent on experimental validation.
+**Working hypothesis:** The compound heterozygous MTHFR dimer shows lower predicted confidence for cofactor-associated and substrate-associated interactions relative to wild-type. These comparative computational results support experimental testing of whether selected MTHFR variant states are associated with measurable differences in retinal and neuropsychiatric-relevant biomarkers or pathway readouts, and whether sequence correction strategies could theoretically alter enzyme behavior relative to wild-type, subject to extensive experimental validation.
 
 ---
 
@@ -201,9 +201,9 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 | **Compound dimer** | **0.745** | **0.715** | **0.540** | **96.5** | **95.15** |
 
 **Key observations (replicated across independent seeds):**
-- **Monomer predictions show all variants fold correctly** (ipTM 0.97-0.98) -- the mutations do not destroy the protein fold
+- **Monomer predictions show preserved overall folding confidence** (ipTM 0.97-0.98) -- the tested monomer predictions do not suggest large-scale loss of overall fold confidence
 - **Dimer predictions reveal inter-chain effects** -- FAD binding confidence drops from 0.97 (monomer) to 0.53-0.58 (dimer), consistent with known cooperativity in the homodimer
-- **The compound heterozygous dimer shows the weakest predicted interaction profile** across every metric in both runs: pTM (0.73/0.76), ipTM (0.70/0.73), FAD binding (0.53/0.55), pLDDT@429 (95.0/95.3)
+- **The compound heterozygous dimer yielded the lowest reported interaction-confidence values** across the reported comparative metrics in both runs: pTM (0.73/0.76), ipTM (0.70/0.73), FAD binding (0.53/0.55), pLDDT@429 (95.0/95.3)
 - **Compound heterozygous dimers averaged lower than the tested comparators** -- ipTM 0.715 vs WT 0.740 and C677T 0.765, consistent with a possible combined destabilizing effect at the dimer level
 - **Results replicate** -- independent random seeds produce consistent trends, supporting the reproducibility of these observations
 - **Position 429 showed the largest confidence decrease** among the reported local metrics in compound dimers -- pLDDT 95.0-95.3 vs 95.8-96.2 in WT, consistent with possible regulatory-domain involvement at the dimer level
@@ -214,11 +214,11 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 
 ---
 
-## What the Research Shows
+## Structural and Literature Context
 
 ### Key Finding: Structural Context for MTHFR Variants
 
-The 2024 cryo-EM structures (PDB 8QA5, 8QA6) revealed for the first time how SAM-mediated allosteric inhibition works through **dual SAM binding** that reorients the catalytic domain and blocks substrate access. This provides critical structural context for understanding the A1298C (E429A) variant, which sits in the regulatory domain near the SAM-binding pocket.
+The 2024 cryo-EM structures (PDB 8QA5, 8QA6) revealed for the first time how SAM-mediated allosteric inhibition works through **dual SAM binding** that reorients the catalytic domain and blocks substrate access. This provides structural context relevant to interpretation of the A1298C (E429A) variant, which sits in the regulatory domain near the SAM-binding pocket.
 
 The 2006 structural perturbation study (Pejchal et al.) showed that the C677T (A222V) variant displaces **helix alpha-5**, which carries three FAD-interacting residues (Asn168, Arg171, Lys172). This is consistent with the observed thermolability; the variant enzyme may have reduced FAD cofactor stability at physiological temperature.
 
@@ -235,7 +235,7 @@ The author also carries MTRR I22M (rs1801394), which is involved in B12 regenera
 | Casgevy | Vertex/CRISPR | Sickle cell / beta-thal | Ex vivo | **FDA Approved (2023)** |
 | YOLT-101 | YolTech | PCSK9 (next-gen ABE) | IV LNP | Phase 1 (2025) |
 
-At the sequence level, C677T appears conceptually compatible with **adenine base editing (ABE)** logic, which converts A-T base pairs to G-C base pairs. However, edit window, guide design, bystander edits, tissue targeting, and functional rescue would all need empirical validation.
+At the sequence level, C677T appears theoretically compatible with **adenine base editing (ABE)** logic, which converts A-T base pairs to G-C base pairs. However, edit window, guide design, bystander edits, tissue targeting, and functional rescue would all need empirical validation.
 
 ---
 
@@ -457,8 +457,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
 *I'm not a doctor. I'm not a biohacker. I'm a cybersecurity guy and cloud architect who looked at his DNA results, started asking questions, and used AI tools to organize what I found. I don't have a lab. I don't have a PhD. I built this project to hand it to the real scientists who can take it further.*
 
-*The structural predictions are reproducible, the references are verified, and the analysis pipeline is open source. I am not qualified to determine whether these computational differences are biologically meaningful, but I have tried to make the question easier for qualified researchers to test.*
+*The structural workflow is reproducible within the documented pipeline, the cited references have been checked against primary or database sources, and the analysis pipeline is open source. I am not qualified to determine whether these computational differences are biologically meaningful, but I have tried to make the question easier for qualified researchers to test.*
 
 *If you are a clinician or researcher, I hope this project helps define a tractable experimental path. If you are a patient or family member, this project should be read as a research document, not as medical guidance. Variant status needs clinical interpretation in context with symptoms, labs, and the broader medical picture.*
 
-*I want to help future generations not have to go through what so many people are going through right now.*
+*My goal is to help move a testable research question into the hands of qualified scientists who can evaluate it rigorously.*

@@ -1,4 +1,4 @@
-# MTHFR Variant Target Validation: Computational Prioritization of High-Risk MTHFR Variant States for Experimental Validation
+# MTHFR Variant Target Validation: Computational Prioritization of Selected MTHFR Variant States for Experimental Validation
 
 ## A Hypothesis-Prioritization Study Using AlphaFold 3 and Boltz-2
 
@@ -22,7 +22,7 @@
 
 ## Abstract
 
-Methylenetetrahydrofolate reductase (MTHFR) variants C677T (A222V) and A1298C (E429A) affect up to 40% of the global population, yet their structural consequences on FAD cofactor binding and folate substrate access at the dimer level remain incompletely characterized. We used AlphaFold 3 Server and Boltz-2 to predict the structures of wild-type, C677T, A1298C, and compound heterozygous MTHFR in complex with FAD, folate substrate (THF), and allosteric inhibitor (SAM). Across 16 structural predictions with independent replication seeds, we compared pTM, ipTM, ligand binding confidence, pLDDT at mutation sites (positions 222 and 429), and predicted aligned error (PAE). Monomer predictions show minimal differences between variants (ipTM 0.97 across all), but dimer predictions reveal a reproducible signal: the compound heterozygous dimer shows the weakest predicted interaction profile across every metric (AlphaFold: pTM 0.73, ipTM 0.70, FAD binding 0.53; Boltz-2: ligand ipTM 0.878 vs 0.974 wild-type for THF substrate binding). These observations generate falsifiable hypotheses for two candidate downstream systems: (1) the retinal pathway, where prior literature links MTHFR dysfunction to homocysteine-related ganglion cell injury, and (2) neuropsychiatric pathways, where A1298C may impair BH4-dependent neurotransmitter synthesis. The present work is intended to prioritize experiments, define measurable hypotheses, and support collaboration with structural biology, metabolic disease, retinal, and neuropsychiatric researchers. All predictions require orthogonal validation through experimental methods.
+Methylenetetrahydrofolate reductase (MTHFR) variants C677T (A222V) and A1298C (E429A) affect up to 40% of the global population, yet their structural consequences on FAD cofactor binding and folate substrate access at the dimer level remain incompletely characterized. We used AlphaFold 3 Server and Boltz-2 to predict the structures of wild-type, C677T, A1298C, and compound heterozygous MTHFR in complex with FAD, folate substrate (THF), and allosteric inhibitor (SAM). Across 16 structural predictions with independent replication seeds, we compared pTM, ipTM, ligand binding confidence, pLDDT at mutation sites (positions 222 and 429), and predicted aligned error (PAE). Monomer predictions show minimal differences between variants (ipTM 0.97 across all), but dimer predictions reveal a reproducible signal: the compound heterozygous dimer yielded the lowest reported interaction-confidence values across the assessed metrics (AlphaFold: pTM 0.73, ipTM 0.70, FAD binding 0.53; Boltz-2: ligand ipTM 0.878 vs 0.974 wild-type for THF substrate binding). These observations generate falsifiable hypotheses for two candidate downstream systems: (1) the retinal pathway, where prior literature has linked MTHFR-related one-carbon pathway disruption to homocysteine-associated ganglion cell injury, and (2) neuropsychiatric pathways, where A1298C has been discussed in relation to BH4-relevant neurotransmitter biology. The present work is intended to prioritize experiments, define measurable hypotheses, and support collaboration with structural biology, metabolic disease, retinal, and neuropsychiatric researchers. All predictions require orthogonal validation through experimental methods.
 
 **Note:** This is a computational study generating hypotheses for experimental validation. All structural predictions require confirmation through experimental methods (cryo-EM, X-ray crystallography, functional assays).
 
@@ -607,7 +607,7 @@ This is an open research project seeking collaboration with:
 - **Clinical researchers:** To establish clinical correlations across all seven disease pathways, particularly stratified by MTRR status
 - **Bioinformaticians:** To independently replicate, extend, and improve the computational analysis
 - **Epigeneticists:** To profile genome-wide methylation consequences of compound heterozygous MTHFR
-- **Reproductive medicine specialists:** To investigate MTHFR-guided management of high-risk pregnancies
+- **Reproductive medicine specialists:** To investigate MTHFR-guided management of pregnancies in defined MTHFR variant cohorts
 
 All data, code, and results are freely available under CC BY-NC-SA 4.0.
 

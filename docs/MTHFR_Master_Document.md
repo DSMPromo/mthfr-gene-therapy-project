@@ -182,7 +182,7 @@ Any future gene editing program would need to address safety. The following are 
 
 At the target base, a successful correction strategy would aim to restore the reference allele sequence rather than introduce a novel coding change.
 
-At the sequence level, C677T appears conceptually compatible with adenine base editing (ABE) logic, which converts A-T base pairs to G-C base pairs. However, edit window, guide design, bystander edits, tissue targeting, and functional rescue would all need empirical validation.
+At the sequence level, C677T appears theoretically compatible with adenine base editing (ABE) logic, which converts A-T base pairs to G-C base pairs. However, edit window, guide design, bystander edits, tissue targeting, and functional rescue would all need empirical validation.
 
 ---
 
