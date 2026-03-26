@@ -1,6 +1,6 @@
 # MTHFR Variant Hypothesis Prioritization Program
 
-### Computational Prioritization of Selected MTHFR Variant States for Experimental Validation
+### Computational Prioritization of Selected MTHFR Variant States for Experimental Follow-Up
 
 > This project is a computational hypothesis-prioritization study designed to identify experimentally testable differences among wild-type, single-variant, and compound heterozygous MTHFR states. In the tested AlphaFold 3 and Boltz-2 model configurations, the compound heterozygous dimer yielded the lowest reported interaction-confidence values across the assessed dimer-interface and ligand-associated metrics relative to the tested wild-type and single-variant comparators. These observations do not establish mechanism, disease causation, clinical relevance, or therapeutic benefit. They support a bounded experimental agenda focused on dimer-level biology, retinal biomarkers, and neuropsychiatric-relevant biochemical readouts.
 >
@@ -126,7 +126,7 @@ Because prior literature has linked MTHFR-related one-carbon pathway disruption 
 
 **Proposed validation:** Correlate MTHFR genotype with retinal OCT measurements, homocysteine levels, and visual acuity in defined patient cohorts.
 
-### Hypothesis 2: Neuropsychiatric Pathway
+### Hypothesis 2: Neuropsychiatric-Relevant Biochemical Follow-Up
 
 Because one-carbon pathway disruption may influence BH4-dependent neurotransmitter biology, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected MTHFR states are associated with measurable biochemical and clinical features.
 
@@ -300,7 +300,7 @@ These experiments would move the project from computational prioritization (Phas
 Across 16 structural predictions on two independent platforms (AlphaFold 3 and Boltz-2) with replicated random seeds, the compound heterozygous MTHFR dimer consistently yielded the lowest interaction-confidence values. Monomers fold normally. The differences emerge at the dimer level.
 
 **Why the question matters:**
-Up to 40% of the global population carries at least one MTHFR variant. If even a fraction of compound heterozygous individuals show measurable dimer-level dysfunction, the downstream implications span retinal, neuropsychiatric, and metabolic biology.
+Up to 40% of the global population carries at least one MTHFR variant. If compound heterozygous individuals show measurable dimer-level dysfunction, the downstream implications would justify focused follow-up in retinal and metabolic-relevant systems.
 
 **What this study does not claim:**
 It does not claim mechanism. It does not claim disease causation. It does not claim therapeutic readiness. It claims a reproducible computational ranking that prioritizes specific experimental questions.
