@@ -32,17 +32,13 @@
 
 ---
 
-## Who I Am (And Who I Am Not)
+## About the Author
 
-**I'm not a biohacker. I'm not trying to be something I'm not.**
+My name is Igor Mihaljko. I come from outside biomedical research -- I'm a cybersecurity specialist and cloud architect with 20+ years in IT. I approached this as a structured computational investigation after discovering I carry compound heterozygous MTHFR variants (C677T + A1298C).
 
-My name is Igor Mihaljko. I'm a cybersecurity specialist, cloud solution architect, and infrastructure architect with 20+ years in IT. I run an AI marketing agency called DSM.Promo in Chicago.
+When I started researching what this means, I found literature spanning multiple disease categories and built this project to synthesize that literature alongside structural predictions in one open framework. I built this as an open starting point for researchers who want to evaluate these questions experimentally. The sequences, protocols, and analysis pipeline are included for replication and critique.
 
-I'm just a guy who thinks outside the box. I looked at my genetic test results, started asking questions that crossed the boundaries between medical specialties, and used AI tools to organize what I found. This project exists because I believe the next generation deserves better -- and sometimes it takes someone from outside a field to see what the people inside it can't.
-
-**This project started with my own DNA.** I discovered I carry compound heterozygous MTHFR mutations (C677T + A1298C). When I started researching what this means, I found that the same variant enzyme is connected to seven disease categories explored in the literature -- and nobody had put the full picture together in one place.
-
-I built this project to hand it to the real scientists. Everything is here -- the sequences, the protocols, the analysis pipeline. Take it. Build on it. Prove me wrong or prove me right.
+See [FOUNDERS_NOTE.md](FOUNDERS_NOTE.md) for the full story behind this project.
 
 ---
 
@@ -64,7 +60,7 @@ A search of ClinicalTrials.gov (March 2026) found no registered MTHFR-targeted g
 
 | Observation | Context |
 |-------------|---------|
-| Common variant, not classic disease gene | 40% carrier prevalence leads to classification as polymorphism rather than disease target |
+| Common variant, not classic disease gene | High population prevalence has led these variants to be framed as common polymorphisms rather than direct interventional targets |
 | Supplementation available | Methylfolate, riboflavin, B12 partially compensate, reducing perceived urgency for genetic correction |
 | Cross-specialty fragmentation | Relevant disease associations span 7+ specialties; no single field owns the integrated picture |
 | Structural data only recently available | First human MTHFR crystal structure 2018 (PDB 6FCX), cryo-EM 2024 (PDB 8QA5, 8QA6) |
@@ -91,9 +87,9 @@ A search of ClinicalTrials.gov (March 2026) found no registered MTHFR-targeted g
 | Variant | rsID | Position | Domain | Mechanism | Population Frequency |
 |---------|------|----------|--------|-----------|---------------------|
 | **C677T (A222V)** | [rs1801133](https://www.ncbi.nlm.nih.gov/clinvar/?term=rs1801133) | 222 (catalytic) | FAD-binding TIM-barrel | Displaces helix alpha-5, disrupting FAD-interacting residues Asn168, Arg171, Lys172. Creates thermolabile enzyme. ~35% activity loss per allele. | 24-50% (varies by ethnicity) |
-| **A1298C (E429A)** | [rs1801131](https://www.ncbi.nlm.nih.gov/clinvar/?term=rs1801131) | 429 (regulatory) | SAM-binding domain | Near the SAM-binding pocket identified in 2024 cryo-EM structures. Impairs BH4 recycling. ~30% activity loss per allele. | ~25% European |
+| **A1298C (E429A)** | [rs1801131](https://www.ncbi.nlm.nih.gov/clinvar/?term=rs1801131) | 429 (regulatory) | SAM-binding domain | Has been discussed in relation to BH4-related pathways and lies near the regulatory region implicated by 2024 cryo-EM structures. Reported ~30% activity reduction per allele. | ~25% European |
 
-**Compound heterozygosity** (one copy of each) produces ~50-60% of normal enzyme activity -- a dual hit affecting both catalytic function and regulatory feedback simultaneously.
+**Compound heterozygosity** has been reported to reduce overall enzyme activity relative to wild-type in prior literature, with effects that may involve both catalytic and regulatory context.
 
 ---
 
@@ -103,7 +99,7 @@ A search of ClinicalTrials.gov (March 2026) found no registered MTHFR-targeted g
 |------|---------|------|----------|----------------|-----------|
 | **MTHFR** | **C677T (A222V)** | rs1801133 | **Hetero (AG)** | Clinically Significant | Catalytic domain -- FAD cofactor binding destabilized. All 7 disease targets. |
 | **MTHFR** | **A1298C (E429A)** | rs1801131 | **Hetero (TG)** | Conflicting/Uncertain | Regulatory domain -- BH4/neurotransmitter pathway impaired. Anxiety, B-vitamins. |
-| **MTRR** | **I22M (c.66A>G)** | rs1801394 | **Hetero (AG)** | Likely Pathogenic | B12 metabolism cofactor -- compounds the MTHFR methylation defect (triple-hit). |
+| **MTRR** | **I22M (c.66A>G)** | rs1801394 | **Hetero (AG)** | Likely Pathogenic | B12 metabolism cofactor -- may place additive pressure on one-carbon metabolism. |
 
 > **Voluntary Disclosure:** I am sharing my genetic variant data voluntarily because I believe transparency strengthens this research. This is my personal decision. You should never feel pressured to share your genetic information publicly. If you want to contribute your own data to this project, you can do so anonymously.
 
@@ -153,11 +149,11 @@ B2 cannot regenerate FAD for the already-weakened enzyme; B12 gets trapped in in
 
 ### Cardiovascular Disease and Stroke
 
-Every 5 umol/L increase in plasma homocysteine is associated with 20-30% higher coronary artery disease risk. The same vascular injury mechanism affecting the retina occurs throughout the body.
+Every 5 umol/L increase in plasma homocysteine is associated with 20-30% higher coronary artery disease risk. Homocysteine-related vascular mechanisms observed in retinal literature may also be relevant to systemic vascular biology, though this project does not test that directly.
 
 ### Genome-Wide DNA Methylation Disruption
 
-MTHFR produces methyl groups used by >200 methyltransferases. Mthfr-deficient male mice show transgenerational loss of sperm DNA methylation persisting across F1 and F2 generations (Karahan et al., 2021). This means MTHFR dysfunction can affect children and grandchildren through epigenetic inheritance.
+MTHFR produces methyl groups used by >200 methyltransferases. Mthfr-deficient male mice show transgenerational loss of sperm DNA methylation persisting across F1 and F2 generations (Karahan et al., 2021). In mouse models, Mthfr deficiency has been associated with transgenerational sperm DNA methylation effects, which supports further investigation of epigenetic consequences.
 
 ### Pregnancy Complications and Reproductive Health
 
@@ -251,7 +247,7 @@ The 2006 structural perturbation study (Pejchal et al.) showed that the C677T (A
 
 ### The MTRR Compounding Effect
 
-The author also carries MTRR I22M (rs1801394), which impairs B12 regeneration -- the enzyme immediately downstream of MTHFR. This creates a **triple-hit** to the methylation cycle: less substrate produced (MTHFR), impaired regulation (A1298C), AND less-functional downstream cofactor (MTRR). This may explain why some compound heterozygous individuals are more severely affected than others.
+The author also carries MTRR I22M (rs1801394), which is involved in B12 regeneration -- the enzyme immediately downstream of MTHFR. This combination could place additive pressure on one-carbon metabolism by affecting upstream folate handling and downstream B12-dependent recycling. Whether this co-occurrence contributes to phenotypic variability among compound heterozygous individuals warrants investigation.
 
 ### Therapeutic Precedent: Base Editing Is Working in Humans
 
@@ -449,7 +445,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 - **Gene therapy researchers:** Base editor guide RNA design and testing for C677T correction in cell lines
 - **Replication:** Independent researchers reproducing and extending the computational analysis
 
-**If you're not a scientist:** Share this project. Get tested for MTHFR. Tell your doctor about it. The more people who know, the more pressure there is to take this seriously.
+**If you're not a scientist:** Share this project with researchers who might find it useful. If you are a patient or family member, discuss any testing or interpretation questions with a qualified clinician.
 
 ---
 
