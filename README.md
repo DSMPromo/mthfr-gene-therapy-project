@@ -324,10 +324,10 @@ From computational predictions to real therapy -- here's the path forward:
 | **1** | Computational foundation -- AlphaFold predictions, 7-pathway thesis, safety architecture, open-source repo | **Done** | **$0** | ✅ **Complete** |
 | **2** | MD simulations, guide RNA design, bioRxiv preprint, researcher outreach | 1-3 months | ~$500 | Next |
 | **3** | Experimental validation -- express proteins, measure FAD binding, test ABE in cell lines | 6-18 months | $50K-200K | Needs lab partner |
-| **4** | Preclinical animal studies -- Mthfr+/- mice, LNP-ABE injection, multi-organ endpoints | 12-24 months | $500K-2M | Needs institution |
-| **5** | IND filing + Phase 1 clinical trial design | 24-36 months | $5M-20M | Needs biotech |
-| **6** | Clinical trials (Phase 1→2→3) | 3-7 years | $50M-500M | Needs pharma |
-| **7** | Market launch + global access | Post-approval | -- | 1.5-2B people affected |
+| **4** | Preclinical: retinal pathway (Mthfr+/- mice, intravitreal ABE, retinal OCT) + neuropsych endpoints | 12-24 months | $500K-2M | Needs institution |
+| **5** | IND filing + Phase 1 trial design (retinal indication first -- established delivery route) | 24-36 months | $5M-20M | Needs biotech |
+| **6** | Clinical trials (Phase 1→2→3), retinal + neuropsych indications | 3-7 years | $50M-500M | Needs pharma |
+| **7** | Market launch + expansion to additional MTHFR-linked indications | Post-approval | -- | 1.5-2B people affected |
 
 **Where we are now:** Phase 1 complete. The computational foundation exists. Every sequence, every prediction, every analysis, every reference -- documented and replicable. Built for $0.
 
@@ -426,13 +426,13 @@ All references have been verified against PubMed and primary sources (March 2026
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
-**If you're a scientist:** We need structural biologists, molecular biologists, ophthalmologists, neuroscientists, psychiatrists, gene therapy researchers, and bioinformaticians. [Open an issue](../../issues/new?template=collaboration.md) or email me.
+**If you're a scientist:** We're focused on two primary targets -- retinal neurodegeneration and neuropsychiatric disorders -- because these have the strongest preclinical evidence and clearest path to clinical trials. We believe the structural data may have broader implications, but we're choosing to focus where the science is strongest. [Open an issue](../../issues/new?template=collaboration.md) or email me.
 
 **What we're looking for:**
-- **Validation:** Are the AlphaFold predictions biologically sensible?
-- **Experimental structures:** Cryo-EM of C677T/A1298C variants with FAD
-- **Wet-lab work:** Base editor guide RNA design and testing for C677T
-- **Clinical correlation:** Prospective studies of compound heterozygous individuals across all seven pathways
+- **Ophthalmologists / Retinal researchers:** Validate the retinal neurodegeneration pathway. Existing Mthfr+/- mouse models show ganglion cell loss -- can we test base editing correction via intravitreal delivery?
+- **Psychiatrists / Neuroscientists:** The A1298C/BH4/neurotransmitter connection may explain treatment-resistant anxiety and depression. Is this mechanism well-characterized enough for clinical investigation?
+- **Structural biologists:** Are the AlphaFold/Boltz-2 predictions biologically sensible? Cryo-EM of C677T/A1298C variants with FAD would validate or refute our computational findings
+- **Gene therapy researchers:** Base editor guide RNA design and testing for C677T correction in cell lines
 - **Replication:** Independent researchers reproducing and extending the computational analysis
 
 **If you're not a scientist:** Share this project. Get tested for MTHFR. Tell your doctor about it. The more people who know, the more pressure there is to take this seriously.
@@ -466,8 +466,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
 ---
 
-*I'm not a doctor. I'm not a biohacker. I'm a cybersecurity guy and cloud architect who looked at his DNA results, fell down a research rabbit hole, and realized that the dots nobody was connecting could potentially help billions of people. I don't have a lab. I don't have a PhD. I built this project to hand it to the real scientists. Everything is here -- the sequences, the protocols, the analysis pipeline. Take it. Build on it. Prove me wrong or prove me right.*
+*I'm not a doctor. I'm not a biohacker. I'm a cybersecurity guy and cloud architect who looked at his DNA results, started asking questions, and used AI tools to organize what I found. I don't have a lab. I don't have a PhD. I'm just someone who thinks outside the box.*
 
-*If you're a researcher who can take this further, please reach out. If you're a parent of a child with autism, or someone living with unexplained anxiety, or someone losing their vision -- get tested for MTHFR. Know your status. It might explain everything.*
+*I believe this data could be important for people losing their vision and people struggling with anxiety and depression that doesn't respond to standard treatment. Maybe I'm right, maybe I'm wrong -- I'm not qualified to say. But the structural predictions are real, the references are verified, and the analysis is replicable. I built this project to hand it to the real scientists who can take it further.*
+
+*We're focusing on retinal neurodegeneration and neuropsychiatric disorders because these seem to have the strongest evidence and the clearest path to clinical trials -- existing mouse models, proven delivery routes, documented human case reversals. I think so, at least. I'm not a doctor. But the data is here for anyone who is.*
+
+*If you're a researcher who can validate this, please reach out. If you're someone losing their vision or living with unexplained anxiety -- get tested for MTHFR. Know your status. It might explain everything.*
 
 *I want to help future generations not have to go through what so many people are going through right now.*
