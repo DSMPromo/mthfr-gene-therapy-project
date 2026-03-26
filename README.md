@@ -34,7 +34,7 @@
 
 ## About the Author
 
-My name is Igor Mihaljko. I come from outside biomedical research -- I'm a cybersecurity specialist and cloud architect with 20+ years in IT. I approached this as a structured computational investigation after discovering I carry compound heterozygous MTHFR variants (C677T + A1298C).
+My name is Igor Mihaljko. I come from outside biomedical research. I'm a cybersecurity specialist and cloud architect with 20+ years in IT. I approached this as a structured computational investigation after discovering I carry compound heterozygous MTHFR variants (C677T + A1298C).
 
 When I started researching what this means, I found literature spanning multiple disease categories and built this project to synthesize that literature alongside structural predictions in one open framework. I built this as an open starting point for researchers who want to evaluate these questions experimentally. The sequences, protocols, and analysis pipeline are included for replication and critique.
 
@@ -52,7 +52,7 @@ See [FOUNDERS_NOTE.md](FOUNDERS_NOTE.md) for the full story behind this project.
 
 MTHFR dysfunction has been studied extensively within individual medical specialties -- ophthalmology, psychiatry, neurology, cardiology, nutrition, reproductive medicine, and genetics. However, these investigations have largely proceeded in parallel rather than as an integrated body of evidence.
 
-This project attempts to bring the structural biology perspective into that conversation. We do not claim to have connected dots that others missed -- we are synthesizing published literature and adding computational structural data to support experimental prioritization.
+This project attempts to bring the structural biology perspective into that conversation. We do not claim to have connected dots that others missed; we are synthesizing published literature and adding computational structural data to support experimental prioritization.
 
 ### Possible Reasons MTHFR Has Not Yet Advanced as a Gene Editing Program
 
@@ -66,13 +66,13 @@ As of March 2026, we did not identify a registered interventional clinical trial
 | Structural data only recently available | First human MTHFR crystal structure 2018 (PDB 6FCX), cryo-EM 2024 (PDB 8QA5, 8QA6) |
 | Gene editing precedent emerging | Human base-editing programs show that precise in vivo correction strategies are feasible for selected targets, though target biology, delivery, benefit-risk, and regulatory path remain highly target-specific |
 
-**Why this question is now technically more testable:** Recent advances in structure prediction, human base-editing programs for other targets, scalable nucleic acid delivery systems, and new human MTHFR structural data make experimental assessment of MTHFR correction more technically discussable than before. They do not establish MTHFR as a validated therapeutic target. This project asks whether these conditions warrant a bounded experimental investigation.
+**Why this question is now technically more testable:** Recent advances in structure prediction, human base-editing programs for other targets, scalable nucleic acid delivery systems, and new human MTHFR structural data make experimental assessment of MTHFR correction more technically discussable than before. They do not establish MTHFR as a validated therapeutic target. This project asks whether these conditions support a bounded experimental investigation.
 
 ---
 
 ## The MTHFR Enzyme
 
-**MTHFR** (methylenetetrahydrofolate reductase, EC 1.5.1.20) is a FAD-dependent homodimeric enzyme that converts 5,10-methylenetetrahydrofolate to 5-methyltetrahydrofolate -- the primary circulating form of folate and the methyl donor for converting homocysteine to methionine.
+**MTHFR** (methylenetetrahydrofolate reductase, EC 1.5.1.20) is a FAD-dependent homodimeric enzyme that converts 5,10-methylenetetrahydrofolate to 5-methyltetrahydrofolate, the primary circulating form of folate and the methyl donor for converting homocysteine to methionine.
 
 ### Known Structures
 
@@ -152,7 +152,7 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 ### Methodology
 
 - **Sequences:** All derived from canonical [UniProt P42898](https://www.uniprot.org/uniprotkb/P42898/entry) (656 amino acids) with verified mutations at positions 222 and 429
-- **Predictions:** 16 jobs total -- monomers, homodimers, heterodimers, with FAD, THF (folate substrate), and SAM (allosteric inhibitor)
+- **Predictions:** 16 jobs total (monomers, homodimers, heterodimers, with FAD, THF, and SAM)
 - **Replication:** Each core prediction run with independent random seeds for statistical comparison
 - **Upload-ready JSON files** included in `alphafold/jobs/json/` for one-click replication
 
@@ -220,11 +220,11 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 
 The 2024 cryo-EM structures (PDB 8QA5, 8QA6) revealed for the first time how SAM-mediated allosteric inhibition works through **dual SAM binding** that reorients the catalytic domain and blocks substrate access. This provides critical structural context for understanding the A1298C (E429A) variant, which sits in the regulatory domain near the SAM-binding pocket.
 
-The 2006 structural perturbation study (Pejchal et al.) showed that the C677T (A222V) variant displaces **helix alpha-5**, which carries three FAD-interacting residues (Asn168, Arg171, Lys172). This is consistent with the observed thermolability -- the variant enzyme may have reduced FAD cofactor stability at physiological temperature.
+The 2006 structural perturbation study (Pejchal et al.) showed that the C677T (A222V) variant displaces **helix alpha-5**, which carries three FAD-interacting residues (Asn168, Arg171, Lys172). This is consistent with the observed thermolability; the variant enzyme may have reduced FAD cofactor stability at physiological temperature.
 
 ### The MTRR Compounding Effect
 
-The author also carries MTRR I22M (rs1801394), which is involved in B12 regeneration -- the enzyme immediately downstream of MTHFR. This combination could place additive pressure on one-carbon metabolism by affecting upstream folate handling and downstream B12-dependent recycling. Whether this co-occurrence contributes to phenotypic variability among compound heterozygous individuals warrants investigation.
+The author also carries MTRR I22M (rs1801394), which is involved in B12 regeneration, the enzyme immediately downstream of MTHFR. This combination could place additive pressure on one-carbon metabolism by affecting upstream folate handling and downstream B12-dependent recycling. Whether this co-occurrence contributes to phenotypic variability among compound heterozygous individuals warrants investigation.
 
 ### Therapeutic Precedent: Base Editing Is Working in Humans
 
@@ -296,7 +296,7 @@ open analysis/outputs/report.html
 
 ## Development Roadmap
 
-From computational observations to experimental validation -- here's the path forward:
+From computational observations to experimental validation:
 
 | Phase | What | Timeline | Cost | Status |
 |-------|------|----------|------|--------|
@@ -308,7 +308,7 @@ From computational observations to experimental validation -- here's the path fo
 | **6** | If cell-based feasibility and safety data support further development: preclinical animal studies (Mthfr+/- mice, multi-organ endpoints) | 24-36 months | $500K-2M | Needs institution |
 | **7** | If preclinical success: IND filing, clinical trial design, regulatory pathway | 3-7+ years | $5M+ | Needs biotech/pharma |
 
-**Where we are now:** Phase 1 complete. The computational foundation exists. Every sequence, every prediction, every analysis, every reference -- documented and replicable. Built for $0.
+**Where we are now:** Phase 1 complete. The computational foundation exists. Every sequence, every prediction, every analysis, every reference, documented and replicable. Built for $0.
 
 **The critical next step:** Get a researcher with a wet lab to say "yes." Everything in this repo is designed to make that conversation happen.
 
@@ -402,7 +402,7 @@ All references have been verified against PubMed and primary sources (March 2026
 17. Abramson J, et al. (2024). *Nature*, 630:493-500. [Nature](https://www.nature.com/articles/s41586-024-07487-w) -- AlphaFold 3: accurate structure prediction of biomolecular interactions
 
 ### Gene Therapy and Base Editing
-18. YOLT-101 Phase 1 Clinical Data. (2025). [YolTech](https://www.yoltx.com/news/press-release/95) -- Next-gen adenine base editor, good safety, no SAEs
+18. YOLT-101 Phase 1 Clinical Data. (2025). [YolTech](https://www.yoltx.com/news/press-release/95) -- Next-gen adenine base editor, Phase 1 clinical data
 
 ### Key Database Links
 [UniProt P42898](https://www.uniprot.org/uniprotkb/P42898/entry) | [PDB 6FCX](https://www.rcsb.org/structure/6FCX) | [PDB 8QA5](https://www.rcsb.org/structure/8QA5) | [PDB 8QA6](https://www.rcsb.org/structure/8QA6) | [ClinVar rs1801133](https://www.ncbi.nlm.nih.gov/clinvar/?term=rs1801133) | [ClinVar rs1801131](https://www.ncbi.nlm.nih.gov/clinvar/?term=rs1801131)
