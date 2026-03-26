@@ -168,7 +168,7 @@ MTHFR variants are associated with multiple adverse pregnancy outcomes.
 - **Neural tube defects:** MTHFR is the key enzyme in the folate pathway that prevents NTDs; global folic acid fortification was designed partly because of MTHFR variant prevalence
 - VTE in pregnancy: 50% of compound heterozygous patients vs 28.6% wild-type (Liew & Gupta, 2015)
 
-**Working hypothesis:** The compound heterozygous MTHFR dimer shows lower predicted confidence for cofactor-associated and substrate-associated interactions relative to wild-type. These results support experimental testing of whether selected high-risk MTHFR states contribute to measurable dysfunction in retinal and neuropsychiatric-relevant pathways, and whether genetic correction could restore enzyme activity toward wild-type levels.
+**Working hypothesis:** The compound heterozygous MTHFR dimer shows lower predicted confidence for cofactor-associated and substrate-associated interactions relative to wild-type. These results support experimental testing of whether selected high-risk MTHFR states contribute to measurable dysfunction in retinal and neuropsychiatric-relevant pathways, and whether genetic correction could theoretically modulate enzyme activity relative to wild-type, contingent on experimental validation.
 
 ---
 
@@ -272,7 +272,7 @@ Any gene therapy must answer this question. We propose a multi-layered safety ap
 
 | Layer | Mechanism | Status |
 |-------|-----------|--------|
-| **1. Inherent safety** | Base editing has no DNA breaks; LNP mRNA degrades in 48 hours; restores wild-type (not novel) protein | Built into platform |
+| **1. Inherent safety** | Base editing has no DNA breaks; LNP mRNA degrades in 48 hours; restores wild-type (not novel) protein | Built into design |
 | **2. Guide RNA screening** | Comprehensive off-target analysis before treatment (Cas-OFFinder, GUIDE-seq, whole-genome sequencing) | Standard practice |
 | **3. Anti-CRISPR off-switch** | Emergency LNP dose carrying anti-CRISPR proteins (AcrIIA4) to neutralize any residual editor | Demonstrated in mice |
 | **4. CRISPRoff reversible option** | Epigenetic silencing as a reversible "test run" before permanent editing; reversed with TET1 demethylase | Moving to clinical (2025) |

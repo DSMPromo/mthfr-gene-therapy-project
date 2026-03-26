@@ -357,7 +357,7 @@ def main():
     # Title
     ax.text(5, 9.5, 'MTHFR Target Validation Program', fontsize=20, fontweight='bold',
             ha='center', color='#1B3A5C')
-    ax.text(5, 9.0, 'Two Primary Clinical Targets', fontsize=14, ha='center', color='#2E75B6')
+    ax.text(5, 9.0, 'Candidate Disease Pathways for Experimental Validation', fontsize=14, ha='center', color='#2E75B6')
 
     # Central enzyme box
     enzyme_box = plt.Rectangle((3.5, 5.5), 3, 1.5, facecolor='#FFE0B2',
@@ -370,22 +370,22 @@ def main():
     vision_box = plt.Rectangle((0.3, 2.5), 3.5, 2.5, facecolor='#E3F2FD',
                                 edgecolor='#1565C0', linewidth=2)
     ax.add_patch(vision_box)
-    ax.text(2.05, 4.5, 'PRIMARY TARGET 1', fontsize=10, fontweight='bold',
+    ax.text(2.05, 4.5, 'HYPOTHESIS 1', fontsize=10, fontweight='bold',
             ha='center', color='#1565C0')
     ax.text(2.05, 4.0, 'Retinal Neurodegeneration', fontsize=12, fontweight='bold', ha='center')
     ax.text(2.05, 3.5, 'Homocysteine → ganglion cell loss', fontsize=9, ha='center')
     ax.text(2.05, 3.1, 'Mouse model exists (Mthfr+/-)', fontsize=9, ha='center', color='green')
-    ax.text(2.05, 2.7, 'Human blindness reversed (Hergert 2022)', fontsize=9, ha='center', color='green')
+    ax.text(2.05, 2.7, 'Case report: visual recovery (Hergert 2022)', fontsize=9, ha='center', color='green')
 
     # Target 2: Neuropsych (right)
     neuro_box = plt.Rectangle((6.2, 2.5), 3.5, 2.5, facecolor='#F3E5F5',
                                edgecolor='#7B1FA2', linewidth=2)
     ax.add_patch(neuro_box)
-    ax.text(7.95, 4.5, 'PRIMARY TARGET 2', fontsize=10, fontweight='bold',
+    ax.text(7.95, 4.5, 'HYPOTHESIS 2', fontsize=10, fontweight='bold',
             ha='center', color='#7B1FA2')
     ax.text(7.95, 4.0, 'Anxiety & Depression', fontsize=12, fontweight='bold', ha='center')
     ax.text(7.95, 3.5, 'A1298C → impaired BH4 → low serotonin', fontsize=9, ha='center')
-    ax.text(7.95, 3.1, 'Treatment-resistant cases explained', fontsize=9, ha='center', color='green')
+    ax.text(7.95, 3.1, 'Testable hypothesis: BH4 pathway', fontsize=9, ha='center', color='green')
     ax.text(7.95, 2.7, 'SAMe + methylfolate response (Levin 2016)', fontsize=9, ha='center', color='green')
 
     # Arrows from enzyme to targets
@@ -401,7 +401,7 @@ def main():
     ax.text(5, 1.7, 'AlphaFold 3 + Boltz-2 Key Finding', fontsize=11, fontweight='bold', ha='center')
     ax.text(5, 1.2, 'Compound het dimer: ipTM 0.70 (vs 0.76 WT) | THF binding: 0.878 (vs 0.974 WT)',
             fontsize=10, ha='center')
-    ax.text(5, 0.7, 'Your genotype shows the WORST structural scores across every metric',
+    ax.text(5, 0.7, 'Compound het dimer shows the weakest predicted interaction profile',
             fontsize=10, ha='center', style='italic', color='#CC3333')
 
     # Additional pathways (small, at bottom)

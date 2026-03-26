@@ -110,7 +110,7 @@ MTHFR variants are associated with multiple adverse pregnancy outcomes:
 - **Neural tube defects:** MTHFR is a key enzyme in the folate pathway that prevents neural tube defects. The global folic acid fortification program was designed in part because of MTHFR variant prevalence
 - **Placental development:** Adequate methylation is required for trophoblast differentiation and placental vascular development; MTHFR dysfunction may impair both processes
 
-The reproductive pathway creates a particularly urgent case for genetic correction: an affected parent can pass both the genetic variant AND epigenetic consequences (Pathway 6) to offspring, creating a cycle of compounding harm across generations.
+The reproductive pathway is notable because a carrier parent can pass both the genetic variant AND potential epigenetic consequences (Pathway 6) to offspring, which warrants investigation as a potential transgenerational mechanism.
 
 ### 1.5 Knowledge Gap and Study Rationale
 
@@ -385,7 +385,7 @@ The compound heterozygous dimer (Job 06: one chain with A222V, one with E429A) r
 
 MTHFR dysfunction connects to seven disease pathways, with this study focusing on two primary experimental indication hypotheses (retinal and neuropsychiatric) while recognizing broader potential associations:
 
-| Pathway | Mechanism | Affected Population |
+| Pathway | Mechanism | Reported Associations (Literature) |
 |---------|-----------|-------------------|
 | 1. Vision loss | Homocysteine-associated retinal neurodegeneration | 2.2 billion with vision impairment (WHO) |
 | 2. Autism/CFD | Cerebral folate deficiency | 1 in 36 children (CDC) |
@@ -393,7 +393,7 @@ MTHFR dysfunction connects to seven disease pathways, with this study focusing o
 | 4. B-vitamins | Multi-vitamin processing failure | ~1.5-2 billion MTHFR carriers |
 | 5. Cardiovascular | Homocysteine-associated vascular dysfunction | 17.9 million CVD deaths/year |
 | 6. Epigenetic | Genome-wide methylation disruption | All MTHFR carriers + offspring |
-| 7. Reproductive | Preeclampsia, pregnancy loss, NTDs | 15% of pregnancies affected |
+| 7. Reproductive | Preeclampsia, pregnancy loss, NTDs | ~15% of pregnancies with reported associations |
 
 The epigenetic pathway (6) is particularly significant because it means MTHFR dysfunction affects not just the carrier but potentially their children and grandchildren through transgenerational epigenetic inheritance, even if the children do not inherit the MTHFR variant itself (Karahan et al., 2021).
 
@@ -507,7 +507,7 @@ A comprehensive monitoring framework would include:
 
 **Why This Matters**
 
-This safety architecture is not theoretical -- every component is either already in clinical use or in active preclinical development. The combination of inherent platform safety (no DNA breaks, transient editor, restoring wild-type) with emergency intervention capability (anti-CRISPR proteins) and a reversible alternative pathway (CRISPRoff) provides multiple layers of protection for patients and their families.
+This safety architecture is not theoretical -- every component is either already in clinical use or in active preclinical development. The combination of inherent design safety (no DNA breaks, transient editor, restoring reference allele) with emergency intervention capability (anti-CRISPR proteins) and a reversible alternative pathway (CRISPRoff) provides multiple layers of protection for patients and their families.
 
 For compound heterozygous MTHFR carriers and their families, the question is whether the convergence of structural prediction tools, validated gene editing platforms, and delivery technologies justifies experimental testing of genetic correction hypotheses.
 

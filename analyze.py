@@ -295,7 +295,7 @@ a{{color:#2E75B6}}
 
     # Clinical targets
     if (fig_dir/"clinical_targets.png").exists():
-        h += '<h2>Primary Clinical Targets</h2>'
+        h += '<h2>Candidate Disease Pathways</h2>'
         h += '<img src="figures/clinical_targets.png" alt="Clinical Targets">'
 
     # Structure visualizations
@@ -379,7 +379,7 @@ a{{color:#2E75B6}}
 <h2>Primary Experimental Indication Hypotheses</h2>
 <div class="info">
 <h3>Retinal Pathway Hypothesis</h3>
-<p>Because MTHFR dysfunction has been linked in prior literature to homocysteine-related retinal injury, the retina is a candidate downstream system for validation. The current computational results do not establish efficacy in retinal disease, but they support testing whether high-risk MTHFR states are associated with measurable retinal biomarkers. Prior evidence: Mthfr+/- mice show ganglion cell loss (Markand 2015); blindness reversed with betaine (Hergert 2022).</p>
+<p>Because MTHFR dysfunction has been linked in prior literature to homocysteine-related retinal injury, the retina is a candidate downstream system for validation. The current computational results do not establish efficacy in retinal disease, but they support testing whether high-risk MTHFR states are associated with measurable retinal biomarkers. Prior evidence: Mthfr+/- mice show ganglion cell loss (Markand 2015); case report of visual recovery with betaine (Hergert 2022).</p>
 <h3>Neuropsychiatric Pathway Hypothesis</h3>
 <p>Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pathways, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected high-risk MTHFR states correlate with measurable biochemical and clinical features. This may be relevant in a subset of treatment-resistant presentations involving upstream one-carbon and BH4-related biology.</p>
 <p><i>Additional downstream systems (autism/CFD, B-vitamin metabolism, cardiovascular, epigenetics, pregnancy) are documented in the full research paper as candidate areas for future investigation.</i></p>
