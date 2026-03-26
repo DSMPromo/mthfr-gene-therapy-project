@@ -384,7 +384,7 @@ def main():
     ax.text(7.95, 4.5, 'HYPOTHESIS 2', fontsize=10, fontweight='bold',
             ha='center', color='#7B1FA2')
     ax.text(7.95, 4.0, 'Anxiety & Depression', fontsize=12, fontweight='bold', ha='center')
-    ax.text(7.95, 3.5, 'A1298C → impaired BH4 → low serotonin', fontsize=9, ha='center')
+    ax.text(7.95, 3.5, 'A1298C → discussed re: BH4 pathways', fontsize=9, ha='center')
     ax.text(7.95, 3.1, 'Testable hypothesis: BH4 pathway', fontsize=9, ha='center', color='green')
     ax.text(7.95, 2.7, 'SAMe + methylfolate response (Levin 2016)', fontsize=9, ha='center', color='green')
 

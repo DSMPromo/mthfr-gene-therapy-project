@@ -52,9 +52,9 @@ Two common MTHFR polymorphisms have substantial clinical significance:
 
 The functional consequences of MTHFR variants are amplified when co-occurring with variants in other methylation cycle genes. Methionine synthase reductase (MTRR, rs1801394, I22M) is particularly relevant because it regenerates the active form of vitamin B12 (methylcobalamin), which is the essential cofactor for methionine synthase -- the enzyme immediately downstream of MTHFR in the methylation cycle.
 
-When MTHFR produces less 5-MTHF (due to C677T/A1298C variants) AND MTRR is less efficient at regenerating B12 (due to I22M), the methylation cycle is impaired at two sequential steps. This creates a compounding deficiency where:
+When MTHFR produces less 5-MTHF (due to C677T/A1298C variants) AND MTRR is less efficient at regenerating B12 (due to I22M), the methylation cycle shows reduced capacity at two sequential steps. This creates a compounding deficiency where:
 - Less substrate (5-MTHF) is produced by MTHFR
-- The enzyme that uses that substrate (methionine synthase) has a less-functional cofactor (due to impaired MTRR)
+- The enzyme that uses that substrate (methionine synthase) has a less-functional cofactor (due to reduced MTRR-mediated regeneration)
 - Homocysteine accumulates from both upstream and downstream blocks
 - B12 becomes trapped in inactive forms, further reducing methylation capacity
 
@@ -82,7 +82,7 @@ MTHFR dysfunction creates a cascade of B-vitamin metabolic failures that extends
 - **B2 (Riboflavin):** Cannot adequately regenerate FAD for the already-weakened C677T enzyme. Riboflavin supplementation specifically lowers homocysteine in 677TT homozygotes by stabilizing FAD binding (McNulty et al., 2006). This provides a direct structural link: the C677T variant has reduced FAD affinity, and increasing cellular FAD through riboflavin partially compensates (Pejchal et al., 2006).
 - **B12 (Cobalamin):** Becomes trapped in inactive forms when methionine synthase activity is reduced (compounded by MTRR I22M)
 - **B9 (Folate):** Dietary folate (folic acid) cannot be converted to active 5-MTHF, the only form that crosses the blood-brain barrier
-- **B6 (Pyridoxine):** The trans-sulfuration pathway (homocysteine disposal via cystathionine) becomes critical when remethylation is impaired, increasing B6 demand
+- **B6 (Pyridoxine):** The trans-sulfuration pathway (homocysteine disposal via cystathionine) becomes critical when remethylation capacity is reduced, increasing B6 demand
 
 Riboflavin supplementation specifically lowered homocysteine by 22% in 677TT individuals, with effects independent of folate status, providing a genotype-guided nutritional intervention (McNulty et al., 2006). Riboflavin supplementation also alters global and gene-specific DNA methylation in adults with the 677TT genotype (Pentieva et al., 2020).
 
@@ -92,7 +92,7 @@ Every 5 umol/L increase in plasma homocysteine is associated with 20-30% higher 
 
 **Pathway 6: Genome-Wide DNA Methylation Disruption (NEW)**
 
-MTHFR's role extends far beyond the five traditionally recognized pathways. Because MTHFR produces 5-MTHF, the primary methyl donor for the entire methylation cycle, impaired MTHFR function reduces the global supply of S-adenosylmethionine (SAMe) -- the universal methyl donor for >200 methyltransferases including DNA methyltransferases (DNMTs).
+MTHFR's role extends far beyond the five traditionally recognized pathways. Because MTHFR produces 5-MTHF, the primary methyl donor for the entire methylation cycle, reduced MTHFR function may reduce the global supply of S-adenosylmethionine (SAMe) -- the universal methyl donor for >200 methyltransferases including DNA methyltransferases (DNMTs).
 
 This creates genome-wide consequences:
 - **Paternal epigenetic inheritance:** Mthfr-deficient male mice show profound genome-wide loss of sperm DNA methylation that persists across the F1 and F2 generations, demonstrating transgenerational epigenetic inheritance (Karahan et al., 2021). This means MTHFR dysfunction in a father can alter gene expression patterns in grandchildren.
@@ -129,7 +129,7 @@ As of March 2026, among approximately 250 active CRISPR/gene editing clinical tr
 
 **1. "It's just a polymorphism, not a disease."** The CDC states that MTHFR variants are "generally not a reason to change treatment." Because the variants are so common (up to 40% of the population), the medical establishment has normalized them as benign polymorphisms rather than recognizing them as clinically actionable targets. However, commonality does not equal benignity -- 40% prevalence means 1.5-2 billion people carry these variants. The potential disease burden is distributed across seven specialties, making it invisible to any single field.
 
-**2. Supplementation "works well enough."** The current standard of care -- methylfolate, riboflavin, B12, SAMe supplementation -- partially compensates for impaired enzyme function. This creates the perception that the problem is solved. However, supplementation is lifelong, and may only partially compensate for reduced enzyme activity, addressing downstream metabolic effects rather than the genetic variant itself. The C677T enzyme is still thermolabile. The A1298C regulatory domain is still impaired. Every cell in the body still carries the variant. Supplementation is a workaround, not a fix.
+**2. Supplementation "works well enough."** The current standard of care -- methylfolate, riboflavin, B12, SAMe supplementation -- partially compensates for impaired enzyme function. This creates the perception that the problem is solved. However, supplementation is lifelong, and may only partially compensate for reduced enzyme activity, addressing downstream metabolic effects rather than the genetic variant itself. The C677T enzyme is still thermolabile. The A1298C regulatory domain still shows functional perturbation. Every cell in the body still carries the variant. Supplementation is a practical interim approach, not genetic correction.
 
 **3. Specialization blindness.** The seven disease pathways connected to MTHFR are managed by seven different medical specialties: ophthalmology (vision), psychiatry (anxiety/depression), neurology (autism/CFD), cardiology (CVD), nutrition (B-vitamins), reproductive medicine (pregnancy), and genetics (epigenetics). No single specialist sees the full picture. Each sees their piece -- "unexplained retinal thinning," "treatment-resistant anxiety," "elevated homocysteine" -- without recognizing the potential common upstream factor.
 
@@ -301,7 +301,7 @@ The most striking finding is the difference between monomer and dimer FAD bindin
 
 At the monomer level, all variants maintain high FAD binding confidence (ipTM = 0.97). This is consistent with the known biology: the C677T enzyme does bind FAD -- it simply loses it more easily under thermal stress. AlphaFold predicts static structures and therefore cannot capture thermolability directly, but the dimer predictions reveal interface-mediated effects on FAD binding that are invisible in monomers.
 
-The compound heterozygous dimer shows the largest FAD binding reduction (-0.44), suggesting that the combination of catalytic domain disruption (A222V) and regulatory domain disruption (E429A) creates synergistic structural instability at the dimer level.
+The compound heterozygous dimer shows the largest FAD binding reduction (-0.44), suggesting that the combination of catalytic domain disruption (A222V) and regulatory domain disruption (E429A) creates possible combined structural effects at the dimer level.
 
 *See analysis/outputs/charts/iptm_comparison.png for visualization.*
 
@@ -368,7 +368,7 @@ The monomer results show that all three MTHFR variants (C677T, A1298C, compound)
 
 2. **Regulatory dysfunction** (A1298C): The E429A substitution near the SAM-binding pocket may alter allosteric regulation without dramatically changing the fold. The 2024 cryo-EM structures show that SAM-mediated inhibition requires precise positioning of dual SAM molecules; even subtle changes at position 429 could alter this mechanism.
 
-3. **Compound effects**: The dimer predictions (pending) will be critical for understanding whether the two mutations create synergistic structural disruption at the dimer interface.
+3. **Compound effects**: The dimer predictions (pending) will be critical for understanding whether the two mutations create combined structural perturbation at the dimer interface.
 
 The subtle pLDDT reduction at position 222 in C677T predictions (0.4-0.5 points) is small but consistent across seeds, suggesting that AlphaFold detects some degree of local structural uncertainty at the mutation site.
 
@@ -401,7 +401,7 @@ The epigenetic pathway (6) is particularly significant because it means MTHFR dy
 
 The co-occurrence of MTRR I22M with compound MTHFR variants creates a triple-hit to the methylation cycle:
 - Hit 1 (MTHFR C677T): Less 5-MTHF produced (reduced substrate)
-- Hit 2 (MTHFR A1298C): Impaired allosteric regulation and BH4 recycling
+- Hit 2 (MTHFR A1298C): Discussed in relation to allosteric regulation and BH4-relevant pathways, with mechanism remaining incompletely defined
 - Hit 3 (MTRR I22M): Less efficient B12 regeneration for methionine synthase
 
 This triple-hit genotype may explain why some compound heterozygous individuals are more severely affected than others with the same MTHFR genotype but wild-type MTRR. Future studies should stratify compound MTHFR carriers by MTRR status.
@@ -446,7 +446,7 @@ The C677T variant (T>C at the DNA level) is a candidate for adenine base editing
 
 The A1298C variant (C>A at the DNA level, resulting in E429A) would require a cytosine base editor (CBE) or prime editing strategy. For compound heterozygous individuals, correction of the C677T variant alone might provide substantial clinical benefit by restoring catalytic domain function, even if the regulatory domain variant persists.
 
-**Critical consideration:** MTHFR is expressed in virtually all tissues. Liver-targeted correction would address cardiovascular risk and systemic methylation, but would not directly correct the enzyme in retinal or brain tissue. A comprehensive correction strategy might require multiple tissue-targeted deliveries or development of systemic delivery platforms.
+**Critical consideration:** MTHFR is expressed in virtually all tissues. Liver-targeted correction would address cardiovascular risk and systemic methylation, but would not directly correct the enzyme in retinal or brain tissue. A comprehensive correction strategy might require multiple tissue-targeted deliveries or development of systemic delivery systems.
 
 ### 4.7 Safety Architecture: Built-In Safeguards and Emergency Off-Switches
 
@@ -509,7 +509,7 @@ A comprehensive monitoring framework would include:
 
 This safety architecture is not theoretical -- every component is either already in clinical use or in active preclinical development. The combination of inherent design safety (no DNA breaks, transient editor, restoring reference allele) with emergency intervention capability (anti-CRISPR proteins) and a reversible alternative pathway (CRISPRoff) provides multiple layers of protection for patients and their families.
 
-For compound heterozygous MTHFR carriers and their families, the question is whether the convergence of structural prediction tools, validated gene editing platforms, and delivery technologies justifies experimental testing of genetic correction hypotheses.
+For compound heterozygous MTHFR carriers and their families, the question is whether the convergence of structural prediction tools, validated gene editing programs, and delivery technologies justifies experimental testing of genetic correction hypotheses.
 
 ### 4.8 Limitations
 
@@ -687,7 +687,7 @@ The author affirms that no individual should feel pressured to share their genet
 ### Gene Therapy and Base Editing
 19. YOLT-101 Phase 1 Clinical Data. (2025). YolTech Press Release, March 2025. https://www.yoltx.com/news/press-release/95
 
-20. LNP-mediated in vivo base editing corrects Agxt to cure primary hyperoxaluria type 1. (2025). PubMed. PMID: 41275431
+20. LNP-mediated in vivo base editing of Agxt in a primary hyperoxaluria type 1 model. (2025). PubMed. PMID: 41275431
 
 ---
 
