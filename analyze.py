@@ -33,8 +33,7 @@ JOBS = {
     "job05_a1298c_mono_fad":"A1298C mono+FAD", "job06_compound_dimer_fad":"Compound dimer+FAD",
     "job07_wt_mono_rep":"WT mono rep", "job08_wt_dimer_rep":"WT dimer rep",
     "job09_c677t_mono_rep":"C677T mono rep", "job10_c677t_dimer_rep":"C677T dimer rep",
-    "job11_a1298c_mono_rep":"A1298C mono rep", "job12_compound_rep":"Compound rep",
-    "job12_compound_dimer_rep":"Compound dimer rep",
+    "job11_a1298c_mono_rep":"A1298C mono rep", "job12_compound_rep":"Compound dimer rep",
     # Boltz-2 / Tamarind Bio jobs (13-16) -- substrate/inhibitor binding
     "job13_wt_dimer_fad_thf":"WT dimer+FAD+THF", "job14_c677t_dimer_fad_thf":"C677T dimer+FAD+THF",
     "job15_compound_dimer_fad_thf":"Compound dimer+FAD+THF", "job16_wt_dimer_fad_sam":"WT dimer+FAD+SAM",
@@ -118,19 +117,10 @@ def load_boltz2_metrics(d):
 
 def find_jobs(d):
     d=Path(d); d.mkdir(parents=True,exist_ok=True); dirs=[]
-    for z in sorted(d.glob("*.zip")):
-        ed=d/z.stem
-        if not ed.exists():
-            print(f"  Extracting: {z.name}")
-            with zipfile.ZipFile(z,'r') as zf: zf.extractall(ed)
-        dirs.append(ed)
+    # Collect all valid result directories (skip ZIPs if folder already exists)
     for x in sorted(d.iterdir()):
-        if x.is_dir() and x not in dirs:
-            # Detect AlphaFold Server results
-            if list(x.rglob("*summary_confidences*.json")):
-                dirs.append(x)
-            # Detect Boltz-2 results
-            elif list(x.rglob("confidence_result_model_*.json")):
+        if x.is_dir():
+            if list(x.rglob("*summary_confidences*.json")) or list(x.rglob("confidence_result_model_*.json")):
                 dirs.append(x)
     return dirs
 
