@@ -128,7 +128,7 @@ Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pa
 **Supporting literature:**
 - **MTHFR polymorphism** associated with schizophrenia, major depression, autism, bipolar disorder, and ADHD (Wan et al., 2018, *Transl Psychiatry*)
 - Compound heterozygous patients show treatment-responsive anxiety with SAMe and methylated B vitamins when MTHFR status is identified (Levin & Varga, 2016)
-- The A1298C variant impairs BH4 recycling -- the cofactor for tryptophan hydroxylase (serotonin) and tyrosine hydroxylase (dopamine)
+- A1298C has been discussed in relation to BH4-relevant pathways in the literature, but the mechanism, effect size, and subgroup specificity remain incompletely defined
 - MTHFR-related one-carbon pathway alterations may influence BH4-dependent neurotransmitter synthesis, warranting investigation in defined subgroups with biochemical abnormalities
 
 **Proposed validation:** Measure BH4, homocysteine, SAMe/SAH ratio, and neurotransmitter metabolites in compound heterozygous individuals vs. wild-type controls.
