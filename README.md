@@ -296,21 +296,23 @@ open analysis/outputs/report.html
 
 ## Development Roadmap
 
-From computational observations to experimental validation:
+From computational prioritization to staged experimental follow-up:
 
-| Phase | What | Timeline | Cost | Status |
-|-------|------|----------|------|--------|
-| **1** | Computational target validation -- AlphaFold/Boltz-2 structural analysis, reproducible pipeline, open-source repo | **Done** | **$0** | ✅ **Complete** |
-| **2** | Structural validation against PDB 6FCX, molecular dynamics simulations, bioRxiv preprint, researcher outreach | 1-3 months | ~$500 | Next |
-| **3** | Biochemical validation -- express WT/variant proteins, dimer stability assays, FAD/THF cofactor binding assays | 6-12 months | $50K-150K | Needs lab partner |
-| **4** | Subgroup biomarker correlation -- homocysteine, methylation panels, retinal OCT, BH4 levels in defined compound het cohorts | 12-18 months | $100K-300K | Needs clinical collaborator |
-| **5** | If biochemical and biomarker data support continued development: guide design assessment, edit-window analysis, bystander-risk evaluation, and cell-based feasibility studies | 18-24 months | $200K-500K | Needs gene editing lab |
-| **6** | If cell-based feasibility and safety data support further development: preclinical animal studies (Mthfr+/- mice, multi-organ endpoints) | 24-36 months | $500K-2M | Needs institution |
-| **7** | If preclinical success: IND filing, clinical trial design, regulatory pathway | 3-7+ years | $5M+ | Needs biotech/pharma |
+| Phase | Focus | Timeline | Cost | Status |
+|-------|-------|----------|------|--------|
+| **1** | Computational hypothesis prioritization, AlphaFold 3 and Boltz-2 structural comparison, reproducible pipeline, open repository | **Done** | **$0** | ✅ **Complete** |
+| **2** | Structural benchmarking against experimental reference structures such as PDB 6FCX, molecular dynamics simulations, preprint preparation, researcher outreach | 1-3 months | ~$500 | Next |
+| **3** | Biochemical validation: expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6-12 months | $50K-150K | Requires lab partner |
+| **4** | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-related readouts in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
+| **5** | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene editing partner |
+| **6** | If cell-based feasibility and safety data support further progression: preclinical animal studies using appropriate Mthfr-relevant models and multi-organ outcome measures | 24-36 months | $500K-2M | Requires institutional partner |
+| **7** | If preclinical data support advancement: IND-enabling planning, regulatory strategy development, and early clinical trial concept design | 3-7+ years | $5M+ | Requires biotech or pharma partner |
 
-**Where we are now:** Phase 1 complete. The computational foundation exists. Every sequence, every prediction, every analysis, every reference, documented and replicable. Built for $0.
+> Advancement between phases is conditional and depends on supportive data at each prior stage. This roadmap is a planning framework, not a claim of therapeutic readiness.
 
-**The critical next step:** Get a researcher with a wet lab to say "yes." Everything in this repo is designed to make that conversation happen.
+**Where we are now:** Phase 1 complete. The computational hypothesis prioritization is documented and replicable. Built for $0.
+
+**The next step:** Identify a researcher with biochemical or structural biology capabilities to evaluate whether these computational observations translate to measurable differences in experimental systems.
 
 ---
 

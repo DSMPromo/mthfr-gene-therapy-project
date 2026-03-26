@@ -561,41 +561,40 @@ We invite collaboration from structural biologists, gene therapy researchers, cl
 
 ## 6. Development Roadmap
 
-Taking this from computational predictions to a real therapy requires a phased approach. Each phase builds on the previous one, with increasing complexity and cost but also increasing confidence and impact.
+From computational prioritization to staged experimental follow-up:
 
-| Phase | Description | Timeline | Estimated Cost | Key Milestone |
-|-------|-------------|----------|----------------|---------------|
-| **1** | **Computational Foundation** | **Complete** | **$0** | AlphaFold predictions, analysis pipeline, 7-pathway thesis, safety architecture, open-source repo |
-| **2** | Extended Computation + Outreach | 1-3 months | ~$500 | MD simulations, guide RNA design, preprint on bioRxiv, researcher outreach |
-| **3** | Experimental Validation | 6-18 months | $50K-200K | Express WT/variant MTHFR, measure FAD binding, test ABE guide RNAs in cell lines, confirm predictions |
-| **4** | Preclinical Animal Studies | 12-24 months | $500K-2M | Mthfr+/- mouse model, LNP-ABE injection, homocysteine/retinal/methylation endpoints, toxicology |
-| **5** | IND Filing + Trial Design | 24-36 months | $5M-20M | FDA Pre-IND meeting, GMP manufacturing, Phase 1 trial design |
-| **6** | Clinical Trials | 3-7 years | $50M-500M | Phase 1 (safety) → Phase 2 (efficacy) → Phase 3 (pivotal) |
-| **7** | Market + Global Access | Post-approval | -- | Commercial launch, expanded indications, global screening integration |
+| Phase | Focus | Timeline | Cost | Status |
+|-------|-------|----------|------|--------|
+| **1** | Computational hypothesis prioritization: AlphaFold 3 and Boltz-2 structural comparison, reproducible pipeline, open repository | **Done** | **$0** | **Complete** |
+| **2** | Structural benchmarking against experimental reference structures such as PDB 6FCX, molecular dynamics simulations, preprint preparation, researcher outreach | 1-3 months | ~$500 | Next |
+| **3** | Biochemical validation: expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6-12 months | $50K-150K | Requires lab partner |
+| **4** | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-related readouts in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
+| **5** | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene editing partner |
+| **6** | If cell-based feasibility and safety data support further progression: preclinical animal studies using appropriate Mthfr-relevant models and multi-organ outcome measures | 24-36 months | $500K-2M | Requires institutional partner |
+| **7** | If preclinical data support advancement: IND-enabling planning, regulatory strategy development, and early clinical trial concept design | 3-7+ years | $5M+ | Requires biotech or pharma partner |
 
-### What Phase 1 Accomplished (This Project)
+> Advancement between phases is conditional and depends on supportive data at each prior stage. This roadmap is a planning framework, not a claim of therapeutic readiness.
+
+### What Phase 1 Produced
 
 This project represents a complete Phase 1 deliverable:
-- Structural evidence that compound heterozygous MTHFR has the lowest FAD binding confidence of any variant tested
-- Seven disease pathways potentially associated with a single genetic variant amenable to correction
-- A safety architecture with anti-CRISPR kill switch and CRISPRoff reversible pathway
+- Computational structural comparison showing the compound heterozygous dimer yielded the lowest predicted interaction-confidence values among the tested states
+- Literature synthesis across multiple disease-relevant pathways associated with MTHFR variant states
+- Safety concepts framework for potential future experimental programs
 - A fully replicable, open-source pipeline that any researcher can verify
-- All of this done for $0 using freely available tools (AlphaFold Server, Python, GitHub)
+- All produced for $0 using freely available tools (AlphaFold Server, Boltz-2, Python, GitHub)
 
-### What Comes Next (Phase 2)
+### Phase 2 Next Steps
 
 Phase 2 is achievable by an independent researcher:
-1. Submit AlphaFold Jobs 13-16 (substrate and inhibitor binding)
-2. Run molecular dynamics simulations on compound heterozygous dimer
-3. Design ABE guide RNAs targeting the C677T locus computationally
-4. Post preprint to bioRxiv to establish priority and make the work citable
-5. Contact target researchers with the complete package
+1. Structural benchmarking of predictions against PDB 6FCX experimental structure
+2. Molecular dynamics simulations on compound heterozygous dimer
+3. Preprint preparation for bioRxiv to establish priority and make the work citable
+4. Researcher outreach with the complete package
 
-### The Critical Transition: Phase 2 → Phase 3
+### The Phase 2 → Phase 3 Transition
 
-Everything from Phase 3 onward requires a laboratory partner. The entire purpose of Phases 1 and 2 is to produce a package compelling enough that a researcher says: "This is worth validating in my lab."
-
-The computational foundation, the structural data, the safety analysis, the open-source pipeline -- this is the door opener. The wet lab is the door.
+Everything from Phase 3 onward requires a laboratory partner. The purpose of Phases 1 and 2 is to produce a package that supports a researcher's decision to evaluate these questions experimentally.
 
 ---
 

@@ -190,15 +190,17 @@ At the sequence level, C677T appears conceptually compatible with adenine base e
 
 From computational observations to experimental validation:
 
-| Phase | What | Timeline | Cost | Status |
-|-------|------|----------|------|--------|
-| 1 | Computational target validation (AlphaFold/Boltz-2 structural analysis, reproducible pipeline, open-source repo) | Done | $0 | Complete |
-| 2 | Structural validation against PDB 6FCX, molecular dynamics simulations, bioRxiv preprint, researcher outreach | 1-3 months | ~$500 | Next |
-| 3 | Biochemical validation: express WT/variant proteins, dimer stability assays, FAD/THF cofactor binding assays | 6-12 months | $50K-150K | Needs lab partner |
-| 4 | Exploratory biomarker correlation studies in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Needs clinical collaborator |
-| 5 | If biochemical and biomarker data support continued development: guide design assessment, edit-window analysis, bystander-risk evaluation, and cell-based feasibility studies | 18-24 months | $200K-500K | Needs gene editing lab |
-| 6 | If cell-based feasibility and safety data support further development: preclinical animal studies (Mthfr+/- mice, multi-organ endpoints) | 24-36 months | $500K-2M | Needs institution |
-| 7 | If preclinical success: IND filing, clinical trial design, regulatory pathway | 3-7+ years | $5M+ | Needs biotech/pharma |
+| Phase | Focus | Timeline | Cost | Status |
+|-------|-------|----------|------|--------|
+| 1 | Computational hypothesis prioritization, AlphaFold 3 and Boltz-2 structural comparison, reproducible pipeline, open repository | Done | $0 | Complete |
+| 2 | Structural benchmarking against experimental reference structures such as PDB 6FCX, molecular dynamics simulations, preprint preparation, researcher outreach | 1-3 months | ~$500 | Next |
+| 3 | Biochemical validation: expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6-12 months | $50K-150K | Requires lab partner |
+| 4 | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-related readouts in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
+| 5 | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene editing partner |
+| 6 | If cell-based feasibility and safety data support further progression: preclinical animal studies using appropriate Mthfr-relevant models and multi-organ outcome measures | 24-36 months | $500K-2M | Requires institutional partner |
+| 7 | If preclinical data support advancement: IND-enabling planning, regulatory strategy development, and early clinical trial concept design | 3-7+ years | $5M+ | Requires biotech or pharma partner |
+
+> Advancement between phases is conditional and depends on supportive data at each prior stage. This roadmap is a planning framework, not a claim of therapeutic readiness.
 
 ---
 
