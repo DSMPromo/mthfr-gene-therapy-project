@@ -1,8 +1,10 @@
 # MTHFR Variant Target Validation Program
 
-### Structural Analysis of Dimer Stability, Cofactor Binding, and Substrate Interaction in High-Risk MTHFR States
+### Computational Prioritization of High-Risk MTHFR Variant States for Experimental Validation
 
-> **This project presents a computational structural analysis of wild-type, single-variant, and compound heterozygous MTHFR states using AlphaFold 3 and Boltz-2. Across both platforms, the compound heterozygous dimer showed the weakest predicted interaction profile for dimer interface, FAD-associated binding, and THF-associated binding. These findings support a focused program of experimental validation. The present work is intended to prioritize experiments, define measurable hypotheses, and support collaboration with structural biology, metabolic disease, retinal, and neuropsychiatric researchers.**
+> **This project is a computational hypothesis-prioritization study, not a therapeutic claim, and its purpose is to identify experimentally testable differences among wild-type, single-variant, and compound heterozygous MTHFR states.**
+>
+> Across the tested computational models (AlphaFold 3 and Boltz-2), the compound heterozygous dimer showed the lowest predicted interaction confidence across dimer interface metrics and ligand-associated contexts relative to wild-type and single-variant comparators. These findings support a focused program of experimental validation. The present work is intended to prioritize experiments, define measurable hypotheses, and support collaboration with structural biology, metabolic disease, retinal, and neuropsychiatric researchers.
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Status: Active Research](https://img.shields.io/badge/Status-Active%20Research-green.svg)]()
@@ -50,27 +52,25 @@ I built this project to hand it to the real scientists. Everything is here -- th
 
 ---
 
-## The Problem Nobody Connected
+## A Cross-Specialty Problem That May Be Underintegrated in Current Research
 
-Modern medicine is organized by organ system. Ophthalmologists treat eyes. Psychiatrists treat anxiety. Neurologists study autism. Cardiologists manage heart disease. Nutritionists advise on B-vitamins.
+MTHFR dysfunction has been studied extensively within individual medical specialties -- ophthalmology, psychiatry, neurology, cardiology, nutrition, reproductive medicine, and genetics. However, these investigations have largely proceeded in parallel rather than as an integrated body of evidence.
 
-**Nobody steps back to see that MTHFR dysfunction is implicated across all seven disease pathways.**
+This project attempts to bring the structural biology perspective into that conversation. We do not claim to have connected dots that others missed -- we are synthesizing published literature and adding computational structural data to support experimental prioritization.
 
-Thousands of papers have been published on individual aspects of MTHFR. But no single document connects all seven disease pathways to one genetic variant and proposes a unified experimental correction strategy using modern structural biology tools. That's what this project does.
+### Why MTHFR Has Not Been Explored as a Gene Editing Target
 
-### Why Has Nobody Tried to Fix This Genetically?
+A search of ClinicalTrials.gov (March 2026) found no registered MTHFR-targeted gene editing interventional trial. Several factors may explain this gap:
 
-As of March 2026, among ~250 active CRISPR clinical trials worldwide, **zero target MTHFR.** Why?
+| Observation | Context |
+|-------------|---------|
+| Common variant, not classic disease gene | 40% carrier prevalence leads to classification as polymorphism rather than disease target |
+| Supplementation available | Methylfolate, riboflavin, B12 partially compensate, reducing perceived urgency for genetic correction |
+| Cross-specialty fragmentation | Relevant disease associations span 7+ specialties; no single field owns the integrated picture |
+| Structural data only recently available | First human MTHFR crystal structure 2018 (PDB 6FCX), cryo-EM 2024 (PDB 8QA5, 8QA6) |
+| Gene editing precedent emerging | PCSK9 base editing trials (VERVE-102, YOLT-101) demonstrate that common-variant correction is technically feasible for other targets |
 
-| Reason It Was Ignored | Why That's Wrong |
-|----------------------|------------------|
-| "It's just a polymorphism" | 40% prevalence ≠ benign. 1.5-2 billion people carrying these variants across diverse populations |
-| "Supplements work fine" | Lifelong, imperfect, addresses downstream effects not the genetic variant. The enzyme carries variant alleles in every cell |
-| Specialists stay in lanes | 7 diseases = 7 specialties. No one sees the full picture |
-| Structural data didn't exist | First crystal structure 2018, cryo-EM 2024, AlphaFold 3 2024 |
-| Gene therapy targets rare diseases | PCSK9 editing (VERVE-102, YOLT-101) demonstrates common-variant correction is technically feasible |
-
-**What changed:** AlphaFold 3 + adenine base editing (proven in humans) + LNP delivery (proven at scale) + 2024 cryo-EM structures = a window that didn't exist two years ago. This project exists to open it.
+**What has changed:** The convergence of AlphaFold 3, adenine base editing (in human trials for other targets), LNP delivery (proven at scale), and the 2024 MTHFR cryo-EM structures creates conditions that did not exist two years ago. This project asks whether those conditions warrant experimental investigation of MTHFR correction.
 
 ---
 
@@ -141,7 +141,7 @@ Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pa
 
 ## Additional Disease Pathways
 
-MTHFR dysfunction extends beyond vision and neuropsychiatry. Correcting the underlying genetic defect could have beneficial effects across these additional pathways. These are documented here for completeness and to support the case for a unified genetic correction strategy.
+MTHFR dysfunction has been associated with additional disease-relevant pathways in the literature. If future biochemical and in vivo studies support a causal contribution of selected high-risk MTHFR states, genetic correction could be evaluated as one possible upstream intervention strategy. These pathways are documented here for completeness.
 
 ### Autism Spectrum Disorder and Cerebral Folate Deficiency
 
@@ -480,12 +480,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
 ---
 
-*I'm not a doctor. I'm not a biohacker. I'm a cybersecurity guy and cloud architect who looked at his DNA results, started asking questions, and used AI tools to organize what I found. I don't have a lab. I don't have a PhD. I'm just someone who thinks outside the box.*
+*I'm not a doctor. I'm not a biohacker. I'm a cybersecurity guy and cloud architect who looked at his DNA results, started asking questions, and used AI tools to organize what I found. I don't have a lab. I don't have a PhD. I built this project to hand it to the real scientists who can take it further.*
 
-*I believe this data could be important for people losing their vision and people struggling with anxiety and depression that doesn't respond to standard treatment. Maybe I'm right, maybe I'm wrong -- I'm not qualified to say. But the structural predictions are real, the references are verified, and the analysis is replicable. I built this project to hand it to the real scientists who can take it further.*
+*The structural predictions are reproducible, the references are verified, and the analysis pipeline is open source. I'm not qualified to say whether these computational differences are biologically meaningful -- but I've tried to make it as easy as possible for someone who is qualified to find out.*
 
-*We're focusing on retinal neurodegeneration and neuropsychiatric disorders because these seem to have the strongest evidence and the clearest path to clinical trials -- existing mouse models, proven delivery routes, documented human case reversals. I think so, at least. I'm not a doctor. But the data is here for anyone who is.*
-
-*If you're a researcher who can validate this, please reach out. If you're someone losing their vision or living with unexplained anxiety -- get tested for MTHFR. Know your status. It might explain everything.*
+*If you are a clinician or researcher, I hope this project helps define a tractable experimental path. If you are a patient or family member, this project should be read as a research document, not as medical guidance. Variant status needs clinical interpretation in context with symptoms, labs, and the broader medical picture.*
 
 *I want to help future generations not have to go through what so many people are going through right now.*

@@ -1,6 +1,6 @@
-# MTHFR Variant Target Validation: Structural Analysis of Dimer Stability, Cofactor Binding, and Substrate Interaction in High-Risk MTHFR States
+# MTHFR Variant Target Validation: Computational Prioritization of High-Risk MTHFR Variant States for Experimental Validation
 
-## A Computational Framework for Experimental Prioritization
+## A Hypothesis-Prioritization Study Using AlphaFold 3 and Boltz-2
 
 ---
 
