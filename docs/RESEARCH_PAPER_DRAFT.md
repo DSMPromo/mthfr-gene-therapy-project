@@ -383,7 +383,7 @@ The compound heterozygous dimer (Job 06: one chain with A222V, one with E429A) r
 
 ### 4.3 Multi-Pathway Implications
 
-The expansion from five to seven disease pathways strengthens the case for MTHFR as a master regulatory node in human health:
+MTHFR dysfunction connects to seven disease pathways, with this study focusing on two primary clinical targets (retinal neurodegeneration and neuropsychiatric disorders) while recognizing broader implications:
 
 | Pathway | Mechanism | Affected Population |
 |---------|-----------|-------------------|

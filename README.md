@@ -1,6 +1,6 @@
 # MTHFR Gene Therapy Platform: Targeting Retinal Neurodegeneration and Neuropsychiatric Disorders Through Structural Biology
 
-> **An open computational research project using AlphaFold 3 and Boltz-2 to structurally characterize MTHFR variants (C677T/A1298C) and their impact on FAD cofactor and folate substrate binding -- focused on retinal neurodegeneration and anxiety/depression, with broader implications across five additional disease pathways. Seeking collaboration with ophthalmologists, neuroscientists, structural biologists, and gene therapy researchers.**
+> **An open computational research project using AlphaFold 3 and Boltz-2 to structurally characterize MTHFR variants (C677T/A1298C) and their impact on FAD cofactor and folate substrate binding -- focused on retinal neurodegeneration and anxiety/depression, with broader implications across additional disease pathways. Seeking collaboration with ophthalmologists, neuroscientists, structural biologists, and gene therapy researchers.**
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Status: Active Research](https://img.shields.io/badge/Status-Active%20Research-green.svg)]()
