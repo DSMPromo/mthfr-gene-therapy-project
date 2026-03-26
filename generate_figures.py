@@ -280,7 +280,7 @@ def plot_summary_dashboard(filename):
 
     # Add footnote
     fig.text(0.5, 0.01,
-             'MTHFR Target Validation Program | Igor Mihaljko | github.com/DSMPromo/mthfr-gene-therapy-project | CC BY-NC-SA 4.0\n'
+             'MTHFR Target Validation Program | Igor Mihaljko | github.com/DSMPromo/mthfr-target-validation | CC BY-NC-SA 4.0\n'
              'Computational predictions -- not experimental structures. For research and educational purposes only.',
              ha='center', fontsize=9, style='italic', color='gray')
 

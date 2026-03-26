@@ -1,0 +1,6 @@
+
+Chn1 Chn2  PAE Dist  Type   ipSAE    ipSAE_d0chn ipSAE_d0dom  ipTM_af  ipTM_d0chn     pDockQ     pDockQ2    LIS       n0res  n0chn  n0dom   d0res   d0chn   d0dom  nres1   nres2   dist1   dist2  Model
+A    B     10   10   asym  0.722265    0.832189    0.819881    0.824    0.789939      0.5061     0.1244     0.3176     623   1312   1161    8.70   11.72   11.18    538     623      56      59   result_model_0
+B    A     10   10   asym  0.717408    0.845395    0.834116    0.836    0.773624      0.5061     0.1247     0.3125     464   1312   1166    7.70   11.72   11.20    553     613      55      53   result_model_0
+A    B     10   10   max   0.722265    0.845395    0.834116    0.836    0.789939      0.5061     0.1247     0.3150     623   1312   1166    8.70   11.72   11.20    613     623      56      59   result_model_0
+

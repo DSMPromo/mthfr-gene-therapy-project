@@ -1,0 +1,42 @@
+Running job Job14_C677T_dimer_FAD_THF
+
+GPU driver ready!
+Processing templates
+DEBUG: Found result.yaml. 'protein:' count: 2
+is_multimer: True
+Starting run 1/1...
+setting random seed: 330634370
+setting recycling steps: 3
+setting step scale: 1.638
+setting output type: pdb
+Executing command: boltz predict result.yaml --diffusion_samples 5 --write_full_pae --write_full_pde --seed 330634370 --recycling_steps 3 --step_scale 1.638 --output_format pdb
+Seed set to 330634370
+Downloading the CCD data to /root/.boltz/mols.tar. This may take a bit of time. You may change the cache directory with the --cache flag.
+Extracting the CCD data to /root/.boltz/mols. This may take a bit of time. You may change the cache directory with the --cache flag.
+Downloading the Boltz-2 weights to /root/.boltz/boltz2_conf.ckpt. You may change the cache directory with the --cache flag.
+Downloading the Boltz-2 affinity weights to /root/.boltz/boltz2_aff.ckpt. You may change the cache directory with the --cache flag.
+Checking input data.
+Processing 1 inputs with 1 threads.
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+100%|██████████| 1/1 [00:01<00:00,  1.88s/it]
+100%|██████████| 1/1 [00:01<00:00,  1.88s/it]
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+/opt/conda/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/logger_connector/logger_connector.py:76: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `pytorch_lightning` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default
+Running structure prediction for 1 input.
+/opt/conda/lib/python3.11/site-packages/pytorch_lightning/utilities/migration/utils.py:56: The loaded checkpoint was produced with Lightning v2.5.0.post0, which is newer than your current Lightning version: v2.5.0
+You are using a CUDA device ('NVIDIA L40S') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+Predicting: |          | 0/? [00:00<?, ?it/s]
+Predicting:   0%|          | 0/1 [00:00<?, ?it/s]
+Predicting DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]
+Predicting DataLoader 0: 100%|██████████| 1/1 [04:56<00:00,  0.00it/s]Number of failed examples: 0
+
+Predicting DataLoader 0: 100%|██████████| 1/1 [04:56<00:00,  0.00it/s]
+Command completed successfully (return code: 0)
+Run 1 completed. Files moved to 'out'.
+All 1 runs completed. Outputs are saved in 'out'.

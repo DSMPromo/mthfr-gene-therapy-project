@@ -303,8 +303,8 @@ Follow the detailed step-by-step instructions in [`alphafold/jobs/submission_pla
 ### After Jobs Complete
 ```bash
 # Clone the repo
-git clone https://github.com/DSMPromo/mthfr-gene-therapy-project.git
-cd mthfr-gene-therapy-project
+git clone https://github.com/DSMPromo/mthfr-target-validation.git
+cd mthfr-target-validation
 
 # Set up environment
 python3 -m venv .venv && source .venv/bin/activate
@@ -344,7 +344,7 @@ From computational observations to experimental validation -- here's the path fo
 ## Project Structure
 
 ```
-mthfr-gene-therapy-project/
+mthfr-target-validation/
 |-- README.md                           <-- You are here
 |-- analyze.py                          <-- Automated analysis pipeline
 |-- requirements.txt                    <-- Python dependencies

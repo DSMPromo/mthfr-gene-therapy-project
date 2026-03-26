@@ -395,7 +395,7 @@ a{{color:#2E75B6}}
 </ol>
 
 <div class="footer">
-<p><b>MTHFR Target Validation Program</b> | Igor Mihaljko | <a href="https://github.com/DSMPromo/mthfr-gene-therapy-project">GitHub</a> | <a href="https://orcid.org/0009-0000-1408-1065">ORCID</a> | CC BY-NC-SA 4.0</p>
+<p><b>MTHFR Target Validation Program</b> | Igor Mihaljko | <a href="https://github.com/DSMPromo/mthfr-target-validation">GitHub</a> | <a href="https://orcid.org/0009-0000-1408-1065">ORCID</a> | CC BY-NC-SA 4.0</p>
 <p>Computational predictions — not experimental structures. For research and educational purposes only.</p>
 </div>
 </body></html>"""

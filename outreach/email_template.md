@@ -20,7 +20,7 @@ I have prepared:
 - A complete replication protocol that any lab can follow
 - A GitHub repository with all sequences, protocols, and analysis tools
 
-I am seeking a research partner with wet-lab capabilities to validate the structural predictions and advance toward preclinical testing of base editor correction. The full project is available at https://github.com/DSMPromo/mthfr-gene-therapy-project.
+I am seeking a research partner with wet-lab capabilities to validate the structural predictions and advance toward preclinical testing of base editor correction. The full project is available at https://github.com/DSMPromo/mthfr-target-validation.
 
 Would you be open to a 15-minute call to discuss potential collaboration?
 

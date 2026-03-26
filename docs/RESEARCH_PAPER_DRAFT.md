@@ -14,7 +14,7 @@
 
 **License:** CC BY-NC-SA 4.0
 
-**Data Availability:** All sequences, analysis scripts, and AlphaFold results available at https://github.com/DSMPromo/mthfr-gene-therapy-project
+**Data Availability:** All sequences, analysis scripts, and AlphaFold results available at https://github.com/DSMPromo/mthfr-target-validation
 
 **AI Disclosure:** AI tools (Claude, Anthropic) were used for literature organization, analysis pipeline development, and manuscript preparation. All AI-generated content was reviewed for accuracy by the author. This disclosure follows emerging best practices in scientific publishing (Nature, 2023).
 
@@ -215,7 +215,7 @@ Analysis was performed using a custom Python pipeline (analyze.py) that:
 6. Produces an HTML report integrating all visualizations and metrics
 7. Outputs CSV data for independent analysis and statistical testing
 
-All analysis code is available at https://github.com/DSMPromo/mthfr-gene-therapy-project. A Google Colab notebook (MTHFR_AlphaFold_Analyzer.ipynb) is provided for cloud-based replication.
+All analysis code is available at https://github.com/DSMPromo/mthfr-target-validation. A Google Colab notebook (MTHFR_AlphaFold_Analyzer.ipynb) is provided for cloud-based replication.
 
 ### 2.5 Positive Control Validation
 
@@ -612,7 +612,7 @@ This is an open research project seeking collaboration with:
 
 All data, code, and results are freely available under CC BY-NC-SA 4.0.
 
-Contact: igor@dsm.promo | GitHub: https://github.com/DSMPromo/mthfr-gene-therapy-project
+Contact: igor@dsm.promo | GitHub: https://github.com/DSMPromo/mthfr-target-validation
 
 ---
 
@@ -703,7 +703,7 @@ This is not medical advice. All therapeutic concepts are speculative and would r
 
 ## Appendix B: Supplementary Materials
 
-Available at https://github.com/DSMPromo/mthfr-gene-therapy-project:
+Available at https://github.com/DSMPromo/mthfr-target-validation:
 
 1. **S1:** All FASTA sequences (sequences/)
 2. **S2:** AlphaFold Server JSON job files (alphafold/jobs/json/)
