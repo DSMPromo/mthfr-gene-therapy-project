@@ -64,7 +64,7 @@ As of March 2026, we did not identify a registered interventional clinical trial
 | Supplementation available | Methylfolate, riboflavin, B12 partially compensate, reducing perceived urgency for genetic correction |
 | Cross-specialty fragmentation | Relevant disease associations span 7+ specialties; no single field owns the integrated picture |
 | Structural data only recently available | First human MTHFR crystal structure 2018 (PDB 6FCX), cryo-EM 2024 (PDB 8QA5, 8QA6) |
-| Gene editing precedent emerging | Human base-editing programs show that precise in vivo correction strategies are feasible for selected targets, though target biology, delivery, benefit-risk, and regulatory path remain highly target-specific |
+| Gene editing precedent emerging | Human base-editing programs have entered clinical testing or early clinical use for selected targets, though target biology, delivery, benefit-risk, and regulatory path remain highly target-specific |
 
 **Why this question is now technically more testable:** Recent advances in structure prediction, human base-editing programs for other targets, scalable nucleic acid delivery systems, and new human MTHFR structural data make experimental assessment of MTHFR correction more technically discussable than before. They do not establish MTHFR as a validated therapeutic target. This project asks whether these conditions support a bounded experimental investigation.
 
@@ -115,7 +115,7 @@ Because prior literature has linked MTHFR-related one-carbon pathway disruption 
 
 **Supporting literature:**
 - **Mthfr+/- mice** show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage, without elevated IOP (Markand et al., 2015, *IOVS*)
-- **Case report:** metabolic correction with betaine was associated with visual recovery in a patient with severe MTHFR deficiency (Hergert et al., 2022, *J Neurology*)
+- **Case report:** betaine treatment was associated with visual recovery in a patient with severe MTHFR deficiency (Hergert et al., 2022, *J Neurology*)
 - **Retinal perfusion improved** by MTHFR genotype-guided supplementation; compound C677T/A1298C carriers showed significant improvement (Jiang et al., 2023, *Clin Ophthalmol*)
 - MTHFR modifies CRB1-related retinopathies, worsening rd8 retinal phenotype (Markand et al., 2015, *Exp Eye Res*)
 
@@ -208,7 +208,7 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 - **Consistent directional trends** -- independent random seeds produced consistent directional trends across the tested configurations, supporting limited internal reproducibility within this modeling setup
 - **Position 429 showed the largest confidence decrease** among the reported local metrics in compound dimers -- pLDDT 95.0-95.3 vs 95.8-96.2 in WT, consistent with possible regulatory-domain involvement at the dimer level
 
-> **The core scientific observation:** Monomer predictions show all variants fold correctly, but dimer predictions reveal inter-chain effects. This is the finding to build around.
+> **The core computational observation:** Monomer predictions showed preserved overall folding confidence, whereas dimer predictions showed comparative inter-chain differences. This is the central finding to build around.
 
 > **Important:** These are computational predictions, not experimental structures. All confidence metrics should be interpreted as hypothesis generators, not proof of mechanism. See the [full research paper draft](docs/RESEARCH_PAPER_DRAFT.md) for complete methodology and limitations.
 
