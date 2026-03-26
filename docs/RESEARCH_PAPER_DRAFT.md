@@ -1,4 +1,4 @@
-# MTHFR Variant Structural Analysis: AlphaFold 3 Predictions of FAD Cofactor Binding Disruption Across Seven Disease Pathways
+# MTHFR Variant Structural Analysis: AlphaFold 3 and Boltz-2 Predictions of FAD Cofactor and Folate Substrate Binding Disruption in Retinal Neurodegeneration and Neuropsychiatric Disorders
 
 ## A Computational Framework for Experimental Validation
 
@@ -10,7 +10,7 @@
 
 **Correspondence:** igor@dsm.promo
 
-**Keywords:** MTHFR, AlphaFold 3, C677T, A1298C, FAD cofactor, protein structure prediction, gene therapy, folate metabolism, DNA methylation, epigenetics, compound heterozygous
+**Keywords:** MTHFR, AlphaFold 3, Boltz-2, C677T, A1298C, FAD cofactor, folate substrate, protein structure prediction, retinal neurodegeneration, anxiety, depression, BH4, gene therapy, base editing, compound heterozygous
 
 **License:** CC BY-NC-SA 4.0
 
@@ -22,7 +22,7 @@
 
 ## Abstract
 
-Methylenetetrahydrofolate reductase (MTHFR) variants C677T (A222V) and A1298C (E429A) affect up to 40% of the global population, yet their structural consequences on FAD cofactor binding and SAM-mediated allosteric regulation remain incompletely characterized at the atomic level. We used AlphaFold 3 Server to predict the structures of wild-type, C677T, A1298C, and compound heterozygous MTHFR in complex with FAD, folate substrate (THF), and allosteric inhibitor (SAM). Across 16 structural predictions with independent replication seeds, we compared pTM, ipTM, pLDDT at mutation sites (positions 222 and 429), and predicted aligned error (PAE) to quantify structural confidence differences between wild-type and variant enzymes. Our computational analysis reveals that while monomer predictions show minimal differences between variants (ipTM 0.97 across all), dimer predictions expose dramatic structural disruption: the compound heterozygous dimer (modeling a real patient genotype) shows the lowest scores across every metric (pTM 0.73, ipTM 0.70, FAD binding 0.53), confirming that dual-domain mutations create synergistic structural instability at the biologically relevant quaternary level. We further present evidence connecting MTHFR dysfunction to seven (not five) disease pathways by incorporating genome-wide DNA methylation disruption and pregnancy complications, and review the compounding effect of MTRR I22M co-occurrence. These predictions generate specific, testable hypotheses for experimental validation and provide a framework for evaluating CRISPR base editing as a potential single-gene correction strategy.
+Methylenetetrahydrofolate reductase (MTHFR) variants C677T (A222V) and A1298C (E429A) affect up to 40% of the global population, yet their structural consequences on FAD cofactor binding and folate substrate access remain incompletely characterized at the atomic level. We used AlphaFold 3 Server and Boltz-2 to predict the structures of wild-type, C677T, A1298C, and compound heterozygous MTHFR in complex with FAD, folate substrate (THF), and allosteric inhibitor (SAM). Across 16 structural predictions with independent replication seeds, we compared pTM, ipTM, ligand binding confidence, pLDDT at mutation sites (positions 222 and 429), and predicted aligned error (PAE). Our analysis reveals that while monomer predictions show minimal differences (ipTM 0.97 across all variants), dimer predictions expose significant structural disruption: the compound heterozygous dimer shows the lowest scores across every metric (AlphaFold: pTM 0.73, ipTM 0.70, FAD binding 0.53; Boltz-2: ligand ipTM 0.878 vs 0.974 wild-type for THF substrate binding). These findings have direct implications for two primary clinical targets: (1) **retinal neurodegeneration**, where MTHFR-driven homocysteine elevation causes ganglion cell loss independent of intraocular pressure, and (2) **neuropsychiatric disorders**, where the A1298C variant specifically impairs BH4 recycling required for serotonin and dopamine synthesis. While MTHFR dysfunction has additional implications across five other disease pathways (autism/CFD, B-vitamin metabolism, cardiovascular disease, epigenetic disruption, and pregnancy complications), this study focuses on retinal and neuropsychiatric applications as the highest-priority targets for CRISPR base editing intervention. These predictions generate specific, testable hypotheses for experimental validation using existing Mthfr+/- mouse models and established intravitreal gene therapy delivery routes.
 
 **Note:** This is a computational study generating hypotheses for experimental validation. All structural predictions require confirmation through experimental methods (cryo-EM, X-ray crystallography, functional assays).
 

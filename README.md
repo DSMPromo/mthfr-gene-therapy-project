@@ -1,6 +1,6 @@
-# MTHFR Gene Therapy Platform: One Gene, Seven Disease Pathways, Billions of Lives
+# MTHFR Gene Therapy Platform: Targeting Retinal Neurodegeneration and Neuropsychiatric Disorders Through Structural Biology
 
-> **An open computational research project using AlphaFold 3 to structurally characterize MTHFR variants (C677T/A1298C) and their impact on FAD cofactor binding across seven disease pathways -- seeking collaboration with structural biologists, gene therapy researchers, and clinicians.**
+> **An open computational research project using AlphaFold 3 and Boltz-2 to structurally characterize MTHFR variants (C677T/A1298C) and their impact on FAD cofactor and folate substrate binding -- focused on retinal neurodegeneration and anxiety/depression, with broader implications across five additional disease pathways. Seeking collaboration with ophthalmologists, neuroscientists, structural biologists, and gene therapy researchers.**
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Status: Active Research](https://img.shields.io/badge/Status-Active%20Research-green.svg)]()
@@ -15,7 +15,8 @@
 - [Who I Am](#who-i-am-and-who-i-am-not)
 - [The Problem](#the-problem-nobody-connected)
 - [The Science](#the-mthfr-enzyme)
-- [Seven Disease Pathways](#the-seven-disease-pathways)
+- [Primary Targets](#primary-research-targets)
+- [Additional Pathways](#additional-disease-pathways)
 - [AlphaFold 3 Results](#alphafold-3-structural-predictions)
 - [Research Findings](#what-the-research-shows)
 - [Safety Architecture](#safety-architecture-what-if-something-goes-wrong)
@@ -106,60 +107,55 @@ As of March 2026, among ~250 active CRISPR clinical trials worldwide, **zero tar
 
 ---
 
-## The Seven Disease Pathways
+## Primary Research Targets
 
-When MTHFR is impaired, seven pathological cascades activate simultaneously:
+While MTHFR dysfunction has implications across seven disease pathways, this project focuses on the two with the strongest structural evidence and clearest path to clinical intervention. Correcting MTHFR at the genetic level would address both primary targets simultaneously -- and may have beneficial effects across the additional pathways described below.
 
-### Target 1: Vision Loss and Retinal Neurodegeneration
+### Primary Target 1: Retinal Neurodegeneration and Vision Loss
 
-Elevated homocysteine damages retinal ganglion cells through oxidative stress, independent of intraocular pressure.
+**Why this target:** The strongest preclinical evidence of any MTHFR-linked disease. Animal models exist. Human case reversal documented. Genotype-specific treatment response proven. Intravitreal delivery is an established route for gene therapy (Luxturna precedent).
 
-- **Mthfr+/- mice** show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage (Markand et al., 2015, *IOVS*)
-- **Complete blindness reversed** with betaine treatment in severe late-onset MTHFR deficiency (Hergert et al., 2022, *J Neurology*)
-- **Retinal perfusion improved** by MTHFR genotype-guided supplementation with Ocufolin medical food; compound C677T/A1298C carriers showed significant improvement (Jiang et al., 2023, *Clin Ophthalmol*)
+Elevated homocysteine damages retinal ganglion cells through oxidative stress, independent of intraocular pressure. This is the same mechanism as glaucoma -- but driven by a correctable genetic cause rather than pressure.
+
+- **Mthfr+/- mice** (same genetic status as human carriers) show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage -- all without elevated IOP (Markand et al., 2015, *IOVS*)
+- **Complete blindness reversed** with betaine treatment in a 30-year-old woman with severe MTHFR deficiency. Vision recovered in 6 weeks (Hergert et al., 2022, *J Neurology*)
+- **Retinal perfusion improved** by MTHFR genotype-guided supplementation with Ocufolin; compound C677T/A1298C carriers showed the most significant improvement (Jiang et al., 2023, *Clin Ophthalmol*)
 - MTHFR modifies CRB1-related retinopathies, worsening rd8 retinal phenotype (Markand et al., 2015, *Exp Eye Res*)
+- **Affected population:** 2.2 billion people with vision impairment worldwide (WHO). Unknown fraction attributable to MTHFR, but with 40% carrier prevalence, the overlap is substantial.
 
-### Target 2: Autism Spectrum Disorder and Cerebral Folate Deficiency
+### Primary Target 2: Anxiety, Depression, and Neuropsychiatric Disorders
 
-Reduced 5-MTHF transport across the blood-brain barrier via Folate Receptor Alpha starves the developing brain of folate.
-
-- **Meta-analysis of 15 studies:** C677T significantly associated with ASD across all five genetic models (Pu et al., 2020, *BMC Pediatrics*)
-- **Randomized controlled trial:** Folinic acid improved verbal communication in ASD children with language impairment (Frye et al., 2018, *Mol Psychiatry*)
-- Chinese Han study: 677TT genotype 2x more prevalent in autistic children (16.1% vs 8.6%, OR=2.04)
-- Maternal folate supplementation before/during pregnancy reduces autism risk (Levine, 45,300 children)
-
-### Target 3: Anxiety, Depression, and Neuropsychiatric Disorders
-
-Impaired SAMe production reduces serotonin, dopamine, norepinephrine, and GABA synthesis. The A1298C variant specifically impairs BH4 recycling -- the rate-limiting cofactor for neurotransmitter hydroxylases.
+**Why this target:** The A1298C variant specifically impairs BH4 recycling -- the rate-limiting cofactor for serotonin and dopamine synthesis. Compound heterozygous individuals (C677T + A1298C) experience a dual hit: reduced methylation (C677T) PLUS reduced neurotransmitter cofactor (A1298C). This creates treatment-resistant anxiety and depression that doesn't respond to standard SSRIs because the problem is upstream of serotonin reuptake.
 
 - **Comprehensive review:** MTHFR polymorphism impacts schizophrenia, major depression, autism, bipolar disorder, and ADHD (Wan et al., 2018, *Transl Psychiatry*)
-- Compound heterozygous patients show treatment-responsive anxiety with SAMe and methylated B vitamins (Levin & Varga, 2016)
-- Stress amplification loop: stress consumes methyl groups, depleting already-limited methylation, worsening anxiety
+- Compound heterozygous patients show treatment-responsive anxiety with SAMe and methylated B vitamins -- but only when the MTHFR status is identified (Levin & Varga, 2016)
+- **Stress amplification loop:** stress consumes methyl groups, depleting already-limited methylation, worsening anxiety, causing more stress. Gene correction would break this cycle permanently.
+- **The BH4 connection:** BH4 (tetrahydrobiopterin) is the cofactor for tryptophan hydroxylase (serotonin) and tyrosine hydroxylase (dopamine). The A1298C variant impairs BH4 recycling, directly reducing neurotransmitter synthesis capacity.
+- **Affected population:** 280 million with anxiety disorders worldwide (WHO). An estimated 100-200 million may have MTHFR-linked neuropsychiatric symptoms.
 
-### Target 4: B-Vitamin Processing Failure
+---
 
-MTHFR dysfunction creates a cascade: B2 cannot regenerate FAD for the already-weakened enzyme; B12 gets trapped in inactive forms; dietary folate cannot convert to active 5-MTHF.
+## Additional Disease Pathways
 
-- **Riboflavin (B2) supplementation** lowers homocysteine specifically in 677TT homozygotes by stabilizing FAD binding (McNulty et al., 2006, *Circulation*)
-- The C677T variant has reduced FAD affinity; increased cellular FAD from riboflavin can partially compensate (Pejchal et al., 2006, *Biochemistry*)
+MTHFR dysfunction extends beyond vision and neuropsychiatry. Correcting the underlying genetic defect could have beneficial effects across these additional pathways. These are documented here for completeness and to support the case for a unified genetic correction strategy.
 
-### Target 5: Cardiovascular Disease and Stroke
+### Autism Spectrum Disorder and Cerebral Folate Deficiency
 
-Every 5 umol/L increase in plasma homocysteine is associated with 20-30% higher coronary artery disease risk and 60% elevated stroke risk.
+Reduced 5-MTHF transport across the blood-brain barrier starves the developing brain of folate. Meta-analysis of 15 studies confirms C677T association with ASD (Pu et al., 2020). Folinic acid improved verbal communication in ASD children (Frye et al., 2018, *Mol Psychiatry*). Maternal folate supplementation reduces autism risk (Levine, 45,300 children).
 
-- Homocysteine triggers endothelial dysfunction through oxidative damage -- the same vascular injury mechanism affecting the retina
-- B-vitamin supplementation reduces homocysteine but clinical trial results on CVD outcomes remain debated
+### B-Vitamin Processing Failure
 
-### Target 6: Genome-Wide DNA Methylation Disruption
+B2 cannot regenerate FAD for the already-weakened enzyme; B12 gets trapped in inactive forms; dietary folate cannot convert to active 5-MTHF. Riboflavin supplementation lowers homocysteine specifically in 677TT homozygotes (McNulty et al., 2006, *Circulation*).
 
-MTHFR produces the methyl groups used by >200 methyltransferases. When MTHFR is impaired, the entire methylation landscape shifts.
+### Cardiovascular Disease and Stroke
 
-- **Transgenerational epigenetic inheritance:** Mthfr-deficient male mice show profound genome-wide loss of sperm DNA methylation persisting across F1 and F2 generations (Karahan et al., 2021, *Development*)
-- **Riboflavin alters methylation:** B2 supplementation changes global and gene-specific DNA methylation patterns in 677TT adults (Pentieva et al., 2020)
-- Affects histone modification, genomic imprinting, and cancer susceptibility
-- This means MTHFR dysfunction affects not just the carrier but potentially their children and grandchildren
+Every 5 umol/L increase in plasma homocysteine is associated with 20-30% higher coronary artery disease risk. The same vascular injury mechanism affecting the retina occurs throughout the body.
 
-### Target 7: Pregnancy Complications and Reproductive Health
+### Genome-Wide DNA Methylation Disruption
+
+MTHFR produces methyl groups used by >200 methyltransferases. Mthfr-deficient male mice show transgenerational loss of sperm DNA methylation persisting across F1 and F2 generations (Karahan et al., 2021). This means MTHFR dysfunction can affect children and grandchildren through epigenetic inheritance.
+
+### Pregnancy Complications and Reproductive Health
 
 MTHFR variants are associated with multiple adverse pregnancy outcomes.
 
@@ -168,7 +164,7 @@ MTHFR variants are associated with multiple adverse pregnancy outcomes.
 - **Neural tube defects:** MTHFR is the key enzyme in the folate pathway that prevents NTDs; global folic acid fortification was designed partly because of MTHFR variant prevalence
 - VTE in pregnancy: 50% of compound heterozygous patients vs 28.6% wild-type (Liew & Gupta, 2015)
 
-**The thesis:** One CRISPR base editing correction of MTHFR could address all seven pathways through a single genetic intervention.
+**The thesis:** One CRISPR base editing correction of MTHFR could restore retinal neuroprotection and neurotransmitter synthesis capacity -- with additional benefits across five other disease pathways -- through a single genetic intervention.
 
 ---
 
