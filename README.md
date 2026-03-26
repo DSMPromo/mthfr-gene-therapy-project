@@ -2,9 +2,9 @@
 
 ### Computational Prioritization of High-Risk MTHFR Variant States for Experimental Validation
 
-> **This project is a computational hypothesis-prioritization study, not a therapeutic claim, and its purpose is to identify experimentally testable differences among wild-type, single-variant, and compound heterozygous MTHFR states.**
+> This project is a computational hypothesis-prioritization study designed to identify experimentally testable differences among wild-type, single-variant, and compound heterozygous MTHFR states. In our tested AlphaFold 3 and Boltz-2 configurations, the compound heterozygous dimer produced the lowest predicted interaction confidence across the reported dimer interface and ligand-associated metrics relative to the tested wild-type and single-variant comparators. These observations do not establish mechanism, disease causation, or therapeutic benefit. They define a bounded experimental agenda centered on dimer-level biology, retinal biomarkers, and neuropsychiatric biochemical readouts.
 >
-> Across the tested computational models (AlphaFold 3 and Boltz-2), the compound heterozygous dimer showed the lowest predicted interaction confidence across dimer interface metrics and ligand-associated contexts relative to wild-type and single-variant comparators. These findings support a focused program of experimental validation. The present work is intended to prioritize experiments, define measurable hypotheses, and support collaboration with structural biology, metabolic disease, retinal, and neuropsychiatric researchers.
+> **Core observation:** Monomer predictions show all variants fold correctly, but dimer predictions reveal inter-chain effects. This is the central finding to build around.
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Status: Active Research](https://img.shields.io/badge/Status-Active%20Research-green.svg)]()
@@ -54,9 +54,9 @@ MTHFR dysfunction has been studied extensively within individual medical special
 
 This project attempts to bring the structural biology perspective into that conversation. We do not claim to have connected dots that others missed -- we are synthesizing published literature and adding computational structural data to support experimental prioritization.
 
-### Why MTHFR Has Not Been Explored as a Gene Editing Target
+### Possible Reasons MTHFR Has Not Yet Advanced as a Gene Editing Program
 
-A search of ClinicalTrials.gov (March 2026) found no registered MTHFR-targeted gene editing interventional trial. Several factors may explain this gap:
+As of March 2026, we did not identify a registered interventional clinical trial focused on MTHFR gene editing in ClinicalTrials.gov searches. This absence should not be interpreted as evidence of scientific disinterest or target invalidity. Several factors may contribute:
 
 | Observation | Context |
 |-------------|---------|
@@ -64,9 +64,9 @@ A search of ClinicalTrials.gov (March 2026) found no registered MTHFR-targeted g
 | Supplementation available | Methylfolate, riboflavin, B12 partially compensate, reducing perceived urgency for genetic correction |
 | Cross-specialty fragmentation | Relevant disease associations span 7+ specialties; no single field owns the integrated picture |
 | Structural data only recently available | First human MTHFR crystal structure 2018 (PDB 6FCX), cryo-EM 2024 (PDB 8QA5, 8QA6) |
-| Gene editing precedent emerging | PCSK9 base editing trials (VERVE-102, YOLT-101) demonstrate that common-variant correction is technically feasible for other targets |
+| Gene editing precedent emerging | Human base-editing programs show that precise in vivo correction strategies are feasible for selected targets, though target biology, delivery, benefit-risk, and regulatory path remain highly target-specific |
 
-**What has changed:** The convergence of AlphaFold 3, adenine base editing (in human trials for other targets), LNP delivery (proven at scale), and the 2024 MTHFR cryo-EM structures creates conditions that did not exist two years ago. This project asks whether those conditions warrant experimental investigation of MTHFR correction.
+**What has changed:** Recent advances in structure prediction, human base-editing programs for other targets, scalable nucleic acid delivery systems, and new human MTHFR structural data make experimental assessment of MTHFR correction more technically discussable than before. They do not establish MTHFR as a therapeutic target. This project asks whether these conditions warrant a bounded experimental investigation.
 
 ---
 
@@ -139,30 +139,7 @@ Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pa
 
 MTHFR dysfunction has been associated with additional disease-relevant pathways in the literature. If future biochemical and in vivo studies support a causal contribution of selected high-risk MTHFR states, genetic correction could be evaluated as one possible upstream intervention strategy. These pathways are documented here for completeness.
 
-### Autism Spectrum Disorder and Cerebral Folate Deficiency
-
-Reduced 5-MTHF transport across the blood-brain barrier starves the developing brain of folate. Meta-analysis of 15 studies supports an association between C677T and ASD (Pu et al., 2020). Folinic acid improved verbal communication in ASD children (Frye et al., 2018, *Mol Psychiatry*). Maternal folate supplementation reduces autism risk (Levine, 45,300 children).
-
-### B-Vitamin Processing Failure
-
-B2 cannot regenerate FAD for the already-weakened enzyme; B12 gets trapped in inactive forms; dietary folate cannot convert to active 5-MTHF. Riboflavin supplementation lowers homocysteine specifically in 677TT homozygotes (McNulty et al., 2006, *Circulation*).
-
-### Cardiovascular Disease and Stroke
-
-Every 5 umol/L increase in plasma homocysteine is associated with 20-30% higher coronary artery disease risk. Homocysteine-related vascular mechanisms observed in retinal literature may also be relevant to systemic vascular biology, though this project does not test that directly.
-
-### Genome-Wide DNA Methylation Disruption
-
-MTHFR produces methyl groups used by >200 methyltransferases. Mthfr-deficient male mice show transgenerational loss of sperm DNA methylation persisting across F1 and F2 generations (Karahan et al., 2021). In mouse models, Mthfr deficiency has been associated with transgenerational sperm DNA methylation effects, which supports further investigation of epigenetic consequences.
-
-### Pregnancy Complications and Reproductive Health
-
-MTHFR variants are associated with multiple adverse pregnancy outcomes.
-
-- **Preeclampsia:** Meta-analysis of 51 studies supports significant association with C677T (Xia et al., 2013)
-- **Recurrent pregnancy loss:** A1298C specifically linked to recurrent miscarriage (Kumar et al., 2024, *BMC Pregnancy Childbirth*)
-- **Neural tube defects:** MTHFR is the key enzyme in the folate pathway that prevents NTDs; global folic acid fortification was designed partly because of MTHFR variant prevalence
-- VTE in pregnancy: 50% of compound heterozygous patients vs 28.6% wild-type (Liew & Gupta, 2015)
+Published literature has also reported MTHFR associations with autism/cerebral folate deficiency (Pu et al., 2020; Frye et al., 2018), B-vitamin processing failure (McNulty et al., 2006), cardiovascular disease via homocysteine elevation, transgenerational epigenetic effects in mouse models (Karahan et al., 2021), and adverse pregnancy outcomes including preeclampsia (Xia et al., 2013) and recurrent pregnancy loss (Kumar et al., 2024). These are documented in the [full research paper](docs/RESEARCH_PAPER_DRAFT.md) but are not the primary focus of this computational study.
 
 **Working hypothesis:** The compound heterozygous MTHFR dimer shows lower predicted confidence for cofactor-associated and substrate-associated interactions relative to wild-type. These results support experimental testing of whether selected high-risk MTHFR states contribute to measurable dysfunction in retinal and neuropsychiatric-relevant pathways, and whether genetic correction could theoretically modulate enzyme activity relative to wild-type, contingent on experimental validation.
 
@@ -258,7 +235,7 @@ The author also carries MTRR I22M (rs1801394), which is involved in B12 regenera
 | Casgevy | Vertex/CRISPR | Sickle cell / beta-thal | Ex vivo | **FDA Approved (2023)** |
 | YOLT-101 | YolTech | PCSK9 (next-gen ABE) | IV LNP | Phase 1 -- good safety (2025) |
 
-The C677T variant (T>C at DNA level) is a candidate for **adenine base editing (ABE)**, which converts A-T base pairs to G-C base pairs -- the same mechanism used by VERVE-102 and YOLT-101 currently in clinical trials.
+At the sequence level, C677T appears conceptually compatible with **adenine base editing (ABE)** logic, which converts A-T base pairs to G-C base pairs. However, edit window, guide design, bystander edits, tissue targeting, and functional rescue would all need empirical validation.
 
 ---
 
@@ -436,7 +413,7 @@ All references have been verified against PubMed and primary sources (March 2026
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
-**If you're a scientist:** We're focused on two primary targets -- retinal neurodegeneration and neuropsychiatric disorders -- because these have the strongest preclinical evidence and clearest path to clinical trials. We believe the structural data may have broader implications, but we're choosing to focus where the science is strongest. [Open an issue](../../issues/new?template=collaboration.md) or email me.
+**If you're a scientist:** Our structural and literature synthesis supports a bounded experimental program centered on dimer-level effects, retinal biomarkers, and neuropsychiatric biochemistry. We are choosing to focus where the existing literature is most developed. [Open an issue](../../issues/new?template=collaboration.md) or email me.
 
 **What we're looking for:**
 - **Ophthalmologists / Retinal researchers:** Validate the retinal neurodegeneration pathway. Existing Mthfr+/- mouse models show ganglion cell loss -- can we test base editing correction via intravitreal delivery?
@@ -466,7 +443,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
 **For researchers:** This license is designed to maximize scientific collaboration while protecting the original work. Use it freely for research. Cite it. Build on it. Share your results.
 
-**For biotech/pharma:** If you want to develop MTHFR base editing therapeutics based on this work, contact us for a commercial license agreement. We want this therapy to exist -- let's talk about how to make it happen.
+**For biotech/pharma:** If you are interested in commercial development based on this work, contact us for a licensing discussion.
 
 ---
 
