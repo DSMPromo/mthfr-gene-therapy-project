@@ -396,8 +396,9 @@ a{{color:#2E75B6}}
 </ol>
 
 <div class="footer">
-<p><b>MTHFR Target Validation Program</b> | Igor Mihaljko | <a href="https://github.com/DSMPromo/mthfr-target-validation">GitHub</a> | <a href="https://orcid.org/0009-0000-1408-1065">ORCID</a> | CC BY-NC-SA 4.0</p>
+<p><b>MTHFR Variant Hypothesis Prioritization Program</b> | Igor Mihaljko | <a href="https://github.com/DSMPromo/mthfr-target-validation">GitHub</a> | <a href="https://orcid.org/0009-0000-1408-1065">ORCID</a> | CC BY-NC-SA 4.0</p>
 <p>Computational predictions, not experimentally resolved structures. This document is intended for research planning and educational use only.</p>
+<p style="margin-top:15px;padding-top:15px;border-top:1px solid #eee;font-size:12px;color:#888"><b>About this project:</b> This research was developed by <a href="https://dsm.promo">DSM.Promo</a> as a demonstration of how AI-powered tools (AlphaFold 3, Boltz-2, Claude) can streamline complex computational research workflows. The entire computational foundation was built using publicly accessible tools at zero cost, demonstrating that advanced structural biology hypothesis prioritization is now accessible to non-specialists with the right methodology and AI integration.</p>
 </div>
 </body></html>"""
 
