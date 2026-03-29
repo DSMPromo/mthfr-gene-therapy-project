@@ -274,18 +274,27 @@ See the [full research paper](docs/RESEARCH_PAPER_DRAFT.md#47-safety-architectur
 
 ## Quick Start: Replicate This Research
 
-**Anyone with a Google account can do this. It's free.**
+The workflow is designed to be reproducible with publicly accessible tools.
 
-### Option A: Upload JSON (Fastest)
+### Option A: Molecular Dynamics on Google Colab (One Click)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DSMPromo/mthfr-target-validation/blob/main/MTHFR_MD_Simulation.ipynb)
+
+Run 100ns molecular dynamics simulations comparing WT and compound heterozygous MTHFR dimers. Requires a Google account and Colab GPU runtime (free T4 or paid A100).
+
+### Option B: AlphaFold Analysis on Google Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DSMPromo/mthfr-target-validation/blob/main/MTHFR_AlphaFold_Analyzer.ipynb)
+
+Run the automated analysis pipeline on pre-computed AlphaFold 3 and Boltz-2 results. Generates metrics, PAE heatmaps, comparison charts, and HTML report.
+
+### Option C: AlphaFold Server (Run Your Own Predictions)
 1. Go to [alphafoldserver.com](https://alphafoldserver.com) and sign in
 2. Click **"Upload JSON"**
-3. Upload `alphafold/jobs/json/ALL_12_JOBS.json` from this repo
-4. Click **"Submit 12 jobs as drafts"**
-5. Open each draft, turn off Seed toggle, click **"Confirm and submit job"**
+3. Upload `alphafold/jobs/json_all/ALL_30_JOBS.json` from this repo
+4. Submit all 30 jobs as drafts, then confirm each one
 
-> **Note:** `json/` contains the original 12 jobs. `json_all/` contains all 30 AlphaFold Server jobs (including v1.2 5-seed replicates) plus `ALL_34_JOBS.json`. Jobs 13-16 (substrate/inhibitor binding with THF and SAM) were run on Boltz-2 via Tamarind Bio.
-
-### Option B: Manual Setup
+### Option D: Local Setup
 Follow the detailed step-by-step instructions in [`alphafold/jobs/submission_plan.md`](alphafold/jobs/submission_plan.md)
 
 ### After Jobs Complete
@@ -341,7 +350,10 @@ mthfr-target-validation/
 |-- generate_figures.py                 <-- Publication figure generator
 |-- validate_language.py                <-- Language compliance scanner (21 rules)
 |-- requirements.txt                    <-- Python dependencies
-|-- MTHFR_AlphaFold_Analyzer.ipynb      <-- Google Colab notebook
+|-- MTHFR_AlphaFold_Analyzer.ipynb      <-- Google Colab: AlphaFold analysis
+|-- MTHFR_MD_Simulation.ipynb           <-- Google Colab: 100ns MD simulations
+|-- run_md.py                           <-- Local MD pipeline (OpenMM/M1 Max)
+|-- validate_structure.py               <-- RMSD, Cohen's d, Bonferroni validation
 |-- MTHFR-Research-Findings.zip         <-- Downloadable archive of all findings
 |-- DISCLAIMER.md / CONTRIBUTING.md / LICENSE
 |
