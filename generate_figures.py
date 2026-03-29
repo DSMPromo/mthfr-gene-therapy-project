@@ -363,8 +363,8 @@ def main():
     enzyme_box = plt.Rectangle((3.5, 5.5), 3, 1.5, facecolor='#FFE0B2',
                                 edgecolor='#E65100', linewidth=2, zorder=5)
     ax.add_patch(enzyme_box)
-    ax.text(5, 6.5, 'MTHFR Enzyme', fontsize=14, fontweight='bold', ha='center', va='center')
-    ax.text(5, 6.0, 'C677T + A1298C\nCompound Heterozygous', fontsize=10, ha='center', va='center')
+    ax.text(5, 6.5, 'MTHFR Enzyme', fontsize=14, fontweight='bold', ha='center', va='center', zorder=10)
+    ax.text(5, 6.0, 'C677T + A1298C\nCompound Heterozygous', fontsize=10, ha='center', va='center', zorder=10)
 
     # Target 1: Vision (left)
     vision_box = plt.Rectangle((0.3, 2.5), 3.5, 2.5, facecolor='#E3F2FD',
