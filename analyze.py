@@ -22,7 +22,7 @@ try:
 except ImportError:
     print("Install: pip install matplotlib numpy"); sys.exit(1)
 
-RESULTS_DIRS = [Path("alphafold/results"), Path("v1.2/results")]
+RESULTS_DIRS = [Path("alphafold/results_all")]
 OUTPUT_DIR = Path("analysis/outputs")
 C677T_POS, A1298C_POS = 222, 429
 
