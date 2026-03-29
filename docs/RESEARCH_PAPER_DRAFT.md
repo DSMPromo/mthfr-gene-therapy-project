@@ -245,7 +245,7 @@ The tested dimer models showed comparative differences that were less apparent i
 
 3. **Relative to the tested C677T dimer model, the compound heterozygous dimer showed lower average ipTM within this model set**, which prioritizes that configuration for experimental follow-up.
 
-4. **Within the tested dimer models, position 429 showed the lowest pLDDT values in the compound heterozygous configuration:** From 97.5 (monomers) to 95.0-95.3 (compound dimer), consistent with the interpretation that the A1298C variant's effect on the regulatory domain is amplified in the dimer context, consistent with the 2024 cryo-EM finding that SAM-mediated allosteric regulation operates across the dimer interface.
+4. **Within the tested dimer models, position 429 showed the lowest pLDDT values in the compound heterozygous configuration:** From 97.5 (monomers) to 95.0-95.3 (compound dimer), consistent with a possible regulatory-domain contribution in the dimer context and compatible with prior cryo-EM work showing that SAM-mediated allosteric regulation operates across the dimer interface.
 
 5. **All findings replicate across independent seeds:** Each variant was predicted with two different random seeds. The directional trends were consistent across the tested runs, supporting limited internal reproducibility within this modeling setup.
 
@@ -286,7 +286,7 @@ The compound heterozygous dimer showed the largest reduction in reported FAD-ass
 | C677T | 97.7 | 95.95 | -1.75 |
 | Compound | -- | **95.15** | -- |
 
-- Position 429 shows the largest pLDDT reduction in the compound dimer (95.0), consistent with the interpretation that the A1298C variant's regulatory domain effect is amplified at the dimer level
+- Position 429 shows the lowest pLDDT values in the compound dimer within the tested model set, consistent with a possible regulatory-domain contribution at the dimer level
 - All dimer predictions show reduced pLDDT at both mutation sites compared to monomers
 
 ### 3.5 Predicted Aligned Error Analysis
@@ -310,7 +310,7 @@ Dimer replication consistency (all 6 dimer jobs complete):
 - C677T dimer: pTM 0.77/0.80, ipTM 0.75/0.78 (range 0.03)
 - Compound dimer: pTM 0.73/0.76, ipTM 0.70/0.73 (range 0.03)
 
-The compound heterozygous dimer consistently ranks lowest across both independent seeds, consistent with the interpretation that observed differences between WT and variants are structural trends, not seed-dependent artifacts. The inter-replicate variance was modest relative to the observed inter-variant differences within this model set, supporting the use of these outputs for computational prioritization, but not establishing biological significance.
+The compound heterozygous dimer consistently ranks lowest across both independent seeds, supporting the use of these differences as computational trends rather than seed-dependent artifacts within the tested model set. The inter-replicate variance was modest relative to the observed inter-variant differences within this model set, supporting the use of these outputs for computational prioritization, but not establishing biological significance.
 
 ### 3.7 Substrate and Inhibitor Binding (Jobs 13-16)
 
@@ -324,13 +324,13 @@ The present study is a computational hypothesis-prioritization analysis. Its pur
 
 ### 4.1 Structural Interpretation of Monomer Results
 
-The monomer results show that all three MTHFR variants (C677T, A1298C, compound) maintain high-confidence folds with strong FAD binding predictions. This is biologically consistent: MTHFR variants are not loss-of-function mutations that prevent folding. Rather, they create subtle structural perturbations that manifest as:
+The present computational results are consistent with preserved overall folding across the tested monomer states and with the possibility of subtle structural perturbations rather than gross folding loss. Within that bounded interpretation, the following hypotheses are reasonable to consider:
 
 1. **Thermolability** (C677T): The enzyme folds and binds FAD normally at low temperatures but loses FAD more rapidly at physiological temperature (37C). AlphaFold predicts equilibrium structures and therefore would not capture this dynamic property in static predictions.
 
 2. **Regulatory dysfunction** (A1298C): The E429A substitution near the SAM-binding pocket may alter allosteric regulation without dramatically changing the fold. The 2024 cryo-EM structures show that SAM-mediated inhibition requires precise positioning of dual SAM molecules; even subtle changes at position 429 could alter this mechanism.
 
-3. **Compound effects**: The dimer predictions (pending) will be critical for understanding whether the two mutations create combined structural perturbation at the dimer interface.
+3. **Compound effects**: The dimer predictions are the most relevant part of the present model set for asking whether the two mutations could contribute to combined perturbation at the dimer interface.
 
 The subtle pLDDT reduction at position 222 in C677T predictions (0.4-0.5 points) is small but consistent across seeds, suggesting that AlphaFold detects some degree of local structural uncertainty at the mutation site.
 
@@ -371,25 +371,13 @@ In this framework, increased cellular FAD availability offers one possible expla
 
 ### 4.6 Sequence Correction as a Downstream Translational Question
 
-Sequence correction remains a downstream translational question rather than a conclusion of the present study. Because C677T is a single-nucleotide variant, it is reasonable to note that base-editing logic could be discussed in principle. However, the present work does not establish MTHFR as a therapeutic editing target and does not address guide design, edit-window fit, bystander edits, delivery, rescue, or safety.
+Sequence correction remains a downstream translational question rather than a conclusion of the present study. Because C677T is a single-nucleotide variant, base-editing logic can be noted in principle. However, the present work does not establish MTHFR as a therapeutic editing target and does not address guide design, edit-window fit, bystander edits, delivery, rescue, or safety.
 
 Current editing programs for other targets show that precise sequence correction is technically discussable in modern translational research. In the context of this paper, that observation serves only as background. Any serious consideration of sequence correction for MTHFR would require supportive evidence from prior stages, including biochemical validation, structural confirmation, cell-based studies, and target-specific safety assessment.
 
-### 4.7 Translational Note: Sequence Correction as a Downstream Question
+### 4.7 Translational Caution
 
-Sequence correction is discussed only as a downstream translational question. Any editing concept would require independent validation of target biology, guide design, bystander-risk profile, delivery, rescue, and safety.
-
-A comprehensive monitoring framework, if correction were ever to advance, would include:
-
-| Timepoint | Assessment | Purpose |
-|-----------|-----------|---------|
-| Pre-treatment | Baseline homocysteine, methylation panel, retinal OCT, psychiatric assessment | Establish individual baseline |
-| 48 hours | Liver function tests, inflammatory markers | Acute LNP safety |
-| 1 week | Plasma homocysteine | Early efficacy signal |
-| 1 month | Complete methylation panel, B-vitamin levels, homocysteine | Sustained correction |
-| 3 months | Retinal OCT, psychiatric reassessment, off-target sequencing | Multi-system efficacy and safety |
-| 6 months | Genome-wide off-target analysis (GUIDE-seq or similar) | Long-term genomic safety |
-| Annual | Full panel repeat | Durability of correction |
+Any translational consideration would depend on successful completion of prior validation stages. The present computational study should not be interpreted as evidence of intervention readiness.
 
 ### 4.8 Limitations
 
@@ -421,11 +409,11 @@ This study has several important limitations:
 
 4. **Base editor guide RNA design:** Computational design of ABE guide RNAs targeting the C677T locus, with off-target analysis and in vitro testing in cell lines heterozygous for C677T.
 
-5. **Clinical correlation study:** Prospective study of compound heterozygous MTHFR individuals stratified by MTRR status, focusing on retinal OCT and neuropsychiatric-relevant biomarkers, with additional context from cardiovascular and reproductive domains as warranted.
+5. **Clinical correlation study:** Prospective study of compound heterozygous MTHFR individuals stratified by MTRR status, focusing on retinal OCT, plasma homocysteine, and neuropsychiatric-relevant biomarkers.
 
 6. **Epigenetic profiling:** Genome-wide methylation profiling (EPIC array or whole-genome bisulfite sequencing) of compound heterozygous individuals vs matched controls.
 
-7. **Model organism studies:** Mthfr+/- mice with Mtrr I22M knock-in to model the triple-hit genotype and test base editing correction in vivo.
+7. **Model organism studies:** Mthfr-relevant models incorporating MTRR co-occurrence, where feasible, to assess pathway-level effects and test whether sequence-correction concepts merit further preclinical evaluation.
 
 ---
 
@@ -433,9 +421,9 @@ This study has several important limitations:
 
 This study presents the first systematic AlphaFold 3 structural characterization of MTHFR variants (C677T, A1298C, and compound heterozygous) in complex with their functional ligands (FAD, THF, SAM). By connecting structural predictions to retinal and neuropsychiatric-relevant follow-up contexts, we provide a framework for prioritizing bounded experimental questions arising from the modeled dimer-level differences.
 
-The key contribution is not the computational predictions themselves -- which require experimental validation -- but the integration: connecting structural biology, clinical genetics, epigenetics, and reproductive health in a single, reproducible, open-source framework that any researcher can extend.
+The key contribution is not the computational predictions themselves -- which require experimental validation -- but the framework: a reproducible, open-source structural prioritization workflow that links modeled dimer-level differences to bounded experimental follow-up questions.
 
-We invite collaboration from structural biologists, gene-editing researchers, clinicians, and bioinformaticians to validate, correct, and build upon this work. All data, code, and analysis are freely available.
+We invite collaboration from structural biologists, clinicians, and bioinformaticians to validate, refine, and build upon this work. All data, code, and analysis are freely available.
 
 ---
 
