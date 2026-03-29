@@ -389,7 +389,7 @@ This study has several important limitations:
 
 3. **Cofactor and substrate modeling.** AlphaFold 3's accuracy for small molecule binding is lower than for protein-protein interactions (Abramson et al., 2024). ipTM scores for protein-ligand complexes should be interpreted more cautiously than for protein-protein interfaces.
 
-4. **No molecular dynamics.** Extended MD simulations would reveal dynamic differences between WT and variant MTHFR that static AlphaFold predictions cannot, particularly regarding FAD dissociation kinetics and allosteric communication.
+4. **Molecular dynamics in progress.** MD simulations (OpenMM, Amber14 force field) comparing WT and compound heterozygous dimer dynamics are currently running. These will reveal dynamic differences that static predictions cannot capture, including RMSD stability, per-residue flexibility (RMSF), and dimer interface behavior over time.
 
 5. **Clinical extrapolation.** The connection between structural predictions and clinical phenotypes involves many biological layers (protein folding kinetics, cellular environment, tissue-specific expression, compensatory mechanisms, microbiome effects) that computational modeling cannot capture.
 
@@ -405,7 +405,7 @@ This study has several important limitations:
 
 2. **Thermal shift assays:** Differential scanning fluorimetry (DSF) to quantify FAD binding affinity and thermal stability of WT vs variant MTHFR, with and without riboflavin supplementation.
 
-3. **Molecular dynamics simulations:** Extended (>1 microsecond) MD simulations of WT, C677T, A1298C, and compound MTHFR to capture FAD dissociation kinetics, allosteric communication, and dynamic differences not visible in static predictions.
+3. **Molecular dynamics simulations (in progress):** Initial 10ns MD simulations of WT and compound heterozygous MTHFR dimers are running (OpenMM, Amber14/TIP3P-FB, 300K, OpenCL acceleration). Extended simulations (100ns+) planned as follow-up to capture FAD dissociation kinetics and allosteric communication dynamics.
 
 4. **Cell-based follow-up after biochemical validation:** Once biochemical and structural follow-up supports continued investigation, computational guide design and initial cell-based feasibility testing could be used to assess whether sequence correction is technically plausible in a controlled setting.
 
@@ -434,7 +434,8 @@ From computational prioritization to staged experimental follow-up:
 | Phase | Focus | Timeline | Cost | Status |
 |-------|-------|----------|------|--------|
 | **1** | Computational hypothesis prioritization: AlphaFold 3 and Boltz-2 structural comparison, reproducible pipeline, open repository | **Done** | **$0** | **Complete** |
-| **2** | Structural benchmarking against experimental reference structures such as PDB 6FCX, molecular dynamics simulations, preprint preparation, researcher outreach | 1-3 months | ~$500 | Next |
+| **2a** | Molecular dynamics simulations: OpenMM/Amber14, WT dimer vs compound dimer, RMSD/RMSF/flexibility analysis | In progress | $0 | Running |
+| **2b** | Preprint (bioRxiv submitted), researcher outreach, extended structural benchmarking | 1-3 months | ~$500 | In progress |
 | **3** | Biochemical validation: expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6-12 months | $50K-150K | Requires lab partner |
 | **4** | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-related readouts in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
 | **5** | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene-editing partner |
