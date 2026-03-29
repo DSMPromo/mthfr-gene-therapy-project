@@ -91,17 +91,15 @@ AlphaFold 3 (Abramson et al., 2024) can model protein + cofactor (FAD) + substra
 
 ### 1.7 Why MTHFR Has Seen Limited Translational Development
 
-As of March 2026, our searches did not identify a registered interventional program specifically focused on therapeutic gene-editing of MTHFR. This absence should not be interpreted as evidence of target invalidity, but it does suggest limited translational development to date. Several factors may contribute, including common-variant framing, partial metabolic compensation through supplementation, and the relative recency of relevant structural tools.
+As of March 2026, our searches did not identify a registered interventional program specifically focused on therapeutic gene-editing of MTHFR. This absence should not be interpreted as evidence of target invalidity, but it does suggest limited translational development to date. Several factors may contribute:
 
-**1. "It's just a polymorphism, not a disease."** The CDC states that MTHFR variants are "generally not a reason to change treatment." Because these variants are common in human populations, they have often been framed as polymorphisms rather than as translational intervention targets. Variant prevalence does not, by itself, determine biological importance or translational priority -- 40% prevalence means 1.5-2 billion people carry these variants. The potential disease burden is distributed across seven specialties, making it invisible to any single field.
+**1. Common-variant framing.** Because these variants are common in human populations, they have often been framed as polymorphisms rather than as translational intervention targets.
 
-**2. Supplementation "works well enough."** The current standard of care -- methylfolate, riboflavin, B12, SAMe supplementation -- partially compensates for impaired enzyme function. This creates the perception that the problem is solved. However, supplementation is lifelong, and may only partially compensate for reduced enzyme activity, addressing downstream metabolic effects rather than the genetic variant itself. The C677T enzyme is still thermolabile. The A1298C regulatory domain still shows functional perturbation. Every cell in the body still carries the variant. Supplementation is a practical interim approach, not genetic correction.
+**2. Supplementation as partial compensation.** Methylfolate, riboflavin, B12, and SAMe supplementation partially compensates for impaired enzyme function, creating the perception that the problem is addressed. However, supplementation is lifelong and does not correct the underlying genetic variant.
 
-**3. Specialization blindness.** Relevant findings have often been discussed across separate specialties rather than within a single structural prioritization framework.
+**3. Fragmentation across specialties.** Relevant findings have been discussed across separate specialties rather than within a single structural prioritization framework.
 
-**4. The structural data is new.** The first human MTHFR crystal structure was only published in 2018 (Froese et al., PDB 6FCX). The cryo-EM structures revealing SAM allosteric regulation were published in 2024 (PDB 8QA5, 8QA6). AlphaFold 3, capable of predicting protein-ligand complexes, became available in 2024. The tools to structurally characterize these variants simply did not exist until very recently.
-
-**5. Relevant findings have often been discussed within separate specialties rather than within a single structural prioritization framework.** Thousands of papers exist on individual aspects of MTHFR -- C677T and cardiovascular risk, MTHFR and autism, MTHFR and pregnancy complications. But no published work has unified all seven pathways with structural predictions and proposed a correction strategy. The information existed in fragments across disciplines. This project is the integration.
+**4. Recency of structural tools.** The first human MTHFR crystal structure was published in 2018 (Froese et al., PDB 6FCX). The cryo-EM structures revealing SAM allosteric regulation were published in 2024 (PDB 8QA5, 8QA6). AlphaFold 3 became available in 2024. The tools to structurally characterize these variants did not exist until recently.
 
 **What has changed:** Recent advances in structure prediction, editing programs for other targets, and new MTHFR structural data make the question more technically discussable than before. The present study does not establish feasibility of correction. It asks whether the target merits bounded experimental follow-up.
 
@@ -245,9 +243,9 @@ The tested dimer models showed comparative differences that were less apparent i
 
 2. **The compound heterozygous dimer consistently shows the lowest scores across every metric in both independent runs:** Job 06 (pTM 0.73, ipTM 0.70, FAD binding 0.53, pLDDT@429 95.0) and Job 12 (pTM 0.76, ipTM 0.73, FAD binding 0.55, pLDDT@429 95.3). In the tested heterozygous dimer configuration, one chain carried A222V and one chain carried E429A. Within this model set, that configuration yielded the lowest reported confidence values across the assessed dimer-level metrics in both runs.
 
-3. **Compound is worse than C677T alone:** Relative to the tested C677T dimer model, the compound heterozygous dimer showed lower average ipTM within this model set, which prioritizes that configuration for experimental follow-up.
+3. **Relative to the tested C677T dimer model, the compound heterozygous dimer showed lower average ipTM within this model set**, which prioritizes that configuration for experimental follow-up.
 
-4. **pLDDT at position 429 drops most in the compound dimer:** From 97.5 (monomers) to 95.0-95.3 (compound dimer), consistent with the interpretation that the A1298C variant's effect on the regulatory domain is amplified in the dimer context, consistent with the 2024 cryo-EM finding that SAM-mediated allosteric regulation operates across the dimer interface.
+4. **Within the tested dimer models, position 429 showed the lowest pLDDT values in the compound heterozygous configuration:** From 97.5 (monomers) to 95.0-95.3 (compound dimer), consistent with the interpretation that the A1298C variant's effect on the regulatory domain is amplified in the dimer context, consistent with the 2024 cryo-EM finding that SAM-mediated allosteric regulation operates across the dimer interface.
 
 5. **All findings replicate across independent seeds:** Each variant was predicted with two different random seeds. The directional trends were consistent across the tested runs, supporting limited internal reproducibility within this modeling setup.
 
@@ -312,7 +310,7 @@ Dimer replication consistency (all 6 dimer jobs complete):
 - C677T dimer: pTM 0.77/0.80, ipTM 0.75/0.78 (range 0.03)
 - Compound dimer: pTM 0.73/0.76, ipTM 0.70/0.73 (range 0.03)
 
-The compound heterozygous dimer consistently ranks lowest across both independent seeds, consistent with the interpretation that observed differences between WT and variants are structural trends, not seed-dependent artifacts. The inter-replicate variance (0.03-0.04 for ipTM) is smaller than the inter-variant differences (0.025 between WT and compound averages), supporting the biological significance of the findings.
+The compound heterozygous dimer consistently ranks lowest across both independent seeds, consistent with the interpretation that observed differences between WT and variants are structural trends, not seed-dependent artifacts. The inter-replicate variance was modest relative to the observed inter-variant differences within this model set, supporting the use of these outputs for computational prioritization, but not establishing biological significance.
 
 ### 3.7 Substrate and Inhibitor Binding (Jobs 13-16)
 
@@ -343,21 +341,16 @@ MTHFR functions exclusively as a homodimer in vivo. The dimer interface contribu
 
 The compound heterozygous dimer (Job 06: one chain with A222V, one with E429A) represents the author's actual genotype and is the most biologically relevant prediction. This asymmetric dimer has never been structurally characterized experimentally.
 
-### 4.3 Multi-Pathway Implications
+### 4.3 Primary and Secondary Follow-Up Contexts
 
-MTHFR dysfunction connects to seven disease pathways, with this study focusing on two primary experimental indication hypotheses (retinal and neuropsychiatric) while recognizing broader potential associations:
+This study focuses on two primary follow-up contexts derived from the broader MTHFR literature:
 
-| Pathway | Mechanism | Reported Associations (Literature) |
+| Context | Mechanism | Reported Associations (Literature) |
 |---------|-----------|-------------------|
-| 1. Vision loss | Homocysteine-associated retinal neurodegeneration | 2.2 billion with vision impairment (WHO) |
-| 2. Autism/CFD | Cerebral folate deficiency | 1 in 36 children (CDC) |
-| 3. Neuropsychiatric | SAMe/BH4 depletion | 280 million with anxiety (WHO) |
-| 4. B-vitamins | Multi-vitamin processing failure | ~1.5-2 billion MTHFR carriers |
-| 5. Cardiovascular | Homocysteine-associated vascular dysfunction | 17.9 million CVD deaths/year |
-| 6. Epigenetic | Genome-wide methylation disruption | All MTHFR carriers + offspring |
-| 7. Reproductive | Preeclampsia, pregnancy loss, NTDs | ~15% of pregnancies with reported associations |
+| Retinal (primary) | Homocysteine-associated retinal neurodegeneration | 2.2 billion with vision impairment (WHO) |
+| Neuropsychiatric (secondary) | SAMe/BH4 depletion, cerebral folate deficiency | Associations reported across ASD, anxiety, and related domains |
 
-The epigenetic pathway (6) is particularly significant because it means MTHFR dysfunction affects not just the carrier but potentially their children and grandchildren through transgenerational epigenetic inheritance, even if the children do not inherit the MTHFR variant itself (Karahan et al., 2021).
+Broader literature across cardiovascular, nutritional, epigenetic, and reproductive domains exists but is outside the scope of the present computational study.
 
 ### 4.4 The MTRR Compounding Factor
 
@@ -404,7 +397,7 @@ The C677T variant (T>C at the DNA level) is a candidate for adenine base editing
 | IV LNP (hepatic) | Liver | CVD, B-vitamins, methylation | VERVE-102, YOLT-101 | High -- Phase 1 |
 | Intravitreal | Retina | Vision loss | Luxturna (AAV), EDIT-101 | Moderate |
 | CNS-targeted LNP | Brain | Autism/CFD, anxiety | Emerging | Low -- requires BBB-crossing LNP |
-| Systemic (multi-tissue) | Multiple | All 7 pathways | Not yet achieved | Aspirational |
+| Systemic (multi-tissue) | Multiple | Additional contexts | Not yet achieved | Aspirational |
 
 The A1298C variant (C>A at the DNA level, resulting in E429A) would require a cytosine base editor (CBE) or prime editing strategy. For compound heterozygous individuals, correction of the C677T variant alone might provide substantial clinical benefit by restoring catalytic domain function, even if the regulatory domain variant persists.
 
@@ -456,7 +449,7 @@ This study has several important limitations:
 
 4. **Base editor guide RNA design:** Computational design of ABE guide RNAs targeting the C677T locus, with off-target analysis and in vitro testing in cell lines heterozygous for C677T.
 
-5. **Clinical correlation study:** Prospective study of compound heterozygous MTHFR individuals stratified by MTRR status across all seven disease pathways, including retinal OCT, plasma homocysteine, methylation panels, psychiatric assessment, and pregnancy outcomes.
+5. **Clinical correlation study:** Prospective study of compound heterozygous MTHFR individuals stratified by MTRR status, focusing on retinal OCT and neuropsychiatric-relevant biomarkers, with additional context from cardiovascular and reproductive domains as warranted.
 
 6. **Epigenetic profiling:** Genome-wide methylation profiling (EPIC array or whole-genome bisulfite sequencing) of compound heterozygous individuals vs matched controls.
 
@@ -466,7 +459,7 @@ This study has several important limitations:
 
 ## 5. Conclusion
 
-This study presents the first systematic AlphaFold 3 structural characterization of MTHFR variants (C677T, A1298C, and compound heterozygous) in complex with their functional ligands (FAD, THF, SAM). By connecting structural predictions to seven disease pathways, we provide a framework for understanding how single amino acid changes in one enzyme can have pleiotropic consequences in populations carrying these variants.
+This study presents the first systematic AlphaFold 3 structural characterization of MTHFR variants (C677T, A1298C, and compound heterozygous) in complex with their functional ligands (FAD, THF, SAM). By connecting structural predictions to retinal and neuropsychiatric-relevant follow-up contexts, we provide a framework for prioritizing bounded experimental questions arising from the modeled dimer-level differences.
 
 The key contribution is not the computational predictions themselves -- which require experimental validation -- but the integration: connecting structural biology, clinical genetics, epigenetics, and reproductive health in a single, reproducible, open-source framework that any researcher can extend.
 
@@ -519,7 +512,7 @@ This is an open research project seeking collaboration with:
 
 - **Structural biologists:** To validate AlphaFold predictions with experimental cryo-EM or X-ray structures of C677T and A1298C variants
 - **Gene therapy researchers:** To design and test ABE guide RNAs targeting C677T
-- **Clinical researchers:** To establish clinical correlations across all seven disease pathways, particularly stratified by MTRR status
+- **Clinical researchers:** To establish clinical correlations in retinal and neuropsychiatric-relevant contexts, particularly stratified by MTRR status
 - **Bioinformaticians:** To independently replicate, extend, and improve the computational analysis
 - **Epigeneticists:** To profile genome-wide methylation consequences of compound heterozygous MTHFR
 - **Reproductive medicine specialists:** To investigate MTHFR-guided management of pregnancies in defined MTHFR variant cohorts
