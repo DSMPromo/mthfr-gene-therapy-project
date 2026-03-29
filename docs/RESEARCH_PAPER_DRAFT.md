@@ -10,7 +10,7 @@
 
 **Correspondence:** igor@dsm.promo
 
-**Keywords:** MTHFR, AlphaFold 3, Boltz-2, C677T, A1298C, FAD cofactor, folate substrate, protein structure prediction, retinal biomarkers, neuropsychiatric-relevant biochemistry, dimer biology, structural prioritization, computational prioritization, compound heterozygous
+**Keywords:** MTHFR, AlphaFold 3, Boltz-2, C677T, A1298C, FAD cofactor, protein structure prediction, dimer biology, structural prioritization, computational hypothesis prioritization, compound heterozygous
 
 **License:** CC BY-NC-SA 4.0
 
@@ -22,9 +22,9 @@
 
 ## Abstract
 
-Methylenetetrahydrofolate reductase (MTHFR) variants C677T (A222V) and A1298C (E429A) are common in human populations, yet their comparative behavior in modeled dimer and ligand-associated contexts remains incompletely characterized. We used AlphaFold 3 Server and Boltz-2 to compare wild-type, C677T, A1298C, and compound heterozygous MTHFR states in the presence of FAD, THF, and SAM. Across the tested configurations, monomer predictions remained broadly similar, whereas dimer predictions showed comparative inter-chain differences. Within this model set, the compound heterozygous dimer yielded the lowest reported interaction-confidence values across the assessed dimer-interface and ligand-associated metrics. These observations do not establish mechanism, disease causation, clinical relevance, or therapeutic feasibility. They define falsifiable follow-up questions centered on dimer-level biology, with retinal follow-up as a primary downstream context and neuropsychiatric-relevant biochemistry as a secondary exploratory context. All predictions require orthogonal validation through biochemical and structural methods.
+Methylenetetrahydrofolate reductase (MTHFR) variants C677T (A222V) and A1298C (E429A) are common in human populations, yet their comparative behavior in modeled dimer and ligand-associated contexts remains incompletely characterized. We used AlphaFold 3 Server and Boltz-2 to compare wild-type, C677T, A1298C, and compound heterozygous MTHFR states in the presence of FAD, THF, and SAM. Across the tested configurations, monomer predictions remained broadly similar, whereas dimer predictions showed comparative inter-chain differences. Within this model set, the compound heterozygous dimer yielded the lowest reported interaction-confidence values across the assessed dimer-interface and ligand-associated metrics. These observations do not establish mechanism, disease causation, clinical relevance, or therapeutic feasibility. They define falsifiable follow-up questions centered on dimer-level biology, with retinal follow-up as a primary downstream context and neuropsychiatric-relevant biochemistry as a secondary exploratory context. These computational observations define bounded follow-up questions and require orthogonal validation through biochemical and structural methods.
 
-**Note:** This is a computational study generating hypotheses for experimental validation. All structural predictions require confirmation through experimental methods (cryo-EM, X-ray crystallography, functional assays).
+**Note:** This is a computational hypothesis-prioritization study. All structural predictions require orthogonal validation through biochemical and structural methods.
 
 ---
 
@@ -32,7 +32,7 @@ Methylenetetrahydrofolate reductase (MTHFR) variants C677T (A222V) and A1298C (E
 
 ### 1.1 The MTHFR Enzyme and Its Clinical Significance
 
-MTHFR (methylenetetrahydrofolate reductase, EC 1.5.1.20) is a FAD-dependent homodimeric enzyme encoded on chromosome 1p36.22 that catalyzes the conversion of 5,10-methylenetetrahydrofolate to 5-methyltetrahydrofolate (5-MTHF), the primary circulating form of folate and the methyl donor for homocysteine remethylation to methionine (Froese et al., 2018). This reaction sits at the intersection of folate metabolism, homocysteine regulation, methylation (via S-adenosylmethionine), neurotransmitter synthesis (via BH4), B-vitamin processing, genome-wide DNA methylation, and reproductive health.
+MTHFR (methylenetetrahydrofolate reductase, EC 1.5.1.20) is a FAD-dependent homodimeric enzyme encoded on chromosome 1p36.22 that catalyzes the conversion of 5,10-methylenetetrahydrofolate to 5-methyltetrahydrofolate (5-MTHF), the primary circulating form of folate and the methyl donor for homocysteine remethylation to methionine (Froese et al., 2018). This reaction sits at the intersection of folate metabolism, homocysteine regulation, methylation biology, and selected downstream pathways discussed in the literature.
 
 The crystal structure of human MTHFR (PDB: 6FCX, 2.5 A resolution) revealed a homodimer with each subunit containing a conserved catalytic TIM-barrel domain (N-terminal, FAD-binding) and a eukaryote-specific regulatory domain (C-terminal, SAM-binding) connected by a 25-residue inter-domain linker (Froese et al., 2018). Recent cryo-EM structures (PDB: 8QA5, 8QA6) have further elucidated the mechanism of SAM-mediated allosteric inhibition through dual SAM binding and inter-domain conformational rearrangement (Froese et al., 2024).
 
@@ -60,59 +60,25 @@ When MTHFR produces less 5-MTHF (due to C677T/A1298C variants) AND MTRR is less 
 
 This compound genetic context is directly relevant to the present study, as the author genotype context carries heterozygous variants in both MTHFR (compound C677T/A1298C) and MTRR (I22M), representing co-occurring variants in MTHFR and MTRR that may be relevant to one-carbon pathway context.
 
-### 1.4 Primary Follow-Up Contexts and Additional Literature Context
+### 1.4 Primary Follow-Up Contexts
 
-MTHFR dysfunction has been reported in the literature to be associated with seven disease-relevant pathways:
+The present study prioritizes two downstream follow-up contexts from the broader literature: retinal follow-up as the primary context, and neuropsychiatric-relevant biochemistry as a secondary exploratory context.
 
-**Pathway 1: Vision Loss and Retinal Neurodegeneration**
+**Primary follow-up context: Retinal biomarkers**
 
-Elevated homocysteine is reported to be associated with retinal ganglion cell loss through oxidative stress, independent of intraocular pressure. Mthfr+/- mice (heterozygous -- the same genetic status as most human carriers) show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage (Markand et al., 2015). Case literature suggests that betaine treatment was associated with visual recovery in selected severe MTHFR deficiency contexts (Hergert et al., 2022). Retinal perfusion was improved in compound C677T/A1298C carriers receiving MTHFR genotype-guided supplementation with the medical food Ocufolin (Jiang et al., 2023). MTHFR additionally modifies CRB1-related retinopathies, worsening the rd8 retinal phenotype (Markand et al., 2015).
+Prior literature links MTHFR-related one-carbon pathway disruption and hyperhomocysteinemia to retinal injury, making retinal follow-up a reasonable primary downstream context for experimental testing. Mthfr+/- mice (heterozygous -- the same genetic status as most human carriers) show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage (Markand et al., 2015). Case literature suggests that betaine treatment was associated with visual recovery in selected severe MTHFR deficiency contexts (Hergert et al., 2022). Retinal perfusion was improved in compound C677T/A1298C carriers receiving MTHFR genotype-guided supplementation with the medical food Ocufolin (Jiang et al., 2023). MTHFR additionally modifies CRB1-related retinopathies, worsening the rd8 retinal phenotype (Markand et al., 2015).
 
-**Pathway 2: Autism Spectrum Disorder and Cerebral Folate Deficiency**
+**Secondary exploratory context: Neuropsychiatric-relevant biochemistry**
 
-Reduced 5-MTHF transport across the blood-brain barrier via folate receptor alpha (FRa) starves the developing brain of folate during critical neurodevelopmental windows. Meta-analysis of 15 studies supports a significant association between C677T and ASD across all five genetic models (Pu et al., 2020). The 677TT genotype was 2x more prevalent in autistic children in a Chinese Han study (16.1% vs 8.6%, OR=2.04). A randomized controlled trial demonstrated that folinic acid improved verbal communication in ASD children with language impairment (Frye et al., 2018). Maternal folate supplementation before and during pregnancy reduces autism risk in a study of 45,300 children (Levine et al., 2018).
+Because one-carbon pathway disruption may influence BH4-relevant neurotransmitter biology, neuropsychiatric-relevant biochemical follow-up is retained here as a secondary exploratory context rather than a primary disease-focused conclusion. Meta-analysis of 15 studies supports a significant association between C677T and ASD across all five genetic models (Pu et al., 2020). The 677TT genotype was 2x more prevalent in autistic children in a Chinese Han study (16.1% vs 8.6%, OR=2.04). A randomized controlled trial demonstrated that folinic acid improved verbal communication in ASD children with language impairment (Frye et al., 2018). Maternal folate supplementation before and during pregnancy reduces autism risk in a study of 45,300 children (Levine et al., 2018).
 
-**Pathway 3: Anxiety, Depression, and Neuropsychiatric Disorders**
+Additional literature context across cardiovascular, nutritional, epigenetic, and reproductive domains is noted in the broader literature, but those domains are not primary follow-up targets of the present computational study and are not interpreted here as direct consequences of the modeled structural differences.
 
-Impaired SAMe production reduces serotonin, dopamine, norepinephrine, and GABA synthesis. A1298C has been discussed in relation to BH4-relevant pathways -- BH4 is the rate-limiting cofactor for tryptophan hydroxylase (serotonin), tyrosine hydroxylase (dopamine, norepinephrine), and phenylalanine hydroxylase -- though the direct mechanism and effect size remain incompletely characterized. Meta-analysis across psychiatric disorders supports associations with schizophrenia, major depression, autism, bipolar disorder, and ADHD (Wan et al., 2018). Compound heterozygous patients show treatment-responsive symptoms with SAMe and methylated B vitamins (Levin & Varga, 2016). Importantly, a stress amplification loop exists: psychological stress consumes methyl groups, further depleting already-limited methylation capacity, which worsens anxiety -- creating a self-reinforcing cycle.
+### 1.5 Additional Literature Context
 
-**Pathway 4: B-Vitamin Processing Failure**
+Published literature discusses MTHFR across multiple clinical and biological domains. In the present study, those broader discussions are treated as background context rather than as outcomes established by the current computational analysis.
 
-MTHFR dysfunction creates a cascade of B-vitamin metabolic failures that extends beyond folate:
-- **B2 (Riboflavin):** Cannot adequately regenerate FAD for the already-weakened C677T enzyme. Riboflavin supplementation specifically lowers homocysteine in 677TT homozygotes by stabilizing FAD binding (McNulty et al., 2006). This provides a direct structural link: the C677T variant has reduced FAD affinity, and increasing cellular FAD through riboflavin partially compensates (Pejchal et al., 2006).
-- **B12 (Cobalamin):** Becomes trapped in inactive forms when methionine synthase activity is reduced (compounded by MTRR I22M)
-- **B9 (Folate):** Dietary folate (folic acid) cannot be converted to active 5-MTHF, the only form that crosses the blood-brain barrier
-- **B6 (Pyridoxine):** The trans-sulfuration pathway (homocysteine disposal via cystathionine) becomes critical when remethylation capacity is reduced, increasing B6 demand
-
-Riboflavin supplementation specifically lowered homocysteine by 22% in 677TT individuals, with effects independent of folate status, providing a genotype-guided nutritional intervention (McNulty et al., 2006). Riboflavin supplementation also alters global and gene-specific DNA methylation in adults with the 677TT genotype (Pentieva et al., 2020).
-
-**Pathway 5: Cardiovascular Disease and Stroke**
-
-Every 5 umol/L increase in plasma homocysteine is associated with 20-30% higher coronary artery disease risk and 60% elevated stroke risk. Homocysteine triggers endothelial dysfunction through oxidative damage -- the same vascular injury mechanism affecting the retina (Pathway 1). B-vitamin supplementation reduces homocysteine but clinical trial results on hard CVD endpoints remain debated, suggesting that reducing homocysteine alone may not be sufficient once vascular damage has occurred, supporting the rationale for genetic correction at the source.
-
-**Pathway 6: Genome-Wide DNA Methylation Disruption (NEW)**
-
-MTHFR's role extends far beyond the five traditionally recognized pathways. Because MTHFR produces 5-MTHF, the primary methyl donor for the entire methylation cycle, reduced MTHFR function may reduce the global supply of S-adenosylmethionine (SAMe) -- the universal methyl donor for >200 methyltransferases including DNA methyltransferases (DNMTs).
-
-This creates genome-wide consequences:
-- **Paternal epigenetic inheritance:** Mthfr-deficient male mice show profound genome-wide loss of sperm DNA methylation that persists across the F1 and F2 generations, demonstrating transgenerational epigenetic inheritance (Karahan et al., 2021). This means MTHFR dysfunction in a father can alter gene expression patterns in grandchildren.
-- **Histone modification:** SAMe is also the methyl donor for histone methyltransferases, meaning MTHFR variants can alter chromatin structure and gene regulation globally
-- **Imprinting disorders:** Genomic imprinting depends on DNA methyltransferases to create parent-specific methylation patterns. MTHFR dysfunction could disrupt imprinted gene expression, with consequences for fetal growth and development
-- **Cancer susceptibility:** Global DNA hypomethylation is a hallmark of many cancers. MTHFR 677TT genotype is associated with altered cancer risk profiles, though the direction varies by cancer type (protective for some colorectal cancers via altered thymidylate synthesis, but risk-increasing for others)
-
-This pathway represents perhaps the most far-reaching consequence of MTHFR dysfunction, as it affects the regulation of potentially thousands of genes rather than a single metabolic pathway.
-
-**Pathway 7: Pregnancy Complications and Reproductive Health (NEW)**
-
-MTHFR variants are associated with multiple adverse pregnancy outcomes:
-- **Preeclampsia:** Meta-analysis of 51 studies found significant association between C677T and preeclampsia risk in overall, Caucasian, and East Asian populations (Xia et al., 2013; Wu et al., 2017)
-- **Recurrent pregnancy loss:** Both maternal and paternal MTHFR polymorphisms are associated with recurrent adverse obstetrical outcomes. The A1298C variant has been specifically linked to recurrent pregnancy loss (Kumar et al., 2024)
-- **Neural tube defects:** MTHFR is a key enzyme in the folate pathway that prevents neural tube defects. The global folic acid fortification program was designed in part because of MTHFR variant prevalence
-- **Placental development:** Adequate methylation is required for trophoblast differentiation and placental vascular development; MTHFR dysfunction may impair both processes
-
-The reproductive pathway is notable because a carrier parent can pass both the genetic variant AND potential epigenetic consequences (Pathway 6) to offspring, which warrants investigation as a potential transgenerational mechanism.
-
-### 1.5 Knowledge Gap and Study Rationale
+### 1.6 Knowledge Gap and Study Rationale
 
 While thousands of individual studies address MTHFR variants in specific disease contexts, no published work has:
 
@@ -123,30 +89,30 @@ While thousands of individual studies address MTHFR variants in specific disease
 
 AlphaFold 3 (Abramson et al., 2024) can model protein + cofactor (FAD) + substrate (THF) + inhibitor (SAM) interactions in a single prediction, enabling direct comparison of wild-type and variant enzyme structures with their functional ligands.
 
-### 1.6 Why MTHFR Has Seen Limited Translational Development
+### 1.7 Why MTHFR Has Seen Limited Translational Development
 
-As of March 2026, our searches did not identify a registered interventional program specifically focused on therapeutic gene-editing of MTHFR. This absence should not be interpreted as evidence of target invalidity, but it does suggest limited translational development to date. This gap exists for several identifiable reasons, each of which we argue is now addressable:
+As of March 2026, our searches did not identify a registered interventional program specifically focused on therapeutic gene-editing of MTHFR. This absence should not be interpreted as evidence of target invalidity, but it does suggest limited translational development to date. Several factors may contribute, including common-variant framing, partial metabolic compensation through supplementation, and the relative recency of relevant structural tools.
 
-**1. "It's just a polymorphism, not a disease."** The CDC states that MTHFR variants are "generally not a reason to change treatment." Because the variants are so common (up to 40% of the population), the medical establishment has normalized them as benign polymorphisms rather than recognizing them as clinically actionable targets. Variant prevalence does not, by itself, determine biological importance or translational priority -- 40% prevalence means 1.5-2 billion people carry these variants. The potential disease burden is distributed across seven specialties, making it invisible to any single field.
+**1. "It's just a polymorphism, not a disease."** The CDC states that MTHFR variants are "generally not a reason to change treatment." Because these variants are common in human populations, they have often been framed as polymorphisms rather than as translational intervention targets. Variant prevalence does not, by itself, determine biological importance or translational priority -- 40% prevalence means 1.5-2 billion people carry these variants. The potential disease burden is distributed across seven specialties, making it invisible to any single field.
 
 **2. Supplementation "works well enough."** The current standard of care -- methylfolate, riboflavin, B12, SAMe supplementation -- partially compensates for impaired enzyme function. This creates the perception that the problem is solved. However, supplementation is lifelong, and may only partially compensate for reduced enzyme activity, addressing downstream metabolic effects rather than the genetic variant itself. The C677T enzyme is still thermolabile. The A1298C regulatory domain still shows functional perturbation. Every cell in the body still carries the variant. Supplementation is a practical interim approach, not genetic correction.
 
-**3. Specialization blindness.** The seven disease pathways connected to MTHFR are managed by seven different medical specialties: ophthalmology (vision), psychiatry (anxiety/depression), neurology (autism/CFD), cardiology (CVD), nutrition (B-vitamins), reproductive medicine (pregnancy), and genetics (epigenetics). No single specialist sees the full picture. Each sees their piece -- "unexplained retinal thinning," "treatment-resistant anxiety," "elevated homocysteine" -- without recognizing the potential common upstream factor.
+**3. Specialization blindness.** Relevant findings have often been discussed across separate specialties rather than within a single structural prioritization framework.
 
 **4. The structural data is new.** The first human MTHFR crystal structure was only published in 2018 (Froese et al., PDB 6FCX). The cryo-EM structures revealing SAM allosteric regulation were published in 2024 (PDB 8QA5, 8QA6). AlphaFold 3, capable of predicting protein-ligand complexes, became available in 2024. The tools to structurally characterize these variants simply did not exist until very recently.
 
 **5. Relevant findings have often been discussed within separate specialties rather than within a single structural prioritization framework.** Thousands of papers exist on individual aspects of MTHFR -- C677T and cardiovascular risk, MTHFR and autism, MTHFR and pregnancy complications. But no published work has unified all seven pathways with structural predictions and proposed a correction strategy. The information existed in fragments across disciplines. This project is the integration.
 
-**6. Gene therapy economics favor rare diseases.** The gene therapy industry has focused on rare diseases (sickle cell, hemophilia, SMA) where small patient populations justify high per-patient pricing ($1-3M per treatment). MTHFR, with 1.5-2 billion carriers, is the opposite -- an extremely common variant. The business model for correcting a common variant has not been established. However, the precedent is shifting: PCSK9 base editing (VERVE-102, YOLT-101) targets a common cardiovascular risk factor, demonstrating that gene-editing for common variants is commercially viable.
+**What has changed:** Recent advances in structure prediction, editing programs for other targets, and new MTHFR structural data make the question more technically discussable than before. The present study does not establish feasibility of correction. It asks whether the target merits bounded experimental follow-up.
 
-**What has changed:** The convergence of AlphaFold 3 (structural predictions), adenine base editing (proven safe in humans via VERVE-102, YOLT-101), LNP delivery (proven at scale via COVID vaccines and now gene-editing), and the 2024 MTHFR cryo-EM structures creates a window that did not exist even two years ago. Recent advances in structure prediction, editing programs for other targets, and MTHFR structural biology make the question more technically discussable than before. The present study does not establish feasibility of correction. It asks whether the target merits bounded experimental follow-up.
-
-### 1.7 Study Objectives
+### 1.8 Study Objectives
 
 1. Compare wild-type, single-variant, and compound heterozygous MTHFR states in modeled monomer, dimer, and ligand-associated contexts
 2. Determine whether the compound heterozygous state is prioritized by comparative dimer-level metrics within the tested model set
 3. Define bounded experimental follow-up questions for biochemical assays and selected downstream biomarker studies
 4. Clarify which conclusions remain unsupported without orthogonal validation
+
+This study does not demonstrate reduced enzyme activity, altered FAD affinity in vitro, retinal injury, neuropsychiatric causation, or editing feasibility. Those questions require independent biochemical, cellular, structural, and clinical investigation.
 
 ---
 
@@ -215,7 +181,7 @@ All analysis code is available at https://github.com/DSMPromo/mthfr-target-valid
 
 ### 2.5 Reference Structure Context
 
-To validate our pipeline, we compared our wild-type monomer prediction (Job 01) against the experimentally determined crystal structure (PDB: 6FCX, Froese et al., 2018). High agreement between the AlphaFold 3 prediction and the experimental structure would confirm that our predictions are reliable for wild-type MTHFR and that differences observed in variant predictions are likely meaningful rather than artifacts.
+Wild-type predictions were contextualized against the experimentally determined crystal structure 6FCX to assess broad structural consistency. This comparison provides reference context for the modeled wild-type state but does not, by itself, validate variant-specific interpretations.
 
 ### 2.6 Reference Structures
 
@@ -254,7 +220,7 @@ All six monomer predictions (3 variants x 2 seeds) achieved high-confidence fold
 
 ### 3.2 Dimer Predictions: Comparative Differences in the Tested Models
 
-The dimer predictions showed comparative differences that were less apparent in the tested monomer models:
+The tested dimer models showed comparative differences that were less apparent in the tested monomer models:
 
 | Job | Variant | pTM | ipTM | FAD Binding (chain_iptm) | pLDDT@222 | pLDDT@429 | Clash |
 |-----|---------|-----|------|--------------------------|-----------|-----------|-------|
@@ -277,17 +243,17 @@ The dimer predictions showed comparative differences that were less apparent in 
 
 1. **Lower ligand-associated confidence is observed in the tested dimer models than in the tested monomer models:** FAD binding confidence (chain_iptm) drops from 0.97 in monomers to 0.53-0.57 in dimers -- a substantial reduction that is consistent with the dimer interface being critical for FAD binding and that AlphaFold detects reduced confidence in the protein-cofactor interaction at the biologically relevant quaternary structure level.
 
-2. **The compound heterozygous dimer consistently shows the lowest scores across every metric in both independent runs:** Job 06 (pTM 0.73, ipTM 0.70, FAD binding 0.53, pLDDT@429 95.0) and Job 12 (pTM 0.76, ipTM 0.73, FAD binding 0.55, pLDDT@429 95.3). This is the author's actual genotype -- one chain carrying A222V (catalytic domain hit) and one chain carrying E429A (regulatory domain hit) -- and it produces the most structurally disrupted prediction of any variant tested, replicated across independent seeds.
+2. **The compound heterozygous dimer consistently shows the lowest scores across every metric in both independent runs:** Job 06 (pTM 0.73, ipTM 0.70, FAD binding 0.53, pLDDT@429 95.0) and Job 12 (pTM 0.76, ipTM 0.73, FAD binding 0.55, pLDDT@429 95.3). In the tested heterozygous dimer configuration, one chain carried A222V and one chain carried E429A. Within this model set, that configuration yielded the lowest reported confidence values across the assessed dimer-level metrics in both runs.
 
-3. **Compound is worse than C677T alone:** The compound dimer average ipTM (0.715) is lower than the C677T dimer average ipTM (0.765), consistent with the interpretation that carrying both mutations creates a more severe structural disruption than carrying one. This supports the clinical observation that compound heterozygous individuals have enzyme activity comparable to C677T homozygotes (~50-60% of normal).
+3. **Compound is worse than C677T alone:** Relative to the tested C677T dimer model, the compound heterozygous dimer showed lower average ipTM within this model set, which prioritizes that configuration for experimental follow-up.
 
 4. **pLDDT at position 429 drops most in the compound dimer:** From 97.5 (monomers) to 95.0-95.3 (compound dimer), consistent with the interpretation that the A1298C variant's effect on the regulatory domain is amplified in the dimer context, consistent with the 2024 cryo-EM finding that SAM-mediated allosteric regulation operates across the dimer interface.
 
-5. **All findings replicate across independent seeds:** Each variant was predicted with two different random seeds. The trends are consistent in both runs, consistent with the interpretation that these are real structural effects and not stochastic noise in the prediction algorithm.
+5. **All findings replicate across independent seeds:** Each variant was predicted with two different random seeds. The directional trends were consistent across the tested runs, supporting limited internal reproducibility within this modeling setup.
 
 ### 3.3 FAD Binding Confidence: Monomer vs Dimer Comparison
 
-The most striking finding is the difference between monomer and dimer FAD binding predictions:
+A notable difference within the tested model set is the contrast between monomer and dimer FAD-associated confidence values:
 
 | Variant | Monomer FAD Binding (avg) | Dimer FAD Binding (avg) | Change |
 |---------|-------------------------:|------------------------:|-------:|
@@ -295,9 +261,9 @@ The most striking finding is the difference between monomer and dimer FAD bindin
 | C677T | 0.970 | 0.575 | -0.40 |
 | **Compound** | **0.970** | **0.540** | **-0.43** |
 
-At the monomer level, all variants maintain high FAD binding confidence (ipTM = 0.97). This is consistent with the known biology: the C677T enzyme does bind FAD -- it simply loses it more easily under thermal stress. AlphaFold predicts static structures and therefore cannot capture thermolability directly, but the dimer predictions reveal interface-mediated effects on FAD binding that are invisible in monomers.
+At the monomer level, all tested states showed high FAD-associated confidence values. This is directionally compatible with prior literature indicating that the C677T enzyme can bind FAD, while experimental work has shown altered thermal stability. AlphaFold predicts static structures and therefore cannot capture thermolability directly, but the dimer predictions reveal interface-mediated effects on FAD binding that are invisible in monomers.
 
-The compound heterozygous dimer shows the largest FAD binding reduction (-0.44), suggesting that the combination of catalytic domain disruption (A222V) and regulatory domain disruption (E429A) creates possible combined structural effects at the dimer level.
+The compound heterozygous dimer showed the largest reduction in reported FAD-associated confidence within the tested model set, which is consistent with a combined dimer-level perturbation hypothesis but does not establish mechanism.
 
 *See analysis/outputs/charts/iptm_comparison.png for visualization.*
 
