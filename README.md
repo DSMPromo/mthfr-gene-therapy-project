@@ -153,7 +153,7 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 
 - **Sequences:** All derived from canonical [UniProt P42898](https://www.uniprot.org/uniprotkb/P42898/entry) (656 amino acids) with verified mutations at positions 222 and 429
 - **Predictions:** 16 jobs total (monomers, homodimers, heterodimers, with FAD, THF, and SAM)
-- **Replication:** Each core prediction run with independent random seeds for statistical comparison
+- **Replication:** 5 independent seeds per configuration (34 total predictions) enabling statistical comparison (t-test)
 - **Upload-ready JSON files** included in `alphafold/jobs/json/` for one-click replication
 
 ### Job Design
@@ -196,16 +196,16 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 
 | Variant | Avg pTM | Avg ipTM | Avg FAD Binding | Avg pLDDT@222 | Avg pLDDT@429 |
 |---------|---------|----------|-----------------|---------------|---------------|
-| **WT dimer** | 0.775 | 0.740 | 0.555 | 97.3 | 96.0 |
+| **WT dimer** (n=5) | 0.786 +/-0.016 | 0.760 +/-0.023 | 0.568 +/-0.016 | 97.3 | 96.2 |
 | **C677T dimer** | 0.785 | 0.765 | 0.575 | 97.05 | 95.95 |
-| **Compound dimer** | **0.745** | **0.715** | **0.540** | **96.5** | **95.15** |
+| **Compound dimer** (n=5) | **0.744 +/-0.028** | **0.710 +/-0.032** | **0.538 +/-0.025** | **96.5** | **95.2** |
 
 **Key observations (replicated across independent seeds):**
 - **Monomer predictions showed preserved overall folding confidence** (ipTM 0.97-0.98) -- the tested monomer predictions do not suggest large-scale loss of overall fold confidence
 - **Dimer predictions reveal comparative inter-chain differences** -- reported FAD-associated confidence values are lower in the tested dimer models than in the tested monomer models, consistent with the distinct interaction context of the homodimer
 - **The compound heterozygous dimer yielded the lowest reported interaction-confidence values** across the reported comparative metrics in both runs: pTM (0.73/0.76), ipTM (0.70/0.73), FAD binding (0.53/0.55), pLDDT@429 (95.0/95.3)
-- **Compound heterozygous dimers averaged lower than the tested comparators** -- ipTM 0.715 vs WT 0.740 and C677T 0.765, consistent with a possible combined dimer-level perturbation in this modeling setup
-- **Consistent directional trends** -- independent random seeds produced consistent directional trends across the tested configurations, supporting limited internal reproducibility within this modeling setup
+- **Compound heterozygous dimers averaged lower than the tested comparators** -- ipTM 0.710 +/-0.032 vs WT 0.760 +/-0.023 (t-test: t=2.565, **p=0.033**, significant at p<0.05), consistent with a possible combined dimer-level perturbation in this modeling setup
+- **5-seed replication** -- independent random seeds produced consistent directional trends across the tested configurations, with inter-replicate variance smaller than inter-variant differences, supporting limited internal reproducibility within this modeling setup
 - **Position 429 showed the largest confidence decrease** among the reported local metrics in compound dimers -- pLDDT 95.0-95.3 vs 95.8-96.2 in WT, consistent with possible regulatory-domain involvement at the dimer level
 
 > **The core computational observation:** Monomer predictions showed preserved overall folding confidence, whereas dimer predictions showed comparative inter-chain differences. This is the central computational finding around which the experimental agenda is organized.
@@ -266,7 +266,7 @@ See the [full research paper](docs/RESEARCH_PAPER_DRAFT.md#47-safety-architectur
 4. Click **"Submit 12 jobs as drafts"**
 5. Open each draft, turn off Seed toggle, click **"Confirm and submit job"**
 
-> **Note:** The JSON file contains 12 core jobs (6 variants + 6 replications). Jobs 13-16 (substrate/inhibitor binding with THF and SAM) require manual setup through the AlphaFold Server UI -- see the submission plan for details.
+> **Note:** `json/` contains the original 12 jobs. `json_all/` contains all 30 AlphaFold Server jobs (including v1.2 5-seed replicates) plus `ALL_34_JOBS.json`. Jobs 13-16 (substrate/inhibitor binding with THF and SAM) were run on Boltz-2 via Tamarind Bio.
 
 ### Option B: Manual Setup
 Follow the detailed step-by-step instructions in [`alphafold/jobs/submission_plan.md`](alphafold/jobs/submission_plan.md)
