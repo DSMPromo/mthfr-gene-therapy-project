@@ -179,7 +179,7 @@ All analysis code is available at https://github.com/DSMPromo/mthfr-target-valid
 
 ### 2.5 Reference Structure Context
 
-Wild-type predictions were contextualized against the experimentally determined crystal structure 6FCX to assess broad structural consistency. This comparison provides reference context for the modeled wild-type state but does not, by itself, validate variant-specific interpretations.
+Wild-type monomer predictions were compared to the experimentally determined crystal structure of human MTHFR (PDB: 6FCX, Froese et al., 2018) using gemmi-based structural superposition. The resulting RMSD of 1.42 A over 596 matched CA atoms classifies the prediction as high accuracy (RMSD <= 2.0 A according to standard benchmarking criteria), supporting the use of AlphaFold 3 predictions for comparative structural analysis within this protein system.
 
 ### 2.6 Reference Structures
 
@@ -311,6 +311,8 @@ Dimer replication consistency (all 6 dimer jobs complete):
 - Compound dimer: pTM 0.73/0.76, ipTM 0.70/0.73 (range 0.03)
 
 The compound heterozygous dimer consistently ranked lowest across all five independent seeds (n=5 per configuration). Statistical testing (Welch's t-test) confirmed that the ipTM difference between WT and compound dimers reached significance (p=0.033). The inter-replicate variance was modest relative to the observed inter-variant differences within this model set, supporting the use of these outputs for computational prioritization, but not establishing biological significance without orthogonal validation.
+
+Effect size analysis (Cohen's d) confirmed large differences between WT and compound heterozygous dimers for ipTM (d=1.62), pTM (d=1.64), and FAD-associated confidence (d=1.29). After Bonferroni correction for 8 simultaneous comparisons, pLDDT at position 429 remained statistically significant (raw p=0.0004, adjusted p=0.003, d=3.65), identifying the regulatory domain as the most robust comparative signal. The ipTM and pTM comparisons showed large effect sizes but did not survive Bonferroni correction (adjusted p=0.267 and 0.255 respectively), consistent with the limited sample size and supporting cautious interpretation.
 
 ### 3.7 Substrate and Inhibitor Binding (Jobs 13-16)
 

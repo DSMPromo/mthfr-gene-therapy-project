@@ -210,6 +210,23 @@ We used [AlphaFold 3 Server](https://alphafoldserver.com) to predict structures 
 
 > **The core computational observation:** Monomer predictions showed preserved overall folding confidence, whereas dimer predictions showed comparative inter-chain differences. This is the central computational finding around which the experimental agenda is organized.
 
+### Structural Validation and Statistical Analysis
+
+**RMSD against experimental structure:** The wild-type monomer prediction was compared to the experimentally determined crystal structure (PDB: 6FCX, Froese et al., 2018) using gemmi-based superposition. The resulting RMSD of 1.42 A over 596 matched CA atoms classifies the prediction as high accuracy (RMSD <= 2.0 A), supporting the use of AlphaFold 3 predictions for comparative analysis within this protein system.
+
+**Effect sizes (Cohen's d, WT dimer vs compound dimer, n=5 each):**
+
+| Metric | WT Dimer (n=5) | Compound Dimer (n=5) | Cohen's d | Raw p | Bonferroni p |
+|--------|---------------|---------------------|-----------|-------|-------------|
+| ipTM | 0.760 +/-0.023 | 0.710 +/-0.032 | 1.62 (large) | 0.033 | 0.267 |
+| pTM | 0.786 +/-0.016 | 0.744 +/-0.028 | 1.64 (large) | 0.032 | 0.255 |
+| FAD binding | 0.568 +/-0.016 | 0.538 +/-0.025 | 1.29 (large) | 0.077 | 0.613 |
+| pLDDT@429 | 96.16 +/-0.22 | 95.20 +/-0.24 | 3.65 (very large) | 0.0004 | **0.003** |
+
+After Bonferroni correction for 8 comparisons, pLDDT at position 429 remains statistically significant (adjusted p=0.003), identifying the regulatory domain as the most robust comparative signal in this modeling setup. The ipTM and pTM differences show large effect sizes (Cohen's d > 1.5) but do not survive Bonferroni correction, consistent with the limited sample size (n=5).
+
+**Per-residue pLDDT comparison:** A full-chain pLDDT comparison across all 656 residues was generated for WT, C677T, and compound heterozygous states (see analysis/outputs/figures/plddt_full_chain.png).
+
 > **Important:** These are computational predictions, not experimental structures. All confidence metrics should be interpreted as hypothesis generators, not proof of mechanism. See the [full research paper draft](docs/RESEARCH_PAPER_DRAFT.md) for complete methodology and limitations.
 
 ---
