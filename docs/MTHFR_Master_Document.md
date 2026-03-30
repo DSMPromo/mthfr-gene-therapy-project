@@ -185,7 +185,7 @@ From computational observations to staged experimental follow-up:
 | Phase | Focus | Timeline | Cost | Status |
 |-------|-------|----------|------|--------|
 | 1 | Computational hypothesis prioritization, AlphaFold 3 and Boltz-2 structural comparison, reproducible pipeline, open repository | Done | $0 | Complete |
-| 2a | Molecular dynamics simulations: OpenMM/Amber14, WT dimer vs compound dimer, RMSD/RMSF/flexibility analysis | In progress | $0 | Running |
+| 2a | Molecular dynamics simulations: 10ns OpenMM/Amber14, WT dimer vs compound dimer. Compound dimer RMSD 7.34 A vs WT 5.29 A (p=1.05e-17). RMSF 6.6x higher at pos 222, 4.3x at pos 429. | Done | $0 | Complete |
 | 2b | Preprint (bioRxiv submitted), researcher outreach, extended structural benchmarking | 1 to 3 months | Approx. $500 | In progress |
 | 3 | Biochemical validation, expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6 to 12 months | $50K to $150K | Requires lab partner |
 | 4 | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-relevant readouts in well-defined cohorts | 12 to 18 months | $100K to $300K | Requires clinical collaborator |

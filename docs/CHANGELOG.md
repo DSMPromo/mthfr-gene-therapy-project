@@ -1,16 +1,22 @@
 # Changelog
 
-## v1.3 (March 29, 2026) -- IN PROGRESS
-- Extended to 10 independent seeds per configuration (64 total predictions)
+## v1.3 (March 29, 2026) -- COMPLETE
+- Extended to 10 independent seeds per configuration (64 total AlphaFold predictions)
 - 3 of 4 key metrics now survive Bonferroni correction (was 1 of 4 with 5 seeds)
 - ipTM: p=0.003, Bonferroni p=0.035 (significant)
 - pTM: p=0.003, Bonferroni p=0.031 (significant)
 - pLDDT@429: p<0.000001, Bonferroni p=0.000005 (highly significant)
-- Molecular dynamics simulations (OpenMM, Amber14 force field) -- WT dimer vs compound dimer
-- MD analysis: RMSD, RMSF, per-residue flexibility comparison
+- 10ns molecular dynamics simulations completed (OpenMM, Amber14, Google Colab A100)
+- MD results: compound dimer RMSD 7.34 vs WT 5.29 A (p=1.05e-17)
+- RMSF at pos 222: 9.76 A vs 1.47 A (6.6x more flexible in compound)
+- RMSF at pos 429: 6.96 A vs 1.61 A (4.3x more flexible in compound)
+- Published: Zenodo DOI 10.5281/zenodo.19318627
+- Published: Preprints.org ID 205673
+- ORCID linked: 0009-0000-1408-1065
+- Researcher outreach emails sent (Dr. Froese, Dr. Smith)
 - Consolidated all results into single alphafold/results_all/ folder (64 results + 4 Boltz-2)
-- Removed v1.2 and v1.3 staging folders
-- Added run_md.py pipeline for local M1 Max execution with OpenCL acceleration
+- Added run_md.py, validate_structure.py, MTHFR_MD_Simulation.ipynb
+- Split all figures into individual small files (no oversized images)
 
 ## v1.2 (March 29, 2026)
 - Extended to 5 independent seeds per configuration (34 total predictions)
