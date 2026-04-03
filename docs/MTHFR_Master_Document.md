@@ -7,13 +7,13 @@
 Igor Mihaljko | Independent Researcher | Chicago, IL  
 ORCID: [0009-0000-1408-1065](https://orcid.org/0009-0000-1408-1065)
 
-March 2026 | Version 6.0 | FOR RESEARCH AND EDUCATIONAL PURPOSES ONLY
+April 2026 | Version 7.0 | FOR RESEARCH AND EDUCATIONAL PURPOSES ONLY
 
 ---
 
 ## Why This Document Exists
 
-MTHFR biology sits at the intersection of folate metabolism, homocysteine regulation, methylation biology, neurotransmitter-relevant one-carbon metabolism, and vitamin-dependent pathway function. Because downstream findings are often discussed within separate specialties, relevant literature can appear fragmented. This document brings selected strands together into a single research framework and pairs them with a computational structural comparison designed to prioritize experimentally testable hypotheses.
+MTHFR biology sits at the intersection of folate metabolism, homocysteine regulation, methylation biology, one-carbon metabolism, and vitamin-dependent pathway function. Because downstream findings are often discussed within separate specialties, relevant literature can appear fragmented. This document brings selected strands together into a single research framework and pairs them with a computational structural comparison designed to prioritize experimentally testable hypotheses.
 
 Common MTHFR variants are widely distributed in human populations, and current clinical guidance does not treat most common variant states as stand-alone indications for major treatment changes. This document does not argue otherwise. Its purpose is narrower: to identify structural and biochemical questions that may warrant orthogonal validation.
 
@@ -23,7 +23,7 @@ Recent advances in structure prediction and related translational tools make it 
 
 ## Core Boundaries of This Document
 
-This document does not demonstrate reduced enzyme activity, altered FAD affinity in vitro, retinal injury, neuropsychiatric causation, or editing feasibility. Structural models described here are predictions, not experimentally resolved structures. Any future translational or therapeutic discussion remains downstream and contingent on substantial biochemical, structural, cellular, preclinical, regulatory, and clinical validation.
+This document does not demonstrate reduced enzyme activity, altered FAD affinity in vitro, retinal injury, or editing feasibility. Structural models described here are predictions, not experimentally resolved structures. Any future translational or therapeutic discussion remains downstream and contingent on substantial biochemical, structural, cellular, preclinical, regulatory, and clinical validation.
 
 ---
 
@@ -50,34 +50,24 @@ MTHFR functions as a homodimer. The crystal structure (PDB: 6FCX, 2.5 A resoluti
 
 Compound heterozygosity, one copy of each variant, has been reported in the literature to produce lower overall enzyme activity than wild-type, with effects that may involve both catalytic-domain and regulatory-domain context.
 
-### 1.3 Primary Follow-Up Contexts
+### 1.3 Primary Follow-Up Context: Retinal Biomarkers
 
-The present document prioritizes two downstream follow-up contexts from the broader literature.
+The present document prioritizes retinal biomarkers as the primary downstream follow-up context, based on the strongest available literature bridge from MTHFR biology to measurable outcomes.
 
-#### Primary follow-up context: Retinal biomarkers
-
-Prior literature links MTHFR-related one-carbon pathway disruption and hyperhomocysteinemia to retinal injury, making retinal follow-up a reasonable primary downstream context for experimental testing. Selected findings include:
+Prior literature links MTHFR-related one-carbon pathway disruption and hyperhomocysteinemia to retinal injury, making retinal follow-up the most testable downstream context for experimental validation. Selected findings include:
 
 - Mthfr+/- mice show increased retinal homocysteine, ganglion cell loss, thinner nerve fiber layer, and vascular leakage (Markand et al., 2015, *IOVS*)
 - MTHFR modifies CRB1-related retinal phenotypes in the rd8 model (Markand et al., 2015, *Experimental Eye Research*)
 - A case report described visual recovery associated with betaine treatment in severe MTHFR deficiency (Hergert et al., 2022, *Journal of Neurology*)
 - Retinal perfusion improved in compound C677T/A1298C carriers receiving genotype-guided supplementation with Ocufolin medical food (Jiang et al., 2023, *Clinical Ophthalmology*)
 
-In the present document, retinal biology is treated as a candidate biomarker domain for follow-up, not as an outcome established by the computational results.
+The retinal pathway is prioritized because it offers quantifiable biomarkers (OCT measurements, retinal nerve fiber layer thickness, macular perfusion density), established animal models (Mthfr+/- mice), and demonstrated genotype-response correlation in human supplementation studies.
 
-#### Secondary exploratory context: Neuropsychiatric-relevant biochemistry
-
-A1298C has been discussed in relation to BH4-relevant pathways, and one-carbon disruption has been discussed in relation to neurotransmitter-relevant biochemistry. However, mechanism, effect size, and subgroup specificity remain incompletely defined. Selected findings include:
-
-- Meta-analysis has reported associations between MTHFR polymorphism and psychiatric phenotypes across several diagnostic categories (Wan et al., 2018, *Translational Psychiatry*)
-- Compound heterozygous patients have been described in treatment-responsive clinical contexts involving SAMe and methylated B vitamins when MTHFR status is identified (Levin and Varga, 2016)
-- These observations support exploratory biochemical follow-up in defined subgroups, rather than a primary disease-focused conclusion
-
-In the present document, this context is treated as secondary and exploratory.
+In the present document, retinal biology is treated as the candidate biomarker domain for follow-up, not as an outcome established by the computational results.
 
 ### 1.4 Additional Literature Context
 
-Published literature also discusses MTHFR across autism and cerebral folate deficiency, B-vitamin processing, cardiovascular biology, DNA methylation, and reproductive health. In the present document, those broader domains are treated as background context rather than as outcomes established by the computational analysis.
+Published literature also discusses MTHFR across neuropsychiatric phenotypes, autism and cerebral folate deficiency, B-vitamin processing, cardiovascular biology, DNA methylation, and reproductive health. In the present document, those broader domains are treated as background context rather than as outcomes established by the computational analysis.
 
 ### 1.5 Author Genotype Context
 
@@ -151,6 +141,21 @@ These predictions are used for hypothesis prioritization only. They do not estab
 | 15 | Compound + FAD + THF | 0.848 | 0.819 | 0.878 | 0.836 |
 | 16 | WT + FAD + SAM | 0.911 | 0.897 | 0.925 | 0.899 |
 
+#### Molecular Dynamics Results (100ns, OpenMM/Amber14)
+
+100ns all-atom MD simulations comparing WT and compound heterozygous MTHFR dimers (OpenMM, Amber14/TIP3P-FB, 300K, 150mM NaCl, RTX 4090). PBC-corrected per-chain RMSD analysis with independent verification (34 checks passed, validated 2x).
+
+| Metric | WT Dimer | Compound Dimer | Difference |
+|--------|----------|---------------|------------|
+| Mean RMSD (100ns) | 7.16 +/- 1.40 A | 6.22 +/- 1.02 A | WT 0.94 A higher |
+| Equilibrium RMSD (>50ns) | 8.17 +/- 0.30 A | 6.88 +/- 0.30 A | WT 1.29 A higher |
+| Per-chain RMSD (A) | A=6.89, B=7.44 | A=5.67, B=6.76 | Compound lower both chains |
+| t-test (equilibrium) | | p < 1e-323 | Highly significant |
+| Cohen's d (equilibrium) | | 4.31 | Very large effect |
+| Time to equilibrium | ~62 ns | ~62 ns | Both similar |
+
+The compound heterozygous dimer adopts a more compact conformational ensemble than wild-type, with significantly lower per-chain backbone RMSD in both chains. This suggests the combined mutations may constrain the dimer into a more rigid state, potentially limiting conformational dynamics required for catalytic function. These dynamic observations complement the static AlphaFold predictions and require orthogonal experimental validation.
+
 ### 2.5 Comparative Observations Within the Tested Model Set
 
 1. Monomer predictions showed preserved overall folding across the tested variant states. The tested monomer outputs do not suggest large-scale loss of overall folding confidence.
@@ -166,7 +171,7 @@ Monomer predictions showed preserved overall folding across the tested variant s
 
 ### 2.7 What This Computational Section Does Not Show
 
-This computational framework does not demonstrate reduced enzyme activity, altered FAD affinity in vitro, disease causation, retinal injury, neuropsychiatric causation, or therapeutic feasibility. It does not prove that observed confidence differences are biologically meaningful. Those questions require independent biochemical, structural, cellular, and clinical investigation.
+This computational framework does not demonstrate reduced enzyme activity, altered FAD affinity in vitro, disease causation, retinal injury, or therapeutic feasibility. It does not prove that observed confidence differences are biologically meaningful. Those questions require independent biochemical, structural, cellular, and clinical investigation.
 
 ---
 
@@ -188,7 +193,7 @@ From computational observations to staged experimental follow-up:
 | 2a | Molecular dynamics simulations: 100ns OpenMM/Amber14, WT vs compound dimer, PBC-corrected per-chain analysis. Compound dimer more compact (equilibrium RMSD 6.88 vs WT 8.17 A, p<1e-323, Cohen's d=4.31). 34-check verification (validated 2x). | Done | $0 | Complete |
 | 2b | Preprint (bioRxiv submitted), researcher outreach, extended structural benchmarking | 1 to 3 months | Approx. $500 | In progress |
 | 3 | Biochemical validation, expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6 to 12 months | $50K to $150K | Requires lab partner |
-| 4 | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-relevant readouts in well-defined cohorts | 12 to 18 months | $100K to $300K | Requires clinical collaborator |
+| 4 | Retinal biomarker correlation studies: retinal OCT (nerve fiber layer, macular perfusion), homocysteine, methylation panels in well-defined compound heterozygous cohorts | 12 to 18 months | $100K to $300K | Requires clinical collaborator |
 | 5 | If biochemical and biomarker findings support continued investigation, sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18 to 24 months | $200K to $500K | Requires gene-editing partner |
 | 6 | If cell-based feasibility and safety data support further progression, preclinical animal studies using appropriate Mthfr-relevant models and multi-organ outcome measures | 24 to 36 months | $500K to $2M | Requires institutional partner |
 | 7 | If preclinical data support advancement, IND-enabling planning, regulatory strategy development, and early clinical trial concept design | 3 to 7+ years | $5M+ | Requires biotech or pharma partner |
@@ -223,9 +228,14 @@ From computational observations to staged experimental follow-up:
 15. Kumar A, et al. (2024). *BMC Pregnancy Childbirth*. A1298C and recurrent pregnancy loss
 16. MTHFR Gene Polymorphisms. (2025). *Genes*, 16(4):441. Comprehensive review
 
+### Compound Heterozygosity and VTE
+17. Weisberg I, et al. (1998). *Mol Genet Metab*, 64(3):169-172. Second MTHFR polymorphism associated with decreased enzyme activity
+18. Liew SC, Gupta ED. (2015). MTHFR polymorphisms associated with increased VTE risk. PMID: 29212064
+19. Levine SZ, et al. (2018). *JAMA Psychiatry*, 75(2):176-184. Maternal folic acid and autism risk
+
 ### Computational Methods and Editing Context
-17. Abramson J, et al. (2024). *Nature*, 630:493-500. AlphaFold 3
-18. YOLT-101 Phase 1 Clinical Data. (2025). YolTech. Next-generation adenine base editor
+20. Abramson J, et al. (2024). *Nature*, 630:493-500. AlphaFold 3
+21. YOLT-101 Phase 1 Clinical Data. (2025). YolTech. Next-generation adenine base editor
 
 ---
 

@@ -2,7 +2,7 @@
 
 ### Computational Prioritization of Selected MTHFR Variant States for Experimental Validation
 
-> This project is a computational hypothesis-prioritization study designed to identify experimentally testable differences among wild-type, single-variant, and compound heterozygous MTHFR states. In the tested AlphaFold 3 and Boltz-2 model configurations, the compound heterozygous dimer yielded the lowest reported interaction-confidence values across the assessed dimer-interface and ligand-associated metrics relative to the tested wild-type and single-variant comparators. These observations do not establish mechanism, disease causation, clinical relevance, or therapeutic benefit. They support a bounded experimental agenda focused on dimer-level biology, retinal biomarkers, and neuropsychiatric-relevant biochemical readouts.
+> This project is a computational hypothesis-prioritization study designed to identify experimentally testable differences among wild-type, single-variant, and compound heterozygous MTHFR states. In the tested AlphaFold 3 and Boltz-2 model configurations, the compound heterozygous dimer yielded the lowest reported interaction-confidence values across the assessed dimer-interface and ligand-associated metrics relative to the tested wild-type and single-variant comparators. These observations do not establish mechanism, disease causation, clinical relevance, or therapeutic benefit. They support a bounded experimental agenda focused on dimer-level biology and retinal biomarker validation.
 >
 > **Core observation:** Across the tested model configurations, monomer predictions showed preserved overall folding confidence, whereas dimer predictions showed comparative inter-chain differences. This is the central computational finding of the current study.
 
@@ -122,17 +122,16 @@ Because prior literature has linked MTHFR-related one-carbon pathway disruption 
 
 **Proposed validation:** Correlate MTHFR genotype with retinal OCT measurements, homocysteine levels, and visual acuity in defined patient cohorts.
 
-### Hypothesis 2: Neuropsychiatric Pathway
+### Why Retinal Focus?
 
-Because one-carbon pathway disruption may influence BH4-dependent neurotransmitter biology, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected MTHFR states are associated with measurable biochemical and clinical features.
+The retinal pathway is prioritized over other downstream domains because it offers:
 
-**Supporting literature:**
-- **MTHFR polymorphism** associated with schizophrenia, major depression, autism, bipolar disorder, and ADHD (Wan et al., 2018, *Transl Psychiatry*)
-- Compound heterozygous patients show treatment-responsive anxiety with SAMe and methylated B vitamins when MTHFR status is identified (Levin & Varga, 2016)
-- A1298C has been discussed in relation to BH4-relevant pathways in the literature, but the mechanism, effect size, and subgroup specificity remain incompletely defined
-- MTHFR-related one-carbon pathway alterations may influence BH4-dependent neurotransmitter synthesis, warranting investigation in defined subgroups with biochemical abnormalities
+1. **Quantifiable biomarkers:** OCT measurements (nerve fiber layer thickness, macular perfusion density) provide objective, reproducible endpoints
+2. **Established animal models:** Mthfr+/- mice show documented retinal pathology -- ganglion cell loss, vascular leakage, elevated retinal homocysteine
+3. **Genotype-response correlation:** Compound C677T/A1298C carriers showed improved retinal perfusion with genotype-guided supplementation (Jiang et al., 2023)
+4. **Case evidence:** Visual recovery associated with betaine treatment in severe MTHFR deficiency (Hergert et al., 2022)
 
-**Proposed validation:** Measure BH4, homocysteine, SAMe/SAH ratio, and neurotransmitter metabolites in compound heterozygous individuals vs. wild-type controls.
+Other downstream domains (neuropsychiatric, cardiovascular, reproductive, epigenetic) are documented in the broader MTHFR literature but are not follow-up targets of the present study.
 
 ---
 
@@ -142,7 +141,7 @@ MTHFR dysfunction has been associated with additional disease-relevant pathways 
 
 Published literature has also reported MTHFR associations with autism/cerebral folate deficiency (Pu et al., 2020; Frye et al., 2018), B-vitamin processing failure (McNulty et al., 2006), cardiovascular disease via homocysteine elevation, transgenerational epigenetic effects in mouse models (Karahan et al., 2021), and adverse pregnancy outcomes including preeclampsia (Xia et al., 2013) and recurrent pregnancy loss (Kumar et al., 2024). These are documented in the [full research paper](docs/RESEARCH_PAPER_DRAFT.md) but are not the primary focus of this computational study.
 
-**Working hypothesis:** The compound heterozygous MTHFR dimer shows lower predicted confidence for cofactor-associated and substrate-associated interactions relative to wild-type. These comparative computational results support experimental testing of whether selected MTHFR variant states are associated with measurable differences in retinal and neuropsychiatric-relevant biomarkers or pathway readouts, and whether sequence correction strategies could theoretically alter enzyme behavior relative to wild-type, subject to extensive experimental validation.
+**Working hypothesis:** The compound heterozygous MTHFR dimer shows lower predicted confidence for cofactor-associated and substrate-associated interactions relative to wild-type. These comparative computational results support experimental testing of whether selected MTHFR variant states are associated with measurable differences in retinal biomarkers (OCT, nerve fiber layer thickness, macular perfusion), and whether sequence correction strategies could theoretically alter enzyme behavior relative to wild-type, subject to extensive experimental validation.
 
 ---
 
@@ -345,14 +344,14 @@ From computational prioritization to staged experimental follow-up:
 | **2a** | Molecular dynamics simulations: 100ns OpenMM/Amber14, WT vs compound dimer, PBC-corrected per-chain RMSD, 34-check verification (2x validated) | **Done** | **$0** | ✅ **Complete** |
 | **2b** | Preprint published ([Zenodo DOI: 10.5281/zenodo.19318627](https://doi.org/10.5281/zenodo.19318627)), researcher outreach, extended structural benchmarking | 1-3 months | ~$500 | In progress |
 | **3** | Biochemical validation: expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6-12 months | $50K-150K | Requires lab partner |
-| **4** | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-related readouts in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
+| **4** | Retinal biomarker correlation studies: retinal OCT (nerve fiber layer, macular perfusion), homocysteine, methylation panels in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
 | **5** | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene-editing partner |
 | **6** | If cell-based feasibility and safety data support further progression: preclinical animal studies using appropriate Mthfr-relevant models and multi-organ outcome measures | 24-36 months | $500K-2M | Requires institutional partner |
 | **7** | If preclinical data support advancement: IND-enabling planning, regulatory strategy development, and early clinical trial concept design | 3-7+ years | $5M+ | Requires biotech or pharma partner |
 
 > Advancement between phases is conditional and depends on supportive data at each prior stage. This roadmap is a planning framework, not a claim of therapeutic readiness.
 
-**Where we are now:** Phase 1 complete. The computational hypothesis prioritization is documented and replicable. Built for $0.
+**Where we are now:** Phase 2a complete. Computational hypothesis prioritization (Phase 1) and 100ns molecular dynamics validation (Phase 2a) are documented and replicable. Built for $0.
 
 **The next step:** Identify a researcher with biochemical or structural biology capabilities to evaluate whether these computational observations translate to measurable differences in experimental systems.
 
@@ -369,13 +368,14 @@ mthfr-target-validation/
 |-- requirements.txt                    <-- Python dependencies
 |-- MTHFR_AlphaFold_Analyzer.ipynb      <-- Google Colab: AlphaFold analysis
 |-- MTHFR_MD_Simulation.ipynb           <-- Google Colab: 100ns MD simulations
-|-- run_md.py                           <-- Local MD pipeline (OpenMM/M1 Max)
+|-- run_md.py                           <-- Local MD pipeline (OpenMM, PBC-corrected)
+|-- verify_md.py                        <-- 34-check MD verification script
 |-- validate_structure.py               <-- RMSD, Cohen's d, Bonferroni validation
 |-- MTHFR-Research-Findings.zip         <-- Downloadable archive of all findings
 |-- DISCLAIMER.md / CONTRIBUTING.md / LICENSE
 |
 |-- docs/
-|   |-- MTHFR_Master_Document.md                 <-- Complete research document (v6.0)
+|   |-- MTHFR_Master_Document.md                 <-- Complete research document (v7.0)
 |   |-- MTHFR_Research_Paper.pdf                 <-- Publication-ready PDF with figures
 |   |-- RESEARCH_PAPER_DRAFT.md                  <-- Publication-quality paper draft
 |
@@ -404,6 +404,7 @@ mthfr-target-validation/
 |-- analysis/
 |   |-- analysis_workflow.md            <-- PyMOL commands, analysis steps
 |   |-- metrics_template.csv            <-- Recording template
+|   |-- md_results/                     <-- 100ns MD trajectories, RMSD CSVs, energy logs
 |   |-- outputs/
 |       |-- metrics.csv                 <-- All 64 jobs: pTM, ipTM, pLDDT, ligand scores
 |       |-- report.html                 <-- Interactive HTML report
@@ -472,11 +473,10 @@ All references have been verified against PubMed and primary sources (March 2026
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
-**If you're a scientist:** Our structural and literature synthesis identifies a bounded experimental agenda centered on dimer-level effects, retinal biomarkers, and neuropsychiatric biochemistry. We are choosing to focus where the existing literature is most developed. [Open an issue](../../issues/new?template=collaboration.md) or email me.
+**If you're a scientist:** Our structural and literature synthesis identifies a bounded experimental agenda centered on dimer-level effects and retinal biomarker validation. We are focusing where the existing literature, animal models, and measurable endpoints converge most strongly. [Open an issue](../../issues/new?template=collaboration.md) or email me.
 
 **What we're looking for:**
-- **Ophthalmologists / Retinal researchers:** Existing Mthfr+/- mouse models provide one possible system for testing whether correction strategies alter retinal biomarkers. Delivery route, tissue targeting, and edit feasibility would need separate evaluation
-- **Psychiatrists / Neuroscientists:** Could A1298C-related one-carbon pathway alterations be a contributing factor in defined subgroups with biochemical abnormalities? The mechanism and subgroup specificity remain incompletely defined
+- **Ophthalmologists / Retinal researchers:** Existing Mthfr+/- mouse models provide one possible system for testing whether correction strategies alter retinal biomarkers. OCT measurements, nerve fiber layer thickness, and macular perfusion density offer quantifiable endpoints. Delivery route, tissue targeting, and edit feasibility would need separate evaluation
 - **Structural biologists:** Are the AlphaFold/Boltz-2 predictions biologically sensible? Cryo-EM of C677T/A1298C variants with FAD would provide orthogonal validation
 - **Gene editing researchers:** Evaluate whether C677T is technically tractable for guide design, edit-window fit, bystander risk assessment, and cell-based rescue studies
 - **Replication:** Independent researchers reproducing and extending the computational analysis

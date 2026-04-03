@@ -1,5 +1,30 @@
 # Changelog
 
+## v1.6 (April 3, 2026) -- COMPLETE
+- Retina-only focus: removed neuropsychiatric secondary exploratory context from all documents
+- Retinal biomarkers now sole primary validation pathway across all documents
+- Added "Why Retinal Focus?" section to README with 4 key rationale points
+- Retinal pathway prioritized for: quantifiable OCT biomarkers, established Mthfr+/- mouse models, genotype-response correlation in human studies, case evidence of visual recovery
+- Roadmap Phase 4 updated: retinal OCT (nerve fiber layer, macular perfusion) as primary endpoints
+- Collaboration section focused on ophthalmologists/retinal researchers
+- Neuropsychiatric, cardiovascular, reproductive, epigenetic domains retained as background literature context only
+- All 4 documents + PDF updated consistently
+- Research Paper: Discussion Section 4.3 rewritten as "Retinal Follow-Up as the Primary Validation Context"
+
+## v1.5 (April 3, 2026) -- COMPLETE
+- Full document rebuild: all 4 documents + Colab notebook updated and cross-verified
+- Critical data correction: all averaged values recomputed as true n=10 from metrics.csv
+- Fixed 8 orphaned references in Research Paper (Wan, McNulty, Karahan, Pentieva, Xia, Kumar, YOLT-101, LNP base editing) -- all now cited in body text
+- Fixed Appendix B paths: json/ → json_all/, results/ → results_all/
+- Master Document updated to v7.0 with Boltz-2 results table and full 100ns MD results section
+- Added 3 missing references to Master Document (Weisberg 1998, Liew & Gupta 2015, Levine 2018)
+- README: updated "Where we are now" from Phase 1 to Phase 2a complete
+- README: added verify_md.py and analysis/md_results/ to project structure tree
+- README: fixed Master Document version reference (v6.0 → v7.0)
+- Supplementary statistics regenerated from true n=10 seed data
+- Boltz-2 results table added to Research Paper Section 3.7 (was empty placeholder)
+- All documents verified for cross-consistency of averaged values, phase status, and version numbers
+
 ## v1.4 (April 3, 2026) -- COMPLETE
 - Extended molecular dynamics to 100ns (was 10ns) on RTX 4090
 - Fixed PBC artifact: per-chain RMSD analysis instead of whole dimer

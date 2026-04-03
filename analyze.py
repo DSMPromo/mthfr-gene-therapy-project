@@ -331,7 +331,7 @@ a{{color:#2E75B6}}
 <li><b>Dimer interface context:</b> ipTM 0.70 versus 0.76 in the tested wild-type dimer</li>
 <li><b>Position 429 context:</b> pLDDT 95.0 versus 96.2 in the tested wild-type comparator</li>
 </ul>
-<b>Working hypothesis:</b> These comparative computational results support experimental testing of whether selected MTHFR variant states are associated with measurable differences in dimer-level behavior, retinal biomarkers, and neuropsychiatric-relevant biochemical readouts. The present work is intended to generate falsifiable hypotheses for orthogonal validation, not to establish mechanism, disease causation, or therapeutic relevance.
+<b>Working hypothesis:</b> These comparative computational results support experimental testing of whether selected MTHFR variant states are associated with measurable differences in dimer-level behavior and retinal biomarkers (OCT, nerve fiber layer thickness, macular perfusion). The present work is intended to generate falsifiable hypotheses for orthogonal validation, not to establish mechanism, disease causation, or therapeutic relevance.
 </div>"""
 
     # Summary dashboard
@@ -427,9 +427,9 @@ a{{color:#2E75B6}}
 <div class="info">
 <h3>Retinal Pathway Hypothesis</h3>
 <p>Because prior literature has linked MTHFR-related one-carbon pathway disruption and hyperhomocysteinemia to retinal injury, the retina is a candidate downstream system for experimental follow-up. The current computational results do not establish efficacy in retinal disease, but they support testing whether selected MTHFR variant states are associated with measurable retinal biomarker differences. Prior evidence: Mthfr+/- mice show ganglion cell loss (Markand 2015); case report of visual recovery with betaine (Hergert 2022).</p>
-<h3>Neuropsychiatric Pathway Hypothesis</h3>
-<p>Because folate cycle dysfunction may influence BH4-dependent neurotransmitter pathways, neuropsychiatric phenotypes are a second candidate area for validation. The current structural data do not establish causation or treatment effect, but they support testing whether selected MTHFR variant states correlate with measurable biochemical differences. This may warrant exploratory study in defined subgroups where one-carbon metabolism and BH4-relevant biology are hypothesized to be relevant.</p>
-<p><i>Additional downstream systems (autism/CFD, B-vitamin metabolism, cardiovascular, epigenetics, pregnancy) are documented in the full research paper as candidate areas for future investigation.</i></p>
+<h3>Why Retinal Focus?</h3>
+<p>The retinal pathway is prioritized because it offers: (1) quantifiable OCT biomarkers (nerve fiber layer thickness, macular perfusion density), (2) established Mthfr+/- mouse models with documented retinal pathology, (3) demonstrated genotype-response correlation in compound heterozygous carriers (Jiang 2023), and (4) case evidence of visual recovery with supplementation (Hergert 2022).</p>
+<p><i>Additional downstream domains (neuropsychiatric, cardiovascular, epigenetic, reproductive) are documented in the broader literature but are not follow-up targets of the present study.</i></p>
 </div>
 
 <h2>Next Steps</h2>
@@ -439,7 +439,7 @@ a{{color:#2E75B6}}
 <li>Biochemical validation: express proteins, dimer stability assays, cofactor binding assays</li>
 <li>Exploratory biomarker correlation studies in well-defined compound heterozygous cohorts</li>
 <li>Submit to bioRxiv as preprint</li>
-<li>Contact target researchers (structural biology, metabolic disease, retinal, neuropsychiatric)</li>
+<li>Contact target researchers (structural biology, metabolic disease, retinal)</li>
 </ol>
 
 <div class="footer">

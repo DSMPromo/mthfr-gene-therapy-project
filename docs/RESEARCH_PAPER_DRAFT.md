@@ -10,9 +10,13 @@
 
 **Correspondence:** igor@dsm.promo
 
-**Keywords:** MTHFR, AlphaFold 3, Boltz-2, C677T, A1298C, FAD cofactor, protein structure prediction, dimer biology, structural prioritization, computational hypothesis prioritization, compound heterozygous
+**Version:** 1.6 (April 2026) — Retinal biomarker focus
+
+**Keywords:** MTHFR, AlphaFold 3, Boltz-2, C677T, A1298C, FAD cofactor, protein structure prediction, dimer biology, retinal biomarkers, computational hypothesis prioritization, compound heterozygous
 
 **License:** CC BY-NC-SA 4.0
+
+**DOI:** [10.5281/zenodo.19318627](https://doi.org/10.5281/zenodo.19318627)
 
 **Data Availability:** All sequences, analysis scripts, and AlphaFold results available at https://github.com/DSMPromo/mthfr-target-validation
 
@@ -22,7 +26,7 @@
 
 ## Abstract
 
-Methylenetetrahydrofolate reductase (MTHFR) variants C677T (A222V) and A1298C (E429A) are common in human populations, yet their comparative behavior in modeled dimer and ligand-associated contexts remains incompletely characterized. We used AlphaFold 3 Server and Boltz-2 to compare wild-type, C677T, A1298C, and compound heterozygous MTHFR states in the presence of FAD, THF, and SAM. Across 64 structural predictions (10 independent seeds per configuration), monomer predictions remained broadly similar, whereas dimer predictions showed comparative inter-chain differences. Within this model set, the compound heterozygous dimer yielded the lowest reported interaction-confidence values across the assessed dimer-interface and ligand-associated metrics. These observations do not establish mechanism, disease causation, clinical relevance, or therapeutic feasibility. They define falsifiable follow-up questions centered on dimer-level biology, with retinal follow-up as a primary downstream context and neuropsychiatric-relevant biochemistry as a secondary exploratory context. These computational observations define bounded follow-up questions and require orthogonal validation through biochemical and structural methods.
+Methylenetetrahydrofolate reductase (MTHFR) variants C677T (A222V) and A1298C (E429A) are common in human populations, yet their comparative behavior in modeled dimer and ligand-associated contexts remains incompletely characterized. We used AlphaFold 3 Server and Boltz-2 to compare wild-type, C677T, A1298C, and compound heterozygous MTHFR states in the presence of FAD, THF, and SAM. Across 64 structural predictions (10 independent seeds per configuration), monomer predictions remained broadly similar, whereas dimer predictions showed comparative inter-chain differences. Within this model set, the compound heterozygous dimer yielded the lowest reported interaction-confidence values across the assessed dimer-interface and ligand-associated metrics. These observations do not establish mechanism, disease causation, clinical relevance, or therapeutic feasibility. They define falsifiable follow-up questions centered on dimer-level biology, with retinal biomarkers as the primary downstream validation context. These computational observations define bounded follow-up questions and require orthogonal validation through biochemical and structural methods.
 
 **Note:** This is a computational hypothesis-prioritization study. All structural predictions require orthogonal validation through biochemical and structural methods.
 
@@ -62,17 +66,15 @@ This compound genetic context is directly relevant to the present study, as the 
 
 ### 1.4 Primary Follow-Up Contexts
 
-The present study prioritizes two downstream follow-up contexts from the broader literature: retinal follow-up as the primary context, and neuropsychiatric-relevant biochemistry as a secondary exploratory context.
+The present study prioritizes retinal biomarkers as the primary downstream follow-up context, based on the strongest available literature bridge from MTHFR biology to measurable outcomes.
 
 **Primary follow-up context: Retinal biomarkers**
 
-Prior literature links MTHFR-related one-carbon pathway disruption and hyperhomocysteinemia to retinal injury, making retinal follow-up a reasonable primary downstream context for experimental testing. Mthfr+/- mice (heterozygous -- the same genetic status as most human carriers) show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage (Markand et al., 2015). Case literature suggests that betaine treatment was associated with visual recovery in selected severe MTHFR deficiency contexts (Hergert et al., 2022). Retinal perfusion was improved in compound C677T/A1298C carriers receiving MTHFR genotype-guided supplementation with the medical food Ocufolin (Jiang et al., 2023). MTHFR additionally modifies CRB1-related retinopathies, worsening the rd8 retinal phenotype (Markand et al., 2015).
+Prior literature links MTHFR-related one-carbon pathway disruption and hyperhomocysteinemia to retinal injury, making retinal follow-up the most testable downstream context for experimental validation. Mthfr+/- mice (heterozygous -- the same genetic status as most human carriers) show 2x retinal homocysteine, ~20% ganglion cell loss, thinner nerve fiber layer, and vascular leakage (Markand et al., 2015). Case literature suggests that betaine treatment was associated with visual recovery in selected severe MTHFR deficiency contexts (Hergert et al., 2022). Retinal perfusion was improved in compound C677T/A1298C carriers receiving MTHFR genotype-guided supplementation with the medical food Ocufolin (Jiang et al., 2023). MTHFR additionally modifies CRB1-related retinopathies, worsening the rd8 retinal phenotype (Markand et al., 2015).
 
-**Secondary exploratory context: Neuropsychiatric-relevant biochemistry**
+The retinal pathway is prioritized because it offers quantifiable biomarkers (OCT measurements, retinal nerve fiber layer thickness, macular perfusion density), established animal models (Mthfr+/- mice), and demonstrated genotype-response correlation in human supplementation studies. These features make retinal follow-up the most experimentally tractable validation pathway for the computational observations reported here.
 
-Because one-carbon pathway disruption may influence BH4-relevant neurotransmitter biology, neuropsychiatric-relevant biochemical follow-up is retained here as a secondary exploratory context rather than a primary disease-focused conclusion. Meta-analysis of 15 studies supports a significant association between C677T and ASD across all five genetic models (Pu et al., 2020). The 677TT genotype was 2x more prevalent in autistic children in a Chinese Han study (16.1% vs 8.6%, OR=2.04). A randomized controlled trial demonstrated that folinic acid improved verbal communication in ASD children with language impairment (Frye et al., 2018). Maternal folate supplementation before and during pregnancy reduces autism risk in a study of 45,300 children (Levine et al., 2018).
-
-Additional literature context across cardiovascular, nutritional, epigenetic, and reproductive domains is noted in the broader literature, but those domains are not primary follow-up targets of the present computational study and are not interpreted here as direct consequences of the modeled structural differences.
+Additional literature context across neuropsychiatric (Wan et al., 2018; Pu et al., 2020; Frye et al., 2018; Levine et al., 2018), cardiovascular, nutritional (McNulty et al., 2006), epigenetic (Karahan et al., 2021; Pentieva et al., 2020), and reproductive domains (Xia et al., 2013; Kumar et al., 2024) is noted in the broader literature, but those domains are not follow-up targets of the present computational study and are not interpreted here as direct consequences of the modeled structural differences.
 
 ### 1.5 Additional Literature Context
 
@@ -110,7 +112,7 @@ As of March 2026, our searches did not identify a registered interventional prog
 3. Define bounded experimental follow-up questions for biochemical assays and selected downstream biomarker studies
 4. Clarify which conclusions remain unsupported without orthogonal validation
 
-This study does not demonstrate reduced enzyme activity, altered FAD affinity in vitro, retinal injury, neuropsychiatric causation, or editing feasibility. Those questions require independent biochemical, cellular, structural, and clinical investigation.
+This study does not demonstrate reduced enzyme activity, altered FAD affinity in vitro, retinal injury, or editing feasibility. Those questions require independent biochemical, cellular, structural, and clinical investigation.
 
 ---
 
@@ -378,22 +380,13 @@ MTHFR functions as a homodimer in vivo, making the dimer context more relevant t
 
 Within the tested model set, the heterozygous dimer configuration, modeled as one chain carrying A222V and one chain carrying E429A, yielded the lowest reported interaction-confidence values across the assessed dimer-level metrics. This makes the heterozygous dimer a reasonable priority for experimental follow-up. It does not establish that this configuration is functionally impaired in vivo, but it provides a focused structural question for biochemical and structural testing.
 
-### 4.3 Primary and Secondary Follow-Up Contexts
+### 4.3 Retinal Follow-Up as the Primary Validation Context
 
-This study focuses on two follow-up contexts derived from the broader MTHFR literature.
+This study focuses on retinal biomarkers as the primary downstream validation context, based on the convergence of animal model data, case literature, and human supplementation studies.
 
-**Primary follow-up context: Retinal biomarkers**
-Prior animal, case-based, and supplementation literature supports retinal follow-up as a testable downstream context for experimental work. In the present study, the retinal context is used as a candidate biomarker domain for follow-up rather than as an outcome established by the computational results.
+Prior animal, case-based, and supplementation literature supports retinal follow-up as the most testable downstream context for experimental work. The retinal pathway offers three key advantages over other downstream domains: (1) quantifiable imaging biomarkers via OCT, (2) an established heterozygous mouse model with documented retinal pathology, and (3) demonstrated genotype-specific response to supplementation in compound heterozygous carriers.
 
-**Secondary exploratory context: Neuropsychiatric-relevant biochemistry**
-Because one-carbon pathway disruption has been discussed in relation to BH4-relevant neurotransmitter biology and related metabolic pathways, neuropsychiatric-relevant biochemical follow-up is retained here as a secondary exploratory context. In the present study, this context is treated as exploratory and does not constitute a disease-focused conclusion.
-
-Broader literature across cardiovascular, nutritional, epigenetic, and reproductive domains exists but remains outside the scope of the present computational analysis.
-
-| Context | Role in present study | Basis in literature |
-|---------|----------------------|---------------------|
-| Retinal biomarkers | Primary follow-up context | Animal, case-based, and supplementation literature support retinal follow-up as a testable downstream context |
-| Neuropsychiatric-relevant biochemistry | Secondary exploratory context | Literature discusses one-carbon and BH4-relevant biochemical pathways, supporting exploratory follow-up |
+In the present study, retinal biology is used as the candidate biomarker domain for follow-up rather than as an outcome established by the computational results. Broader literature across cardiovascular, nutritional, epigenetic, neuropsychiatric, and reproductive domains exists but remains outside the scope of the present computational analysis.
 
 ### 4.4 MTRR Co-occurrence as a Contextual Factor
 
@@ -411,7 +404,7 @@ In this framework, increased cellular FAD availability offers one possible expla
 
 Sequence correction remains a downstream translational question rather than a conclusion of the present study. Because C677T is a single-nucleotide variant, base-editing logic can be noted in principle. However, the present work does not establish MTHFR as a therapeutic editing target and does not address guide design, edit-window fit, bystander edits, delivery, rescue, or safety.
 
-Current editing programs for other targets show that precise sequence correction is technically discussable in modern translational research. In the context of this paper, that observation serves only as background. Any serious consideration of sequence correction for MTHFR would require supportive evidence from prior stages, including biochemical validation, structural confirmation, cell-based studies, and target-specific safety assessment.
+Current editing programs for other targets, including next-generation adenine base editors entering clinical trials (YOLT-101, YolTech 2025) and preclinical demonstrations of LNP-mediated in vivo base editing (PMID: 41275431), show that precise sequence correction is technically discussable in modern translational research. In the context of this paper, that observation serves only as background. Any serious consideration of sequence correction for MTHFR would require supportive evidence from prior stages, including biochemical validation, structural confirmation, cell-based studies, and target-specific safety assessment.
 
 ### 4.7 Translational Caution
 
@@ -447,7 +440,7 @@ This study has several important limitations:
 
 4. **Cell-based follow-up after biochemical validation:** Once biochemical and structural follow-up supports continued investigation, computational guide design and initial cell-based feasibility testing could be used to assess whether sequence correction is technically plausible in a controlled setting.
 
-5. **Clinical correlation study:** Prospective study of compound heterozygous MTHFR individuals stratified by MTRR status, focusing on retinal OCT, plasma homocysteine, and neuropsychiatric-relevant biomarkers.
+5. **Retinal biomarker correlation study:** Prospective study of compound heterozygous MTHFR individuals stratified by MTRR status, focusing on retinal OCT (nerve fiber layer thickness, macular perfusion density), plasma homocysteine, and visual function outcomes.
 
 6. **Epigenetic profiling:** Genome-wide methylation profiling (EPIC array or whole-genome bisulfite sequencing) of compound heterozygous individuals vs matched controls.
 
@@ -457,7 +450,7 @@ This study has several important limitations:
 
 ## 5. Conclusion
 
-This study presents an AlphaFold 3 and Boltz-2 based comparative characterization of selected MTHFR variant states in modeled monomer, dimer, and ligand-associated contexts. By connecting these computational outputs to retinal and neuropsychiatric-relevant follow-up contexts, it provides a framework for prioritizing bounded experimental questions arising from the modeled dimer-level differences.
+This study presents an AlphaFold 3 and Boltz-2 based comparative characterization of selected MTHFR variant states in modeled monomer, dimer, and ligand-associated contexts. By connecting these computational outputs to retinal biomarker follow-up, it provides a framework for prioritizing bounded experimental questions arising from the modeled dimer-level differences.
 
 The key contribution is not the computational predictions themselves, which require experimental validation, but the framework: a reproducible, open-source structural prioritization workflow that links modeled dimer-level differences to bounded experimental follow-up questions.
 
@@ -475,7 +468,7 @@ From computational prioritization to staged experimental follow-up:
 | **2a** | Molecular dynamics simulations: 100ns OpenMM/Amber14, WT vs compound dimer, PBC-corrected per-chain RMSD, 34-check verification (2x validated) | **Done** | **$0** | **Complete** |
 | **2b** | Preprint (bioRxiv submitted), researcher outreach, extended structural benchmarking | 1-3 months | ~$500 | In progress |
 | **3** | Biochemical validation: expression of wild-type and selected variant proteins, dimer stability assays, FAD and THF interaction assays | 6-12 months | $50K-150K | Requires lab partner |
-| **4** | Exploratory biomarker correlation studies, including homocysteine, methylation panels, retinal OCT, and BH4-related readouts in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
+| **4** | Retinal biomarker correlation studies: retinal OCT (nerve fiber layer, macular perfusion), homocysteine, methylation panels in well-defined compound heterozygous cohorts | 12-18 months | $100K-300K | Requires clinical collaborator |
 | **5** | If biochemical and biomarker findings support continued investigation: sequence-level guide assessment, edit-window analysis, bystander-risk assessment, and cell-based feasibility studies | 18-24 months | $200K-500K | Requires gene-editing partner |
 | **6** | If cell-based feasibility and safety data support further progression: preclinical animal studies using appropriate Mthfr-relevant models and multi-organ outcome measures | 24-36 months | $500K-2M | Requires institutional partner |
 | **7** | If preclinical data support advancement: IND-enabling planning, regulatory strategy development, and early clinical trial concept design | 3-7+ years | $5M+ | Requires biotech or pharma partner |
@@ -486,7 +479,7 @@ From computational prioritization to staged experimental follow-up:
 
 This project represents a complete Phase 1 deliverable:
 - Computational structural comparison showing that the compound heterozygous dimer yielded the lowest reported interaction-confidence values among the tested states
-- Literature synthesis supporting bounded retinal and neuropsychiatric-relevant follow-up contexts
+- Literature synthesis supporting retinal biomarker follow-up as the primary validation context
 - A fully replicable, open-source pipeline that independent researchers can verify
 
 ### Phase 2 Completed Work
@@ -509,7 +502,7 @@ This is an open research project seeking collaboration with:
 
 - **Structural biologists:** To validate AlphaFold predictions with experimental cryo-EM or X-ray structures of C677T and A1298C variants
 - **Gene editing researchers:** To assess whether sequence correction becomes technically plausible after prior biochemical and structural validation
-- **Clinical researchers:** To establish phenotype correlations in retinal and neuropsychiatric-relevant contexts, particularly when stratified by MTRR status and other confounders
+- **Clinical researchers:** To establish retinal biomarker correlations (OCT, nerve fiber layer, macular perfusion) in compound heterozygous cohorts, stratified by MTRR status
 - **Bioinformaticians:** To independently replicate, extend, and improve the computational analysis
 - **Epigeneticists:** To profile genome-wide methylation consequences of compound heterozygous MTHFR
 
@@ -613,8 +606,8 @@ This is not medical advice. All therapeutic concepts are speculative and would r
 Available at https://github.com/DSMPromo/mthfr-target-validation:
 
 1. **S1:** All FASTA sequences (sequences/)
-2. **S2:** AlphaFold Server JSON job files (alphafold/jobs/json/)
-3. **S3:** Complete AlphaFold results -- CIF structures, JSON confidence data, PAE matrices (alphafold/results/)
+2. **S2:** AlphaFold Server JSON job files (alphafold/jobs/json_all/)
+3. **S3:** Complete AlphaFold results -- CIF structures, JSON confidence data, PAE matrices (alphafold/results_all/)
 4. **S4:** Analysis pipeline source code (analyze.py)
 5. **S5:** Google Colab notebook (MTHFR_AlphaFold_Analyzer.ipynb)
 6. **S6:** PAE heatmap plots for all predictions (analysis/outputs/pae_plots/)

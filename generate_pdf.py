@@ -36,18 +36,18 @@ title_page = f"""
     <p class="affil">ORCID: 0009-0000-1408-1065</p>
     <p class="affil">igor@dsm.promo</p>
     <div class="title-divider"></div>
-    <p class="date">March 2026</p>
+    <p class="date">April 2026 | v1.6</p>
     <div class="key-result">
         <p class="kr-label">CORE COMPUTATIONAL OBSERVATION</p>
         <p class="kr-text">Monomer predictions showed preserved overall folding confidence across tested variant states.
         Dimer predictions showed comparative inter-chain differences, with the compound heterozygous
         dimer yielding the lowest reported interaction-confidence values.</p>
         <table class="kr-table">
-            <tr><th>Metric</th><th>WT Dimer</th><th>Compound Het Dimer</th><th>Difference</th></tr>
-            <tr><td>ipTM (AlphaFold 3)</td><td>0.76</td><td style="color:#CC3333;font-weight:bold">0.70</td><td>-0.06</td></tr>
-            <tr><td>FAD binding</td><td>0.57</td><td style="color:#CC3333;font-weight:bold">0.53</td><td>-0.04</td></tr>
-            <tr><td>THF binding (Boltz-2)</td><td>0.974</td><td style="color:#CC3333;font-weight:bold">0.878</td><td>-0.096</td></tr>
-            <tr><td>pLDDT @ pos 429</td><td>96.2</td><td style="color:#CC3333;font-weight:bold">95.0</td><td>-1.2</td></tr>
+            <tr><th>Metric</th><th>WT Dimer (n=10)</th><th>Compound Het (n=10)</th><th>Significance</th></tr>
+            <tr><td>ipTM (AlphaFold 3)</td><td>0.752 &plusmn;0.023</td><td style="color:#CC3333;font-weight:bold">0.714 &plusmn;0.026</td><td>p=0.003</td></tr>
+            <tr><td>FAD binding</td><td>0.563 &plusmn;0.014</td><td style="color:#CC3333;font-weight:bold">0.542 &plusmn;0.020</td><td>p=0.016</td></tr>
+            <tr><td>pLDDT @ pos 429</td><td>96.04 &plusmn;0.22</td><td style="color:#CC3333;font-weight:bold">95.29 &plusmn;0.21</td><td>p&lt;0.000001</td></tr>
+            <tr><td>Equilibrium RMSD (100ns MD)</td><td>8.17 &plusmn;0.30 &Aring;</td><td style="color:#CC3333;font-weight:bold">6.88 &plusmn;0.30 &Aring;</td><td>Cohen's d=4.31</td></tr>
         </table>
     </div>
     <p class="disclaimer-small">For research and educational purposes only. Computational predictions, not experimentally resolved structures.</p>
@@ -62,7 +62,7 @@ figures_section = f"""
 
 {figure(FIG/"figures"/"summary_dashboard.png", 1, "Summary dashboard of all 16 structural predictions across AlphaFold 3 (Jobs 1-12) and Boltz-2 (Jobs 13-16) platforms. Compound heterozygous dimer consistently yielded the lowest comparative confidence values.")}
 
-{figure(FIG/"figures"/"clinical_targets.png", 2, "Primary experimental follow-up contexts. Retinal neurodegeneration (Hypothesis 1) and neuropsychiatric-relevant biochemistry (Hypothesis 2) are identified as the two contexts with the strongest literature bridges from MTHFR biology to measurable downstream readouts.")}
+{figure(FIG/"figures"/"clinical_targets.png", 2, "Primary experimental follow-up context. Retinal biomarkers are identified as the primary validation pathway based on quantifiable OCT endpoints, established animal models, and demonstrated genotype-response correlation in human studies.")}
 
 <div style="page-break-before:always"></div>
 
@@ -70,19 +70,21 @@ figures_section = f"""
 
 {figure(FIG/"charts"/"ptm_comparison.png", 4, "Predicted TM-score (pTM) comparison across all tested configurations. Monomer predictions remained broadly similar; dimer predictions showed comparative differences.")}
 
-{figure(FIG/"figures"/"plddt_comparison.png", 5, "Per-residue confidence (pLDDT) at mutation sites 222 and 429 across variant states. Position 429 showed the largest comparative decrease in compound dimers (95.0 vs 96.2 in wild-type), consistent with possible regulatory-domain involvement.")}
+{figure(FIG/"figures"/"plddt_comparison.png", 5, "Per-residue confidence (pLDDT) at mutation sites 222 and 429 across variant states. Position 429 showed the largest comparative decrease in compound dimers (95.29 vs 96.04 in wild-type, n=10), consistent with possible regulatory-domain involvement.")}
+
+{figure(FIG/"figures"/"md_comparison.png", 6, "100ns molecular dynamics comparison: WT vs compound heterozygous MTHFR dimer (OpenMM, Amber14/TIP3P-FB, 300K, RTX 4090). PBC-corrected per-chain RMSD shows compound dimer adopts a more compact ensemble (equilibrium RMSD 6.88 vs 8.17 A, Cohen's d = 4.31, p < 1e-323). Both systems reach equilibrium at ~62ns.")}
 
 <div style="page-break-before:always"></div>
 <h3>3D Structure Comparisons</h3>
 
 <div class="grid">
-{figure(FIG/"figures"/"structure_job01_wt_mono_fad.png", "6a", "Wild-type monomer + FAD (Job 01). Backbone colored by pLDDT confidence (blue = high).", "48%")}
-{figure(FIG/"figures"/"structure_job06_compound_dimer_fad.png", "6b", "Compound heterozygous dimer + FAD (Job 06). Author genotype context.", "48%")}
+{figure(FIG/"figures"/"structure_job01_wt_mono_fad.png", "7a", "Wild-type monomer + FAD (Job 01). Backbone colored by pLDDT confidence (blue = high).", "48%")}
+{figure(FIG/"figures"/"structure_job06_compound_dimer_fad.png", "7b", "Compound heterozygous dimer + FAD (Job 06). Author genotype context.", "48%")}
 </div>
 
 <div class="grid">
-{figure(FIG/"figures"/"structure_job02_wt_dimer_fad.png", "6c", "Wild-type dimer + FAD (Job 02). Baseline homodimer.", "48%")}
-{figure(FIG/"figures"/"structure_job13_wt_dimer_fad_thf.png", "6d", "Wild-type dimer + FAD + THF (Job 13, Boltz-2). Substrate binding context.", "48%")}
+{figure(FIG/"figures"/"structure_job02_wt_dimer_fad.png", "7c", "Wild-type dimer + FAD (Job 02). Baseline homodimer.", "48%")}
+{figure(FIG/"figures"/"structure_job13_wt_dimer_fad_thf.png", "7d", "Wild-type dimer + FAD + THF (Job 13, Boltz-2). Substrate binding context.", "48%")}
 </div>
 
 <div style="page-break-before:always"></div>
@@ -90,16 +92,16 @@ figures_section = f"""
 <p class="caption">Blue regions indicate high positional confidence; yellow/red indicate lower confidence or disorder. Off-diagonal blocks in dimer plots represent inter-chain contact confidence.</p>
 
 <div class="grid">
-{figure(FIG/"pae_plots"/"pae_job01_wt_mono_fad.png", "7a", "WT Mono (Job 01)", "48%")}
-{figure(FIG/"pae_plots"/"pae_job03_c677t_mono_fad.png", "7b", "C677T Mono (Job 03)", "48%")}
+{figure(FIG/"pae_plots"/"pae_job01_wt_mono_fad.png", "8a", "WT Mono (Job 01)", "48%")}
+{figure(FIG/"pae_plots"/"pae_job03_c677t_mono_fad.png", "8b", "C677T Mono (Job 03)", "48%")}
 </div>
 <div class="grid">
-{figure(FIG/"pae_plots"/"pae_job02_wt_dimer_fad.png", "7c", "WT Dimer (Job 02)", "48%")}
-{figure(FIG/"pae_plots"/"pae_job06_compound_dimer_fad.png", "7d", "Compound Dimer (Job 06)", "48%")}
+{figure(FIG/"pae_plots"/"pae_job02_wt_dimer_fad.png", "8c", "WT Dimer (Job 02)", "48%")}
+{figure(FIG/"pae_plots"/"pae_job06_compound_dimer_fad.png", "8d", "Compound Dimer (Job 06)", "48%")}
 </div>
 <div class="grid">
-{figure(FIG/"pae_plots"/"pae_job13_wt_dimer_fad_thf.png", "7e", "WT + THF, Boltz-2 (Job 13)", "48%")}
-{figure(FIG/"pae_plots"/"pae_job15_compound_dimer_fad_thf.png", "7f", "Compound + THF, Boltz-2 (Job 15)", "48%")}
+{figure(FIG/"pae_plots"/"pae_job13_wt_dimer_fad_thf.png", "8e", "WT + THF, Boltz-2 (Job 13)", "48%")}
+{figure(FIG/"pae_plots"/"pae_job15_compound_dimer_fad_thf.png", "8f", "Compound + THF, Boltz-2 (Job 15)", "48%")}
 </div>
 """
 
