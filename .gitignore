@@ -4,3 +4,7 @@ __pycache__/
 .DS_Store
 *.egg-info/
 v1.3/results/*.zip
+# MD trajectories and large structure files (regenerate with: python run_md.py)
+analysis/md_results/*.dcd
+analysis/md_results/*_prepared.pdb
+analysis/md_results/*_final.pdb

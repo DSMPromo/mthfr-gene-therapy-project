@@ -26,15 +26,10 @@ try:
     import numpy as np
     import matplotlib; matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    from openmmforcefields.generators import GAFFTemplateGenerator
-    from openff.toolkit.topology import Molecule
 except ImportError as e:
     print(f"Missing dependency: {e}")
     print("Run: conda activate md")
     sys.exit(1)
-
-# FAD (flavin adenine dinucleotide) — required cofactor in MTHFR structures
-FAD_SMILES = "CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)C[C@@H](O)[C@@H](O)[C@@H](O)COP(=O)(O)OP(=O)(O)OC[C@@H]4OC([C@H](O)[C@@H]4O)N5C=NC6=C5N=CN=C6N"
 
 RESULTS = Path("alphafold/results_all")
 MD_OUTPUT = Path("analysis/md_results")
@@ -69,29 +64,35 @@ def prepare_system(cif_path, name):
     fixer.addMissingAtoms()
     fixer.addMissingHydrogens(7.4)  # pH 7.4
 
+    # Remove FAD residues — AlphaFold CIF lacks internal bond info for
+    # ligands, making parameterization unreliable. Both WT and compound
+    # dimers have FAD, so removal is a controlled comparison.
+    modeller = app.Modeller(fixer.topology, fixer.positions)
+    fad_residues = [r for r in modeller.topology.residues() if r.name == 'FAD']
+    if fad_residues:
+        print(f"  Removing {len(fad_residues)} FAD residue(s) (CIF lacks bond info)")
+        modeller.delete(fad_residues)
+
     # Add solvent (water box with 1.0 nm padding)
-    fixer.addSolvent(padding=1.0 * unit.nanometers, ionicStrength=0.15 * unit.molar)
+    modeller.addSolvent(app.ForceField('amber14-all.xml', 'amber14/tip3pfb.xml'),
+                        padding=1.0 * unit.nanometers, ionicStrength=0.15 * unit.molar)
 
     # Save prepared structure
     prep_path = MD_OUTPUT / f"{name}_prepared.pdb"
     with open(prep_path, 'w') as f:
-        app.PDBFile.writeFile(fixer.topology, fixer.positions, f)
+        app.PDBFile.writeFile(modeller.topology, modeller.positions, f)
 
     print(f"  Saved prepared structure: {prep_path}")
-    print(f"  Atoms: {fixer.topology.getNumAtoms()}")
+    print(f"  Atoms: {modeller.topology.getNumAtoms()}")
 
-    return fixer.topology, fixer.positions
+    return modeller.topology, modeller.positions
 
 def run_simulation(topology, positions, name, length_ns=10, platform_name="OpenCL"):
     """Run MD simulation with OpenMM."""
     print(f"\n  Running {length_ns}ns MD for {name} on {platform_name}...")
 
-    # Force field with GAFF template generator for FAD cofactor
-    fad_mol = Molecule.from_smiles(FAD_SMILES, allow_undefined_stereo=True)
-    gaff = GAFFTemplateGenerator(molecules=[fad_mol], forcefield='gaff-2.11')
-
+    # Force field
     forcefield = app.ForceField('amber14-all.xml', 'amber14/tip3pfb.xml')
-    forcefield.registerTemplateGenerator(gaff.generator)
 
     # Create system
     system = forcefield.createSystem(
@@ -174,7 +175,11 @@ def run_simulation(topology, positions, name, length_ns=10, platform_name="OpenC
     return traj_path
 
 def analyze_trajectory(name, label, color):
-    """Analyze MD trajectory and generate plots."""
+    """Analyze MD trajectory and generate plots.
+
+    Loads trajectory in strided chunks to avoid exhausting RAM on
+    large (50+ GB) DCD files.
+    """
     print(f"\n  Analyzing {name}...")
 
     traj_path = MD_OUTPUT / f"{name}_trajectory.dcd"
@@ -184,22 +189,76 @@ def analyze_trajectory(name, label, color):
         print(f"  No trajectory found for {name}")
         return None
 
-    # Load trajectory
-    traj = md.load(str(traj_path), top=str(top_path))
-    print(f"  Loaded {traj.n_frames} frames, {traj.n_atoms} atoms")
+    # Determine stride to keep memory usage under ~4 GB per trajectory.
+    # Each frame ≈ n_atoms * 3 * 4 bytes (float32 coords).
+    top = md.load_topology(str(top_path))
+    protein_indices = top.select('protein')
+    file_size_gb = traj_path.stat().st_size / (1024**3)
+    # Use stride to target ~2000 frames max (sufficient for RMSD/RMSF)
+    n_frames_est = int(file_size_gb * 1024**3 / (top.n_atoms * 3 * 4))
+    stride = max(1, n_frames_est // 2000)
+    print(f"  Trajectory ~{file_size_gb:.0f} GB, est. {n_frames_est} frames, using stride={stride}")
 
-    # Select protein atoms only
-    protein = traj.atom_slice(traj.topology.select('protein'))
+    # Load only protein atoms with stride to keep RAM manageable
+    traj = md.load(str(traj_path), top=str(top_path), stride=stride,
+                   atom_indices=protein_indices)
+    print(f"  Loaded {traj.n_frames} frames, {traj.n_atoms} protein atoms (strided)")
 
-    # RMSD
-    rmsd = md.rmsd(protein, protein, 0) * 10  # Convert to Angstroms
+    # Fix PBC imaging: re-image molecules so both chains stay in the
+    # same periodic image. Without this, chain wrapping inflates RMSD.
+    try:
+        traj.image_molecules(inplace=True)
+        print(f"  Re-imaged molecules (PBC fix applied)")
+    except Exception as e:
+        print(f"  Warning: could not re-image ({e}), proceeding without PBC fix")
 
-    # RMSF per residue
-    rmsf = md.rmsf(protein, protein, 0) * 10  # Angstroms
+    protein = traj  # already protein-only
 
-    # Get CA indices for per-residue RMSF
-    ca_indices = protein.topology.select('name CA')
-    ca_rmsf = rmsf[ca_indices] if len(ca_indices) > 0 else rmsf
+    # Analyze each chain separately to avoid PBC artifacts on whole dimer
+    chains = list(protein.topology.chains)
+    chain_a_idx = protein.topology.select(f'chainid 0')
+    chain_b_idx = protein.topology.select(f'chainid 1')
+
+    if len(chain_a_idx) > 0 and len(chain_b_idx) > 0:
+        chain_a = protein.atom_slice(chain_a_idx)
+        chain_b = protein.atom_slice(chain_b_idx)
+        rmsd_a = md.rmsd(chain_a, chain_a, 0) * 10
+        rmsd_b = md.rmsd(chain_b, chain_b, 0) * 10
+        # Use per-chain average as the representative RMSD
+        rmsd = (rmsd_a + rmsd_b) / 2.0
+        print(f"  Per-chain RMSD: A={np.mean(rmsd_a):.2f} A, B={np.mean(rmsd_b):.2f} A")
+
+        # RMSF: compute per-chain then combine
+        rmsf_a = md.rmsf(chain_a, chain_a, 0) * 10
+        rmsf_b = md.rmsf(chain_b, chain_b, 0) * 10
+
+        ca_a = chain_a.topology.select('name CA')
+        ca_b = chain_b.topology.select('name CA')
+        ca_rmsf_a = rmsf_a[ca_a] if len(ca_a) > 0 else rmsf_a
+        ca_rmsf_b = rmsf_b[ca_b] if len(ca_b) > 0 else rmsf_b
+        # Stack both chains' CA RMSF (chain A then chain B)
+        ca_rmsf = np.concatenate([ca_rmsf_a, ca_rmsf_b])
+    else:
+        # Fallback: single chain
+        rmsd = md.rmsd(protein, protein, 0) * 10
+        rmsf = md.rmsf(protein, protein, 0) * 10
+        ca_indices = protein.topology.select('name CA')
+        ca_rmsf = rmsf[ca_indices] if len(ca_indices) > 0 else rmsf
+
+    total_frames = traj.n_frames * stride  # approximate original count
+
+    # Get actual simulation time from energy CSV (more reliable than DCD timestamps)
+    energy_csv = MD_OUTPUT / f"{name}_energy.csv"
+    actual_time_ns = traj.time[-1] / 1000 if len(traj.time) > 0 else 0
+    if energy_csv.exists():
+        try:
+            with open(energy_csv) as ef:
+                for last_line in ef:
+                    pass
+                parts = last_line.split(',')
+                actual_time_ns = float(parts[1].strip().strip('"')) / 1000  # ps -> ns
+        except Exception:
+            pass
 
     results = {
         "name": name,
@@ -207,14 +266,19 @@ def analyze_trajectory(name, label, color):
         "color": color,
         "rmsd": rmsd,
         "rmsf": ca_rmsf,
-        "n_frames": traj.n_frames,
-        "time_ns": traj.time[-1] / 1000 if len(traj.time) > 0 else 0,
+        "n_frames": total_frames,
+        "time_ns": actual_time_ns,
     }
 
     # Save per-simulation RMSD
+    time_step = 0.01 * stride
     np.savetxt(MD_OUTPUT / f"{name}_rmsd.csv",
-               np.column_stack([np.arange(len(rmsd)) * 0.01, rmsd]),
+               np.column_stack([np.arange(len(rmsd)) * time_step, rmsd]),
                header="time_ns,rmsd_angstrom", delimiter=",", comments="")
+
+    # Free memory before loading the next trajectory
+    del traj, protein
+    import gc; gc.collect()
 
     return results
 
@@ -226,7 +290,7 @@ def plot_comparison(all_results):
 
     # 1. RMSD over time
     for r in all_results:
-        time_ns = np.arange(len(r['rmsd'])) * 0.01
+        time_ns = np.linspace(0, r['time_ns'], len(r['rmsd']))
         axes[0,0].plot(time_ns, r['rmsd'], label=r['label'], color=r['color'], alpha=0.8, linewidth=0.5)
     axes[0,0].set_xlabel('Time (ns)')
     axes[0,0].set_ylabel('RMSD (A)')
