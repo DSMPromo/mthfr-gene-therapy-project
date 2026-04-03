@@ -40,7 +40,7 @@ MTHFR (methylenetetrahydrofolate reductase, EC 1.5.1.20) is a FAD-dependent homo
 
 The crystal structure of human MTHFR (PDB: 6FCX, 2.5 A resolution) revealed a homodimer with each subunit containing a conserved catalytic TIM-barrel domain (N-terminal, FAD-binding) and a eukaryote-specific regulatory domain (C-terminal, SAM-binding) connected by a 25-residue inter-domain linker (Froese et al., 2018). Recent cryo-EM structures (PDB: 8QA5, 8QA6) have further elucidated the mechanism of SAM-mediated allosteric inhibition through dual SAM binding and inter-domain conformational rearrangement (Froese et al., 2024).
 
-A comprehensive 2025 review characterizes MTHFR as having "wide-ranging clinical implications" across cardiovascular, neurological, oncological, and reproductive domains, supporting its relevance across multiple clinical and biological domains discussed in the literature (MTHFR Gene Polymorphisms Review, Genes 2025).
+Published reviews discuss MTHFR across multiple clinical and biological domains, reflecting broad interest in the enzyme and its variants (MTHFR Gene Polymorphisms Review, Genes 2025).
 
 ### 1.2 The Two Key Variants
 
@@ -50,7 +50,7 @@ Two common MTHFR polymorphisms have substantial clinical significance:
 
 **A1298C (rs1801131, p.Glu429Ala):** Located in the regulatory domain near the SAM-binding site, this variant has been reported in some studies to associate with reduced enzyme activity of ~30% per allele and has been discussed in relation to BH4-relevant pathways, though the mechanism, effect size, and subgroup specificity remain incompletely defined. The interaction between position 429 and the SAM-binding pocket identified in the 2024 cryo-EM structures (Froese et al., 2024) provides structural context for this variant's functional impact.
 
-**Compound heterozygosity** (one copy of each variant) produces enzyme activity comparable to C677T homozygosity (~50-60% of normal), providing a plausible basis for combined catalytic-domain and regulatory-domain effects that warrant experimental testing (Weisberg et al., 1998). Compound heterozygous individuals show lower plasma folate concentrations and elevated homocysteine levels equivalent to C677T homozygotes. VTE occurred in 50% of compound heterozygous patients versus 28.6% of wild-type subjects in a retrospective analysis (Liew & Gupta, 2015).
+**Compound heterozygosity** (one copy of each variant) produces enzyme activity comparable to C677T homozygosity (~50-60% of normal), providing a plausible basis for combined catalytic-domain and regulatory-domain effects that warrant experimental testing (Weisberg et al., 1998). Compound heterozygous individuals show lower plasma folate concentrations and elevated homocysteine levels equivalent to C677T homozygotes.
 
 ### 1.3 MTRR Co-occurrence as Contextual Background
 
@@ -70,7 +70,7 @@ Prior literature links MTHFR-related one-carbon pathway disruption and hyperhomo
 
 Retinal follow-up remains attractive because it offers quantifiable biomarkers such as OCT-derived measures and retinal perfusion readouts, along with prior animal and human literature that can help guide staged validation. In the present manuscript, these features justify retinal biomarker follow-up as a practical candidate domain rather than as an outcome established by the computational results.
 
-Additional literature context across neuropsychiatric (Wan et al., 2018; Pu et al., 2020; Frye et al., 2018; Levine et al., 2018), cardiovascular, nutritional (McNulty et al., 2006), epigenetic (Karahan et al., 2021; Pentieva et al., 2020), and reproductive domains (Xia et al., 2013; Kumar et al., 2024) is noted in the broader literature, but those domains are not follow-up targets of the present computational study and are not interpreted here as direct consequences of the modeled structural differences.
+Additional literature across other clinical and biological domains is noted in the broader MTHFR literature, but those domains are not follow-up targets of the present study and are not interpreted here as consequences of the modeled structural differences.
 
 ### 1.5 Additional Literature Context
 
